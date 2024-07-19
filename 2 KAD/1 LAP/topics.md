@@ -46,9 +46,10 @@ total_training: 126
 -	Regression & Classification — Supervised
   -	Linear Regression, Support Vector Machines
 -	Clustering & Dimensionality — Unsupervised 
-  -	Reduction K-Means, PCA
-- Reinforcement Learning — Reward based learning.
-- Deep Learning — Representation learning
+  - PCA & Other	Dimensionality Reduction Techniques
+  - Introduction to K-Means clustering & DBSCAN
+- Reinforcement Learning / Reward-based learning.
+- Deep Learning / Representation learning
   -	Feed Forward Neural Networks (FNN)
   -	Recurrent Neural Networks (RNN)
   -	Transformers (Attention based Networks)

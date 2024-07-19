@@ -1,19 +1,18 @@
+[The Pattern on the Stone, by Danny Hillis](https://www.goodreads.com/book/show/277658.The_Pattern_on_the_Stone)
+
+[The moment we stopped understanding AI [AlexNet]](https://www.youtube.com/watch?v=UZDiGooFs54)
+
+[Can machines think?](https://academic.oup.com/mind/article/LIX/236/433/986238)
+
+[](https://course.fast.ai/)
 <!-- Session 1 Resources Go Here -->
-
-
-
 ---
-<!-- Session 2 Resources Go Here -->
 
 [Data Attributes and Model Attributes](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/23/dmprg/about-attributes.html)
-
+<!-- Session 2 Resources Go Here -->
 ---
 <!-- Session 3 Resources Go Here -->
-
-
-
 ---
-<!-- Session 4 Resources Go Here -->
 
 WA:
 
@@ -29,38 +28,21 @@ Out of state:
 
 [Artificial Intelligence Ethics Policy](https://www.digital.nsw.gov.au/policy/artificial-intelligence/artificial-intelligence-ethics-policy)
 
-
+<!-- Session 4 Resources Go Here -->
 ---
 <!-- Session 5 Resources Go Here -->
-
-
-
 ---
 <!-- Session 6 Resources Go Here -->
-
-
-
 ---
 <!-- Session 7 Resources Go Here -->
-
-
-
 ---
 <!-- Session 8 Resources Go Here -->
-
-
 ---
-
-<!-- Session 9 Resources Go Here -->
 [But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
-
-
 [Gradient descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w)
-
-
 [What is backpropagation really doing?](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 
-
+<!-- Session 9 Resources Go Here -->
 ---
 <!-- Session 10 Resources Go Here -->
 
