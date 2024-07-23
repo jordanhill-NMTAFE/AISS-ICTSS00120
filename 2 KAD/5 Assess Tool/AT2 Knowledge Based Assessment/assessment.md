@@ -12,76 +12,123 @@ marking_checklist:
 qualification_national_code_and_title: "ICTSS00120 - Artificial Intelligence Skill Set"
 
 units:
-  - name: Identify opportunities to apply artificial intelligence, machine learning and deep learning	
+  - name: Identify opportunities to apply artificial intelligence, machine learning and deep learning
     id: ICTAII401
 
-  - name: Automate work tasks using machine learning	
+  - name: Automate work tasks using machine learning
     id: ICTAII501
 
-  - name: Train and evaluate machine learning models	
+  - name: Train and evaluate machine learning models
     id: ICTAII502
+
 
 mapping:
   - #  1
     criteria:
     knowledge:
+      ICTAII401: 
+        - 1
   - #  2
     criteria:
     knowledge:
+      ICTAII401: 
+        - 2
+      ICTAII501:
+        - 1
   - #  3
     criteria:
     knowledge:
+      ICTAII401: 
+        - 5
   - #  4
     criteria:
     knowledge:
+      ICTAII501:
+        - 7
   - #  5
     criteria:
     knowledge:
+      ICTAII501:
+        - 8
   - #  6
     criteria:
     knowledge:
+      ICTAII501:
+        - 5
+        - 9
   - #  7
     criteria:
     knowledge:
+      ICTAII501:
+        - 13
   - #  8
     criteria:
     knowledge:
+      ICTAII502:
+        - 2
   - #  9
     criteria:
     knowledge:
+      ICTAII502:
+        - 2
   - #  10
     criteria:
     knowledge:
+      ICTAII502:
+        - 2
   - #  11
     criteria:
     knowledge:
+      ICTAII502:
+        - 2
   - #  12
     criteria:
     knowledge:
+      ICTAII501:
+        - 9
+        - 10
   - #  13
     criteria:
     knowledge:
+      ICTAII501:
+        - 12
+      ICTAII502:
+        - 1
   - #  14
     criteria:
     knowledge:
+      ICTAII502:
+        - 2
   - #  15
     criteria:
     knowledge:
+      ICTAII401: 
+        - 4
   - #  16
     criteria:
     knowledge:
+      ICTAII401:
+        - 6
+      ICTAII501:
+        - 16
+        - 18
+
   - #  17
     criteria:
     knowledge:
+      ICTAII501:
+        - 6
   - #  18
     criteria:
     knowledge:
+      ICTAII501:
+        - 18
   - #  19
     criteria:
     knowledge:
-  - #  20
-    criteria:
-    knowledge:
+      ICTAII501:
+        - 2
+        - 3
 
 
 ---
@@ -142,19 +189,10 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 *Your answer here.*
 
----
-
-
-<!-- Replace Question -->
-#### Question (4): Impacts of Machine Learning on Task Automation (501.KE5) ???
-
-*Machine Learning (ML) has revolutionized the way organizations approach task automation. Discuss several tasks and processes that are commonly automated within organizations through ML technology. Explain the impact of ML on these tasks, particularly in terms of efficiency, accuracy, or scalability. Provide real-life examples of successful ML implementations that enhanced organizational workflows.*
-
-*Your answer here.*
 
 ---
 
-#### Question 5: Ensuring Quality Data in Machine Learning (501.KE7)
+#### Question 4: Ensuring Quality Data in Machine Learning (501.KE7)
 
 *The quality of data used in Machine Learning (ML) is critical for the development of effective models. Discuss the importance and techniques of randomizing, deduplicating, and checking for imbalances and biases in machine training data sets. Illustrate with examples how these techniques contribute to the generation of reliable and unbiased ML models, and the potential consequences of neglecting these steps.*
 
@@ -163,7 +201,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 ---
 
 
-#### Question 6: Training and Evaluation Data Sets in Machine Learning (501.KE8)
+#### Question 5: Training and Evaluation Data Sets in Machine Learning (501.KE8)
 
 *Machine Learning models need to be trained and evaluated on different subsets of data. Explain the distinction between training subsets and evaluation subsets within machine learning datasets. Describe their roles and importance in the lifecycle of an ML model, and discuss the potential impact on model performance if these subsets are not appropriately utilized.*
 
@@ -171,7 +209,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 7: Characteristics and Functions of Data Types in ML (501.KE5 & 501.KE9)
+#### Question 6: Characteristics and Functions of Data Types in ML (501.KE5)
 
 *In machine learning, the nature and structure of your data can greatly influence the effectiveness of the model. Discuss the characteristics and functions of structured, unstructured, labeled, and unlabeled data. Explain how each data type can be utilized in the creation and training of machine learning models, and provide examples of scenarios where one may be preferred over the others.*
 
@@ -179,7 +217,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 8: Programming Languages and Their Role in Machine Learning (ICTAII501 KE13)
+#### Question 7: Programming Languages and Their Role in Machine Learning (ICTAII501 KE13)
 
 *Discuss the importance of programming languages in the development of machine learning algorithms. Highlight how languages like Python support machine learning implementations through libraries such as TensorFlow and PyTorch. Illustrate with examples how these libraries empower developers to design, train, and deploy machine learning models efficiently.*
 
@@ -188,7 +226,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 ---
 
 
-#### Question 9: Training, Validation, and Test Data (502.KE2 - Training, Validation, and Test Data)
+#### Question 8: Training, Validation, and Test Data (502.KE2 - Training, Validation, and Test Data)
 
 *Explain the difference between training data, validation data, and test data in the context of a machine learning model's development life cycle. Discuss the crucial role each data type plays and why it's important to have distinct sets for developing robust AI models.*
 
@@ -196,7 +234,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 10: Data Sources (502.KE2 - Data Sources)
+#### Question 9: Data Sources (502.KE2 - Data Sources)
 
 *Identify and describe different types of data sources commonly used in machine learning projects. How does the origin or type of data source impact the choice of machine learning model or the preprocessing steps required?*
 
@@ -204,7 +242,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 11: Attribute Names (502.KE2 - Attribute Names)
+#### Question 10: Attribute Names (502.KE2 - Attribute Names)
 
 *In machine learning datasets, attribute names serve as a critical axis of information. Discuss how the selection and naming of attributes can influence model training and results. Provide examples of well-defined attribute names versus poor choices and their potential implications.*
 
@@ -212,7 +250,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 12: Target Data (502.KE2 - Target Data)
+#### Question 11: Target Data (502.KE2 - Target Data)
 
 *Define target data within the scope of machine learning tasks and elaborate on its significance during model training and evaluation. What challenges might arise if the target data is not accurately defined or if it's missing from the dataset?*
 
@@ -221,15 +259,16 @@ Describe at least three such tasks/processes commonly automated in similar organ
 ---
 
 
-#### Question 13: Key Algorithms for Labeled and Unlabeled Data (501.KE9 & 501.KE10)
+#### Question 12: Key Algorithms for Labeled and Unlabeled Data (501.KE9 & 501.KE10)
 
 *Explain the key differences between the algorithms used for handling labeled data and those for handling unlabeled data in machine learning. Provide examples of each type and describe a scenario where one would be more appropriate to use over the other.*
+
 
 *Your answer here.*
 
 ---
 
-#### Question 14: Characteristics of Learning Types (501.KE12 & 502.KE1)
+#### Question 13: Characteristics of Learning Types (501.KE12 & 502.KE1)
 
 *Define and compare the four primary learning paradigms in machine learning: supervised, unsupervised, semi-supervised, and reinforcement learning. Include examples of applications or scenarios where each type of learning can be effective.*
 
@@ -237,7 +276,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 15: Key Features and Functions of Learning Algorithms (502.KE2 - Learning Algorithms)
+#### Question 14: Key Features and Functions of Learning Algorithms (502.KE2 - Learning Algorithms)
 
 *Discuss the fundamental logic underpinning learning algorithms in machine learning. Explain how this logic governs their decision-making capabilities and provide examples of learning algorithms commonly used in the field, detailing their basic functions and operations.*
 
@@ -245,7 +284,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 16: Key Implementation Risks for AI, ML, and DL Technologies (401.KE4)
+#### Question 15: Key Implementation Risks for AI, ML, and DL Technologies (401.KE4)
 
 *Identify and discuss the key risks associated with implementing AI, ML, and DL technologies within an organization. Highlight specific challenges that may arise during integration and suggest strategies to mitigate these risks.*
 
@@ -253,7 +292,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 17: Organisational Policies and Procedures in AI Implementation (401.KE6 & 501.KE16 & 501.KE18)
+#### Question 16: Organisational Policies and Procedures in AI Implementation (401.KE6 & 501.KE16 & 501.KE18)
 
 *Explain the significance of adopting secure and safe practices such to adhering to organisational policies and procedures, as well as legislative requirements when implementing AI, ML, and DL in the workplace. Consider the roles of behavioral science, data governance, ethics, and human rights in guiding safe and ethical implementations of AI.*
 
@@ -261,7 +300,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 18: Characteristics of Unbiased and Biased Datasets (501.KE6)
+#### Question 17: Characteristics of Unbiased and Biased Datasets (501.KE6)
 
 *Define what constitutes an unbiased dataset and a biased dataset in the context of machine learning. Discuss the potential implications and risks of using biased datasets in AI model development and deployment, including real-world examples where bias has affected outcomes. Provide strategies for detecting and mitigating data bias to ensure fair and equitable AI systems.*
 
@@ -269,7 +308,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 19: Australia’s Artificial Intelligence Ethics Framework (501.KE18)
+#### Question 18: Australia’s Artificial Intelligence Ethics Framework (501.KE18)
 
 *Discuss the key principles and guidelines outlined in Australia’s Artificial Intelligence Ethics Framework. Explain how these principles can be applied to the design, development, implementation, and operation of AI systems within an organization to ensure ethical, transparent, and responsible use of artificial intelligence.*
 
@@ -277,7 +316,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 ---
 
-#### Question 20: Industry-Recognised Machine Learning Principles and Techniques (501.KE2 & 501.KE3)
+#### Question 19: Industry-Recognised Machine Learning Principles and Techniques (501.KE2 & 501.KE3)
 
 *Identify and explain several industry-recognised principles and techniques in machine learning. Discuss how these are applied in practice to improve the automation of work tasks and enhance organisational productivity. Provide real-world examples to illustrate the application of these principles and techniques.*
 

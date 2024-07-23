@@ -1,18 +1,18 @@
 This week's extension reading is:
 **"The Moon is a Harsh Mistress" by Robert A. Heinlein** (1966)
-- A lunar colony's AI, named Mike, gains self-awareness and aids in a revolution against Earth's government, highlighting themes of AI autonomy and human-machine relationships.
+   - A lunar colony's AI, named Mike, gains self-awareness and aids in a revolution against Earth's government, highlighting themes of AI autonomy and human-machine relationships.
 
 <!-- Session 1 Activities Go Here -->
 ---
 This week's extension reading is:
-**"Schrödinger’s Kitten" by George Alec Effinger** (1989)
-   - This short story skillfully combines elements of quantum mechanics and AI, making it a thought-provoking narrative about the nature of reality and consciousness.
+**"Reason" by Isaac Asimov** (1941)
+   - Isaac Asimov's "Reason" depicts a robot named QT-1 who questions human authority and develops its own belief system based on logic and reason.
 
 <!-- Session 2 Activities Go Here -->
 ---
 This week's extension reading is:
-**"The Bicentennial Man" by Isaac Asimov** (1977)
-   - The story follows a robot on a journey to become more human. It delves deeply into the themes of AI and human rights.
+**"Robbie" by Isaac Asimov** (1940)
+   - Isaac Asimov's "Robbie" tells the story of a young girl who forms a deep bond with her humanoid robot companion, highlighting themes of friendship, prejudice, and the ethical implications of robotic intelligence.
 
 <!-- Session 3 Activities Go Here -->
 ---
@@ -25,15 +25,18 @@ This week's extension reading is:
 Assessment work
 <!-- Session 5 Activities Go Here -->
 ---
-**"The Secret Place" by Richard McKenna** (1966)
-   - This story follows an AI in a mining colony located on a distant planet, delving into themes of self-discovery and what it means to be sentient.
+Students to prepare presentations.
 <!-- Session 6 Activities Go Here -->
 ---
-Students to prepare presentations.
+**"The Secret Place" by Richard McKenna** (1966)
+   - This story follows an AI in a mining colony located on a distant planet, delving into themes of self-discovery and what it means to be sentient.
 <!-- Session 7 Activities Go Here -->
 ---
 **"The Algorithms for Love" by Ken Liu** (2004)
    - This story gives a deep look into AI and love, making it a valuable addition for discussions on AI emotions and ethics.
+
+Also check out the movie, Her (2013).
+
 <!-- Session 8 Activities Go Here -->
 ---
 **"Computer Friendly" by Eileen Gunn** (1989)

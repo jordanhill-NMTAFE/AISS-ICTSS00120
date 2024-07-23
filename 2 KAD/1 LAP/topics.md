@@ -41,6 +41,7 @@ total_training: 126
 
 
 ##### Week 3: Essentials of ML and DL Technologies 
+- Introduction to sci-kit learn package
 -	Understanding ML: Supervised vs. Unsupervised Learning 
 -	Introduction to DL and its place within AI
 -	Regression & Classification — Supervised

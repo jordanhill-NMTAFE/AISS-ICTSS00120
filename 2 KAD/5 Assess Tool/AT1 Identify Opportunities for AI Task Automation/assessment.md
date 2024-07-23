@@ -29,44 +29,73 @@ units:
 mapping:
   - # 1
     criteria:
-      - 1.1
-      - 1.2
-      - 1.3
+      ICTAII401: 
+        - 1.1
+        - 1.2 
+        - 1.3
+
     knowledge:
-      - 5
-      - 6
+      ICTAII401:
+        - 5
+        - 6
+    skills:
+      ICTAII401:
+        - 2
   - # 2
     criteria:
-      - 1.4
-      - 2.1
+      ICTAII401:
+        - 1.4
+        - 2.1
+
     knowledge:
-      - 1
-      - 5
-      - 6
+      ICTAII401:
+        - 1
+        - 5
+        - 6
+    skills:
+      ICTAII401:
+        - 2
   - # 3
+    skills:
+      ICTAII401:
+        - 1
+        - 2
     criteria:
-      - 2.2
-      - 2.3
+      ICTAII401:
+        - 2.2
+        - 2.3
     knowledge:
-      - 1
-      - 3
-      - 4
-      - 5
-      - 6
+      ICTAII401:
+        - 1
+        - 3
+        - 4
+        - 5
+        - 6
   - # 4
+    skills:
+      ICTAII401:
+        - 2
     criteria:
-      - 3.1
+      ICTAII401:
+        - 3.1
     knowledge:
-      - 1
-      - 5
-      - 6
+      ICTAII401:
+        - 1
+        - 5
+        - 6
   - # 5
+    performance:
+      ICTAII401:
+        - 1
     criteria:
-      - 2.4
-      - 3.2
-      - 3.3
+      ICTAII401:
+        - 2.4
+        - 3.2
+        - 3.3
+
     knowledge:
-      - 5
+      ICTAII401:
+        - 5
 
 
 

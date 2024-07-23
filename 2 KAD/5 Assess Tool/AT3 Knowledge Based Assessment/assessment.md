@@ -19,6 +19,92 @@ units:
 
   - name: Train and evaluate machine learning models	
     id: ICTAII502
+
+mapping:
+  - #1
+    criteria:
+    knowledge:
+      ICTAII501:
+        - 4
+  - #2
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 2
+  - #3
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 2
+  - #4
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 5
+  - #5
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 6
+  - #6
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 8
+  - #7
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 3
+  - #8
+    criteria:
+    knowledge:
+      ICTAII501:
+        - 11
+  - #9
+    criteria:
+    knowledge:
+      ICTAII501:
+        - 14
+  - #10
+    criteria:
+    knowledge:
+      ICTAII501:
+        - 15
+  - #11
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 2
+  - #12
+    criteria:
+    knowledge:
+      ICTAII501:
+        - 17
+      ICTAII502:
+        - 4
+  - #13
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 9
+  - #14
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 2
+  - #15
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 7
+        - 14
+  - #16
+    criteria:
+    knowledge:
+      ICTAII502:
+        - 7
+
 ---
 
 # Assessment Resources:
@@ -152,14 +238,14 @@ Carefully read each question and provide a detailed response that includes examp
 ---
 
 #### Question 14: Importance of Model Sizes in Machine Learning (ICTAII502 KE2 - Model Sizes)
-*Discuss the significance of model size in the development and performance of machine learning models, particularly language models. Finally, calculate in GB roughly how much VRAM would be needed to load an 80 Billion parameter model as bfloat16 and also as int4.*
+*Discuss the significance of model size in the development and performance of machine learning models, particularly language models. Finally, calculate in GB roughly how much VRAM would be needed to load an 80 Billion parameter model (neural network) as bfloat16 and again as int8.*
 
 *Your answer here.*
 
 ---
 
 #### Question 15: Evaluating Industry-Recognized Machine Learning Models (ICTAII502 KE14 & KE7)
-*Identify and discuss several industry-recognized machine learning models. Provide two examples of Transformer models of different sizes and briefly summarize how the size of each model might impact how you might apply it to real-world use-cases.*
+*Identify and discuss several industry-recognized machine learning models. Provide two examples of Transformer models of different sizes and briefly summarize how the size of each model might impact how you could apply it to real-world use-cases.*
 
 *Your answer here.*
 

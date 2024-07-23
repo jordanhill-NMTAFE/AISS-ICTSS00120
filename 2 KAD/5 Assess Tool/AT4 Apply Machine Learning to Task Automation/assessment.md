@@ -34,9 +34,120 @@ units:
 
 # folder_location: ""
 
+mapping:
+  - # 1
+    skills:
+      ICTAII501:
+        - 1
+        - 2
+    criteria:
+      ICTAII501:
+        - 1.1
+      ICTAII502:
+        - 1.1
+        - 1.2
 
-# TODO:
-# Add You must sections mapping to criteria
+  - # 2
+    criteria:
+      ICTAII501:
+        - 1.2
+        - 1.3
+        - 1.4
+      ICTAII502:
+        - 1.3
+        - 1.4
+        - 1.5
+    
+  - # 3
+    criteria:
+      ICTAII501:
+        - 1.5
+        - 2.1
+      ICTAII502:
+        - 2.3
+    
+  - # 4
+    criteria:
+      ICTAII501:
+        - 2.2
+        - 2.3
+        - 2.5
+      ICTAII502:
+        - 1.6
+    
+  - # 5
+    performance:
+      ICTAII501:
+        - 1
+        - 2
+      ICTAII502:
+        - 1
+    criteria:
+      ICTAII501:
+        - 3.1
+      ICTAII502:
+        - 2.1
+        - 2.2
+        - 3.2
+        - 4.1
+        - 4.2
+        - 4.3
+        - 4.4
+        - 4.5
+    
+  - # 6
+    performance:
+      ICTAII501:
+        - 2
+      ICTAII502:
+        - 2
+    criteria:
+      ICTAII501:
+        - 2.4
+        - 3.2
+        - 3.3
+        - 3.4
+        - 3.5
+        - 3.5
+        - 3.6
+
+      ICTAII502:
+        - 2.4
+        - 3.1
+        - 3.3
+        - 3.4
+        - 3.5
+        - 5.1
+        - 5.2
+        - 5.4
+        - 5.5
+    
+  - # 7
+    skills:
+      ICTAII502:
+        - 1
+        - 2
+      ICTAII501:
+        - 2
+    criteria:
+      ICTAII501:
+        - 4.2
+      ICTAII502:
+        - 5.3
+        - 5.6
+    
+  - # 8
+    skills:
+      ICTAII501:
+        - 2
+    criteria:
+      ICTAII501:
+        - 4.1
+        - 4.3
+    
+  - # 9
+
+    
 
 ---
 
