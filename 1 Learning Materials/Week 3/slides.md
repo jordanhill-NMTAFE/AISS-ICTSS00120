@@ -228,7 +228,7 @@ $$\sum_{i=0}^{n}\min_{\mu_j \in C}(||x_i - \mu_j||^2)$$
 
 ---
 
-## In-Class Activity: Applying Sci-Kit Learn
+## In-Class Activity/Workshop: Applying Sci-Kit Learn
 
 ### **Activity Overview**
 - **Objective:** Apply various machine learning techniques using the sci-kit learn package to a sample dataset.
@@ -246,16 +246,20 @@ $$\sum_{i=0}^{n}\min_{\mu_j \in C}(||x_i - \mu_j||^2)$$
 ## Questions & Answers
 
 **Q&A**
-- Open floor for questions.
-- Encourage students to discuss their understanding and clarify doubts.
+- Questions from today's session??
+
+Contact: jordan.hill@nmtafe.wa.edu.au
 
 ![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
 
 ---
 
 ## Next Week
+### **Data Bias and Ethics in AI**
 
-**Next Week:**
-- Data Bias and Ethics in AI
+
+**Next Week's topics:** <br> -	Recognising biased vs. unbiased datasets <br> - Implementation Risks <br> - Ethics in AI, including Australia’s AI Ethics Framework
+
+*Before* class next week read: [Australia’s AI Ethics Principles](https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework/australias-ai-ethics-principles)
 
 ![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
