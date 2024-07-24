@@ -92,5 +92,3 @@ By the end of this lab, students will:
   - Initial findings from the EDA.
   - Identified biases and how they were addressed.
   - Data preprocessing steps taken.
-
-![bg right:40%](images/kaggle_activity.png)

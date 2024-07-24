@@ -362,7 +362,7 @@ As data scientists, we have a moral obligation to ensure we develop systems ethi
 - Evaluate its suitability for machine learning.
 - Visualize the dataset and perform initial exploratory data analysis.
 
-[Lab Sheet]()
+[Lab Sheet](https://github.com/jordanhill-NMTAFE/AISS-ICTSS00120/blob/main/1%20Learning%20Materials/Week%202/lab.md)
 
 1. Log in to Kaggle.
 2. Find a dataset.

@@ -232,7 +232,7 @@ $$\sum_{i=0}^{n}\min_{\mu_j \in C}(||x_i - \mu_j||^2)$$
 
 ### **Activity Overview**
 - **Objective:** Apply various machine learning techniques using the sci-kit learn package to a sample dataset.
-- **Lab Sheet:** [Markdown Lab Sheet](lab.md)
+- **Lab Sheet:** [Markdown Lab Sheet](https://github.com/jordanhill-NMTAFE/AISS-ICTSS00120/blob/main/1%20Learning%20Materials/Week%203/lab.md)
 
 ### **Discussion:**
    - Discuss the results with peers.
