@@ -35,8 +35,6 @@ Students to prepare presentations.
 **"The Algorithms for Love" by Ken Liu** (2004)
    - This story gives a deep look into AI and love, making it a valuable addition for discussions on AI emotions and ethics.
 
-Also check out the movie, Her (2013).
-
 <!-- Session 8 Activities Go Here -->
 ---
 **"Computer Friendly" by Eileen Gunn** (1989)
