@@ -136,6 +136,10 @@ $$\sum_{i=0}^{n}\min_{\mu_j \in C}(||x_i - \mu_j||^2)$$
 ![bg right:40% fit](https://scikit-learn.org/stable/_images/sphx_glr_plot_dbscan_002.png)
 
 ---
+<!-- _class: lead -->
+
+# Other machine learning paradigms
+---
 
 ## Reinforcement Learning (RL)
 ![bg right:40% fit](https://pytorch.org/tutorials/_images/cartpole.gif)
@@ -149,7 +153,125 @@ $$\sum_{i=0}^{n}\min_{\mu_j \in C}(||x_i - \mu_j||^2)$$
 
 ---
 
-## Deep Learning Architectures
+#### Reinforcement learning is often thought of as a separate pillar of machine learning. Not quite supervised learning, not quite unsupervised.
+
+#### It has a huge problem of alignment, however.
+
+#### There is always some kind of proxy between the system/reward and the environment.
+
+#### Rewards are often set arbitrarily and can be hard to do so without unforeseen consequences.
+
+---
+
+## Semi-supervised learning
+#### Overview
+
+Semi-supervised learning is a machine learning technique that leverages both labeled and unlabeled data to build better models. 
+
+- Falls between supervised learning, which uses only labeled data, and unsupervised learning, which uses only unlabeled data. 
+
+- The driving idea behind semi-supervised learning is that the unlabeled data can provide useful information about the structure of the data distribution, thereby enhancing the learning process.
+
+---
+
+#### Approaches in Semi-Supervised Learning
+
+1. **Self-training**:
+  - Initially train a model using the labeled data.
+  - Use this model to predict labels for the unlabeled data.
+  - Add the most confident predictions to the labeled dataset.
+  - Retrain the model using this augmented labeled dataset and repeat as needed.
+
+2. **Co-training**:
+  - Train two models on different views (subsets of features) of the data.
+  - Each model uses the other's predictions on the unlabeled data to add confident examples to the labeled dataset.
+
+---
+
+3. **Graph-based Methods**:
+  - Treat the dataset as a graph, where nodes represent data points and edges represent similarities between them.
+  - Use techniques like label propagation to spread the label information from labeled to unlabeled points based on the graph structure.
+
+4. **Generative Models**:
+  - Learn the distribution of the data and generate new data points. Use methods such as [Variational Autoencoders](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) (VAEs) or [Generative Adversarial Networks](https://developers.google.com/machine-learning/gan/gan_structure) (GANs) to enhance the learning process.
+
+5. **Consistency Regularization**:
+  - Encourage the model to produce consistent predictions for unlabeled data points, even when they are perturbed in some way (e.g., adding noise).
+
+---
+
+### Practical Implementation Example Using Python and Scikit-learn
+
+#### Let's look at a simple example of semi-supervised learning using the **LabelSpreading** algorithm from Scikit-learn
+
+#### First import our dependencies:
+
+```python
+import numpy as np
+from sklearn import datasets
+from sklearn.semi_supervised import LabelSpreading
+import matplotlib.pyplot as plt
+
+```
+
+---
+####  Next, we'll generate a synthetic dataset to work with 
+```python
+# Create a synthetic dataset
+X, y = datasets.make_moons(n_samples=300, noise=0.1)
+```
+![bg right fit](images/initial.png)
+
+---
+#### Let's unlabel most of the data to simulate a large amount of unlabeled data with some small set of labels
+
+```python 
+y[50:] = -1  # Unlabel majority of the data
+```
+
+![bg right fit](images/de-labeled.png)
+
+---
+
+#### Lets train our model
+```python
+
+# Create and fit the model
+label_spread = LabelSpreading(kernel='knn', alpha=0.8)
+label_spread.fit(X, y)
+
+# Predict labels for the entire dataset
+y_pred = label_spread.transduction_
+```
+[User guide in Sci-kit](https://scikit-learn.org/stable/modules/semi_supervised.html#label-propagation)
+
+![](images/alpha.png)
+
+
+---
+
+#### Results??
+
+```python
+# Plot the results
+plt.figure(figsize=(8, 5))
+cm = plt.cm.RdBu
+plt.scatter(X[:, 0], X[:, 1], c=y_pred, cmap=cm, edgecolors='k')
+plt.title("Semi-Supervised Learning with Label Spreading")
+plt.show()
+```
+![bg right fit](images/result.png)
+
+#### Yay! we re-labeled our data
+
+#### Now we can train our model using the whole dataset rather than the 10% that was labeled initially
+
+---
+
+<!-- _class: lead -->
+# Deep Learning Architectures
+
+---
 
 ### Feed Forward Neural Networks (FNN/MLP)
 - **Definition:** Simplest type of artificial neural network with information flowing only forward.
@@ -258,8 +380,24 @@ Contact: jordan.hill@nmtafe.wa.edu.au
 ### **Data Bias and Ethics in AI**
 
 
-**Next Week's topics:** <br> -	Recognising biased vs. unbiased datasets <br> - Implementation Risks <br> - Ethics in AI, including Australia’s AI Ethics Framework
+**Next Week's topics:**  <br> - Implementation Risks <br> - Ethics in AI, including Australia’s AI Ethics Framework <br> - Alignment
 
-*Before* class next week read: [Australia’s AI Ethics Principles](https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework/australias-ai-ethics-principles)
+![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
+
+---
+
+## Home Work!
+
+*Before* class next week read: 
+[Australia’s AI Ethics Principles](https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework/australias-ai-ethics-principles)
+"I Have No Mouth, and I Must Scream" by Harlan Ellison 
+"Robbie" by Isaac Asimov
+
+**We will be discussing these texts next week in-class** 
+
+Choose one of the readings from the last 3 weeks:
+**Come to class with a question for the class about one of the assigned readings. <br> You will be asked to provide your question to the class tomorrow for discussion.**
+
+*Think:* How well does the AI Ethics Principles address issues raised in our readings?
 
 ![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
