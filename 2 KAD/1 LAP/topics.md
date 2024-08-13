@@ -2,10 +2,10 @@
 # Each Markdown Header corresponds to a session topic
 
 session_hours: 4.5
-out_of_class_hours: 2.5
-total_session_hours: 81
-total_out_of_class_hours: 45
-total_training: 126
+out_of_class_hours: 3
+total_session_hours: 90
+total_out_of_class_hours: 60
+total_training: 160
 
 ---
 

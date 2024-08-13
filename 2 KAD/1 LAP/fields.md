@@ -34,30 +34,39 @@ college_to_supply: |
   - Online databases and resources
   - Course materials and online textbooks
   - Choice of Kaggle or Colab or another Jupiter notebook/IPython environment.
-  - Access to GPU accellerated compute environment.
+  - Access to GPU accelerated compute environment.
 
 
 lecturers: 
   - name: Jordan Hill
     phone: --
-    email: jordan.hill@nmtafe.edu.au
+    email: jordan.hill@nmtafe.wa.edu.au
     contact_time: in-class or by appointment
     campus/room: Perth 306
 
 
 assessments:
   - title: AT1 Identify Opportunities for AI Task Automation
-    description: Demonstrate ability to research, verify, and pitch AI solutions
+    description: | 
+      Demonstrate ability to research, verify, and pitch AI solutions
+      In-class Research activity and presentation.
     due_date: Week 7
   - title: AT2 Knowledge-Based Assessment (Weeks 1–6)
-    description: Demonstrate an initial knowledge of AI, ML and DL concepts.
+    description: | 
+      Demonstrate an initial knowledge of AI, ML and DL concepts. 
+      Open book out of class knowledge assessment.
     due_date: Week 10
   - title: AT3 Knowledge Based Assessment (Weeks 8-13)
-    description: Demonstrate specific technical knowledge of deep learning processes and concepts.
+    description: | 
+      Demonstrate specific technical knowledge of deep learning processes and concepts.
+      Open book out of class knowledge assessment.
+
     due_date: Week 15
   - title: AT4 Apply Machine Learning to Task Automation
     due_date: Week 18
-    description: Final project using machine learning to automate work tasks.
+    description: | 
+      Final project using machine learning to automate work tasks.
+      In-class project work.
 
 
 # TODO:

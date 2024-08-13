@@ -6,7 +6,7 @@
 
 ### Steps:
 1. **Set Up Environment:**
-   - Open a Jupyter Notebook.
+   - Open a Jupyter Notebook (Kaggle or Colab).
    - Import necessary libraries: `pandas`, `numpy`, `matplotlib`, and `sklearn`.
 
 2. **Load and Explore Dataset:**
