@@ -226,9 +226,9 @@ As data scientists, we have a moral obligation to ensure we develop systems ethi
 
 **Generating Balanced Data:**
 - **Techniques to Balance Data:**
-  - Oversampling minority class.
-  - Undersampling majority class.
-  - SMOTE (Synthetic Minority Over-sampling Technique).
+  - [Oversampling minority class.](https://imbalanced-learn.org/stable/over_sampling.html)
+  - [Undersampling majority class.](https://imbalanced-learn.org/stable/under_sampling.html)
+  - [SMOTE (Synthetic Minority Over-sampling Technique)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html#smote).
 
 
 ---
@@ -240,9 +240,9 @@ As data scientists, we have a moral obligation to ensure we develop systems ethi
 
 2. **Data Resampling Techniques:**
    - **Oversampling:** Increase the number of minority class samples.
-     - Example: SMOTE (Synthetic Minority Over-sampling Technique).
+     - Example: [SMOTE (Synthetic Minority Over-sampling Technique)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html#smote).
    - **Undersampling:** Reduce the number of majority class samples.
-     - Example: Random undersampling.
+     - Example: [Random undersampling.](https://imbalanced-learn.org/stable/references/generated/imblearn.under_sampling.RandomUnderSampler.html)
 
 ---
 
