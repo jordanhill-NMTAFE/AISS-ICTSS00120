@@ -5,7 +5,7 @@ session_hours: 4.5
 out_of_class_hours: 3
 total_session_hours: 90
 total_out_of_class_hours: 60
-total_training: 160
+total_training: 150
 
 ---
 
@@ -92,8 +92,9 @@ total_training: 160
 
 *Perform a 5 to 10-minute pitch on a particular opportunity for Automation in AI.*
 
-##### Week 8: Hyper Parameter Tuning
+##### Week 8: Optimization & Evaluation
 
+- Hyper Parameters, What are they?
 - Model Output Evaluation Methods
 - Documenting ML model Evaluations
 - Evaluation metrics:
@@ -101,7 +102,7 @@ total_training: 160
   - accuracy
   - precision/recall
   - loss metrics
-  - confusion
+  - confusion matrix
 
 
 *Lab: Let’s apply grid search to optimize an email spam filter.*
@@ -126,7 +127,6 @@ total_training: 160
 - Feature Engineering and Data Preprocessing Techniques
 - Activation functions:
 
-*Let’s build: A card classifier using pytorch.*
 
 *Term Break*
 
@@ -137,6 +137,7 @@ total_training: 160
   - Software development methodologies relevant to AI/ML
   - Applying organizational policies and procedures, and legislation to work tasks
 
+*Let’s build: A card classifier using pytorch.*
 
 ##### Week 12: Transformers and Embeddings
 -	Attention is all you need!
