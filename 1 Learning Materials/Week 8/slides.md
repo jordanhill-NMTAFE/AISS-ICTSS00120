@@ -5,10 +5,10 @@ theme: nmt-theme
 ---
 
 <!-- _class: lead -->
-# ICTSS00120 <br> Artificial Intelligence Skill Set
+# ICTSS00120 - <br> Artificial Intelligence Skill Set
 ![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
 
-## Week 8: Hyperparameter Tuning
+## Week 8: Homework Resources Introduction & Key Concepts
 
 Lecturer: Jordan Hill
 
@@ -22,214 +22,158 @@ p {
 
 ## Learning Objectives
 
-- Understand what hyperparameters are and their role in machine learning models.
-- Learn about different methods for hyperparameter tuning.
-- Implement hyperparameter tuning using scikit-learn.
-- Evaluate the performance of machine learning models using various metrics (e.g., f-score, accuracy, precision/recall, loss metrics, confusion matrix).
+- Introduction to key resources for understanding machine learning concepts.
+- Detailed explanation of Backpropagation of Error.
+- Understanding Gradient Descent.
+- Introduction to Gradient Boosting.
+- Utilize specific video resources to reinforce learning.
 
 ---
 
-## What are Hyperparameters?
+## Resources Introduction
 
-- **Definition**: Hyperparameters are external configurations to the model that must be set before the learning process begins.
-- **Examples**: 
-  - Learning rate in gradient descent
-  - Number of layers and nodes in a neural network
-  - Regularization parameters (e.g., L1, L2)
-  - Max depth of a decision tree
+Useful resources for this week:
+1. **Videos on Gradient Descent and Backpropagation**:
+   - [Gradient Descent, Step-by-Step](https://www.youtube.com/watch?v=sDv4f4s2SB8)
+   - [Gradient Descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w)
+   - [Backpropagation](https://www.youtube.com/watch?v=IN2XmBhILt4&t=0s)
+   - [But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
+   - [What is backpropagation really doing?](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
+---
+## Gradient Descent Introduction
 
-![bg right:40% fit](https://upload.wikimedia.org/wikipedia/commons/b/b6/Hyperparameter_Optimization_using_Grid_Search.svg)
+**Definition**:
+- Gradient Descent is an optimization algorithm used to minimize the cost function in a machine learning model.
+
+**Purpose**:
+- To find the parameters (coefficients) of a model that minimize the cost function.
+
+**Steps**:
+1. Start with initial parameter values.
+2. Compute the gradient (partial derivatives) of the cost function.
+3. Update the parameters in the opposite direction of the gradient.
+4. Repeat until convergence.
 
 ---
 
-## Why Hyperparameter Tuning?
+## Video Resource: Gradient Descent, Step-by-Step
 
-- **Optimize Model Performance**:
-  - Carefully chosen hyperparameters can significantly improve model accuracy and efficiency.
-- **Avoid Overfitting/Underfitting**:
-  - Regularization parameters can help to generalize the model better.
-- **Balancing Performance Metrics**:
-  - Tuning parameters like the class weight can balance precision and recall.
+**Video**:
+[Gradient Descent, Step-by-Step](https://www.youtube.com/watch?v=sDv4f4s2SB8)
 
-![bg left:40%](images/optimization_curve.jpg)
-
----
-
-## Common Methods for Hyperparameter Tuning
-
-### Grid Search
-- **Definition**: Exhaustive search over specified parameter values for an estimator.
-- **GridSearchCV** in scikit-learn performs hyperparameter tuning using cross-validation.
-
-### Random Search
-- **Definition**: Randomly sampling parameter values from a specified distribution.
-- Often quicker than grid search for large hyperparameter spaces.
-
-### Bayesian Optimization
-- **Definition**: Using a probabilistic model to find the most promising hyperparameters.
-- Iteratively updates to balance exploration and exploitation.
-
-![bg right:40%](images/grid_vs_random.jpg)
+**Key Takeaways**:
+- Explains gradient descent with a practical example.
+- Walks through the algorithm step-by-step.
+- Demonstrates how gradients are computed and used for parameter updates.
 
 ---
 
-## Implementing Grid Search with Scikit-Learn
+## Video Resource: Gradient Descent, how neural networks learn
 
-```python
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
+**Video**:
+[Gradient Descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 
-# Define the model
-model = RandomForestClassifier()
-
-# Define the parameter grid
-param_grid = {
-    'n_estimators': [50, 100, 200],
-    'max_depth': [None, 10, 20, 30],
-    'min_samples_split': [2, 5, 10]
-}
-
-# Initialize GridSearchCV
-grid_search = GridSearchCV(estimator=model, param_grid=param_grid, 
-                           cv=5, scoring='accuracy')
-
-# Fit the model
-grid_search.fit(X_train, y_train)
-
-# Best parameters
-print("Best Hyperparameters:", grid_search.best_params_)
-```
+**Key Points**:
+- Detailed explanation of gradient descent in the context of neural networks.
+- Illustrates the learning process and parameter updates over iterations.
+- Highlights the role of gradients in adjusting weights and biases.
 
 ---
 
-## Implementing Random Search with Scikit-Learn
+## Backpropagation of Error
 
-```python
-from sklearn.model_selection import RandomizedSearchCV
-from scipy.stats import randint
+**Definition**:
+- Backpropagation is an algorithm used for training neural networks, enabling them to learn from errors.
 
-# Define the model
-model = RandomForestClassifier()
+**Purpose**:
+- To minimize the loss function by adjusting weights through gradient descent.
 
-# Define the parameter distribution
-param_dist = {
-    'n_estimators': randint(50, 200),
-    'max_depth': [None, 10, 20, 30],
-    'min_samples_split': randint(2, 11)
-}
-```
----
-```python
-# Initialize RandomizedSearchCV
-random_search = RandomizedSearchCV(estimator=model, param_distributions=param_dist,
-                                   n_iter=100, cv=5, scoring='accuracy', random_state=42)
+**Process**:
+1. Forward Pass: Compute outputs and loss.
+2. Backward Pass: Compute gradients of the loss with respect to weights using the chain rule.
+3. Update weights using gradients.
 
-# Fit the model
-random_search.fit(X_train, y_train)
-
-# Best parameters
-print("Best Hyperparameters:", random_search.best_params_)
-```
+![bg right:40% 90%](https://media.geeksforgeeks.org/wp-content/uploads/20240217152156/Frame-13.png)
 
 ---
 
-## Evaluating Model Performance
+## Video Resource: Backpropagation
 
-### Common Metrics
-- **Accuracy**: Proportion of true results among the total number of cases.
-- **Precision**: Proportion of true positive results in terms of positive results returned by the classifier.
-- **Recall**: Proportion of true positive results in terms of all samples that should have been identified as positive.
-- **F1 Score**: Harmonic mean of precision and recall.
-- **Confusion Matrix**: A table used to describe the performance of a classification model.
+**Video**:
+[Backpropagation](https://www.youtube.com/watch?v=IN2XmBhILt4&t=0s)
 
-![bg right:40%](images/evaluation_metrics.jpg)
-
----
-
-## Calculating Evaluation Metrics with Scikit-Learn
-
-```python
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
-
-# Predictions
-y_pred = grid_search.predict(X_test)
-
-# Calculating metrics
-accuracy = accuracy_score(y_test, y_pred)
-precision = precision_score(y_test, y_pred)
-recall = recall_score(y_test, y_pred)
-f1 = f1_score(y_test, y_pred)
-conf_matrix = confusion_matrix(y_test, y_pred)
-
-# Printing results
-print(f"Accuracy: {accuracy}")
-print(f"Precision: {precision}")
-print(f"Recall: {recall}")
-print(f"F1 Score: {f1}")
-print(f"Confusion Matrix:\n{conf_matrix}")
-```
+**Key Takeaways**:
+- Explanation of backpropagation algorithm.
+- Shows how errors are propagated backward through the network.
+- Practical examples to illustrate gradient calculation and weight updates.
 
 ---
 
-## Visualizing the Confusion Matrix
+## Video Resource: But what is a neural network?
 
-```python
-import matplotlib.pyplot as plt
-import seaborn as sns
+**Video**:
+[But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
 
-# Plotting the confusion matrix
-sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues')
-plt.xlabel('Predicted Label')
-plt.ylabel('True Label')
-plt.title('Confusion Matrix')
-plt.show()
-```
-
-![bg right:40%](images/confusion_matrix.png)
+**Highlights**:
+- Provides a conceptual overview of neural networks.
+- Explains how neurons and layers work together to process inputs.
+- Sets the stage for understanding backpropagation and gradient descent in deeper networks.
 
 ---
 
-## Practical Exercise: Grid Search for Spam Detection
+## Video Resource: What is backpropagation really doing?
 
-### Steps:
-1. **Data Preprocessing**:
-   - Load and preprocess the spam dataset.
-2. **Model Selection**:
-   - Choose a classification model (e.g., SVM, RandomForest).
-3. **Hyperparameter Tuning**:
-   - Use GridSearchCV for hyperparameter tuning.
-4. **Model Evaluation**:
-   - Evaluate the performance using the discussed metrics.
+**Video**:
+[What is backpropagation really doing?](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 
-Refer to the lab sheet for detailed steps and code snippets.
+**Key Points**:
+- Delves into the mathematical foundation of backpropagation.
+- Clarifies common misunderstandings about the algorithm.
+- Provides a deeper insight into how gradients are calculated and used.
 
 ---
 
-## Summary and Next Steps
+## Gradient Boosting
 
-### Key Points
-- Definition and importance of hyperparameters.
-- Common methods for hyperparameter tuning: Grid Search, Random Search.
-- Implementing hyperparameter tuning using scikit-learn.
-- Evaluating model performance using various metrics.
+**Definition**:
+- Gradient Boosting is an ensemble learning technique that builds a series of models, each correcting errors of the previous ones.
 
-### Homework
-1. Complete the practical exercise on hyperparameter tuning.
-2. Review the paper "Study on the effect of preprocessing methods for spam email detection" by Ruskanda, F.Z., 2019.
+**Purpose**:
+- To improve predictive accuracy by combining weak learners (usually decision trees).
 
-### Next Week: Deep Learning Foundations
+**Steps**:
+1. Fit a model to the data.
+2. Compute the residual errors.
+3. Fit a new model to the residuals.
+4. Repeat the process to combine all models.
 
-![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
+![bg right:30% fit](https://miro.medium.com/v2/resize:fit:1400/1*OZPOQUKiaVmZOEMm_-8iYA.png)
 
 ---
 
-## Questions & Answers
-**Q&A:**
-- Any questions from today's session??
+## Summary and Q&A
+
+**Summary**:
+- Introduced key resources and videos for understanding Gradient Descent and Backpropagation.
+- Explained the concepts and algorithms of Gradient Descent and Backpropagation.
+- Introduced Gradient Boosting as a powerful ensemble technique.
+
+**Q&A**:
+- Any questions about today's topics?
+- How would you apply these concepts to real-world problems?
 
 Contact: jordan.hill@nmtafe.wa.edu.au
 
 ![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
-```
 
 ---
+
+## Homework
+
+**Next Week**: Continue exploring deep learning foundations and advanced optimization techniques.
+
+1. Watch the linked videos thoroughly.
+2. Read on the concept of Convolutional Neural Networks (CNNs) for the next session.
+3. Prepare questions based on the videos and reading materials.
+
+![bg blur:1px contrast:90%](../../../common_resources/images/ai-gaze.jpg)
