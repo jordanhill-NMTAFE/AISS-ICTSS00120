@@ -1,11 +1,38 @@
-Lab Sheet: Deep Learning Foundations - Training and Evaluating Neural Networks
+# Lab Sheet: Deep Learning Foundations - Building a simple MNIST Neural Network
 
-### Objective:
+_Disclaimer: This labsheet contains generated content which has been lecturer-reviewed. It may contain errors or misguiding code—part of the exercise will be to identify and correct for these issues_
+
+
+
+```
+This lab contains example code in Tensorflow and Pytorch for comparison purposes only
+
+Students are recommended to use Pytorch as it requires users to understand more about what is happening 'underneath the hood' so to speak.
+```
+
+---
+
+Today we will be working on solving the MNIST Challenge using a simple Feed Forward Network in Pytorch.
+
+### Resources:
+
+**Kaggle Competition**: https://www.kaggle.com/competitions/digit-recognizer
+
+**Worked Examples**:
+
+https://www.kaggle.com/code/abdulbasitniazi/pytorch-feedforwad-network-explained-for-beginners
+
+https://www.kaggle.com/code/geekysaint/solving-mnist-using-pytorch
+
+https://www.kaggle.com/code/abhinand05/mnist-introduction-to-computervision-with-pytorch
+
+
+### Learning Objectives:
 By the end of this lab, students will:
 - Understand the basic concepts of neural networks.
 - Implement and train a simple neural network using a deep learning framework (e.g., TensorFlow/Keras or PyTorch).
 - Evaluate the performance of the trained neural network.
-- Visualize the training process and results.
+- Investigate the training process and evaluate results.
 
 ### Prerequisites:
 - Basic understanding of Python programming.

@@ -35,11 +35,6 @@ Students to prepare presentations.
 **"The Algorithms for Love" by Ken Liu** (2004)
    - This story gives a deep look into AI and love, making it a valuable addition for discussions on AI emotions and ethics.
 
-Look at the 3Blue1Brown course: 
-
-[Youtube Course](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-[Interactive course](https://www.3blue1brown.com/topics/neural-networks)
-
 <!-- Session 8 Activities Go Here -->
 ---
 **"Computer Friendly" by Eileen Gunn** (1989)

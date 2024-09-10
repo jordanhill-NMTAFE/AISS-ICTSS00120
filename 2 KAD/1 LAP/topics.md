@@ -35,6 +35,7 @@ total_training: 150
   -	Randomising, deduplication
   -	Data cleaning
   - Creating training, validation, and test subsets, why?
+  -	Training, Test, and Validation Loops (Preview Topic)
 
 
 *In-class Activity*: Find and load a dataset into Kaggle. Evaluate its usefulness for Machine Learning. Visualise the dataset and perform initial exploratory data analysis.
@@ -104,6 +105,10 @@ total_training: 150
   - loss metrics
   - confusion matrix
 
+Preview for next session (Main Concepts):
+  -	Backpropagation of the Loss
+  -	Stochastic Gradient Descent
+
 
 *Lab: Let’s apply grid search to optimize an email spam filter.*
 
@@ -111,22 +116,28 @@ total_training: 150
 -	Introduction to Neural Networks
 -	What are ‘hidden layers’?
 -	How can we teach machines to think good?
-  -	Training, Test, and Validation Loops
+  -	Training, Test, and Validation Loops for Deep Learning
   -	Stochastic Gradient Descent
   -	Backpropagation of the Loss
 -	Machine Vision
-  -	Multilayer Perceptron (MLP) 
-  -	Convolutional Neural Networks (CNN)
+- Neural network architecture
+  -	Multilayer Perceptron (MLP) / Feed-Forward Networks / Fully-connected Networks
+  -	Convolutional Neural Networks (CNN) — What does it do, why might it be better for images?
+  - Recurrent Neural Networks — (Stateful networks) Why should we keep track of state?
 
 
-*Lab: Continue spam filter? or Work with Sci-kit learn more*
+*Lab: Training a FFN on MNIST in Pytorch*
 
+**Let's look at the KBA (Assessment 2 KBA)**
 
 ##### Week 10: What is a Tensor? And why is it important?
 - Computing Tensors, GPU vs CPU
-- Feature Engineering and Data Preprocessing Techniques
+- Feature Engineering and Data Preprocessing Techniques for Deep Learning
 - Activation functions:
+  - ReLU (Hidden Layer activations)
+  - SoftMax (Output Layer activations)
 
+*Let's look at CNN and Machine vision more closely*
 
 *Term Break*
 
