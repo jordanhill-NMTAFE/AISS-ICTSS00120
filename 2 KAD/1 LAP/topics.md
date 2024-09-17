@@ -130,7 +130,8 @@ Preview for next session (Main Concepts):
 
 **Let's look at the KBA (Assessment 2 KBA)**
 
-##### Week 10: What is a Tensor? And why is it important?
+##### Week 10: Fundamentals in Deep Learning & Introduction to Machine Vision
+- Linear algebra for ML — scalars, vectors, and tensors
 - Computing Tensors, GPU vs CPU
 - Feature Engineering and Data Preprocessing Techniques for Deep Learning
 - Activation functions:

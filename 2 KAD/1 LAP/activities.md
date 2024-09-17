@@ -44,11 +44,40 @@ Look at the 3Blue1Brown course:
 ---
 **"Computer Friendly" by Eileen Gunn** (1989)
    - This short story is a speculative look at AI in education, exploring the impact of computer-managed teaching on students and society.
+
+Go back through the 3Blue1Brown Video/Excercise:
+
+[Neural Networks](https://www.3blue1brown.com/lessons/neural-networks)
+
+Ask yourself: how many weights and biases are there in a 6x6 network? (6 layers of 6 neurons deep)
+
 <!-- Session 9 Activities Go Here -->
 ---
 **"The Girl-Thing Who Went Out for Sushi" by Pat Cadigan** (2013)
 <!-- Session 10 Activities Go Here -->
    - Set in an environment of body modification and post-humanity, this story looks at AI and transhumanism through the fascinating lens of transformed humans working in space.
+
+Math—Optional but Highly useful!
+
+We are at the point in the course where you have a decision to make.
+Do I want to understand the math or do I want to focus on applying AI.
+
+[Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra)
+
+[Calculus](https://www.3blue1brown.com/topics/calculus)
+
+If you want a deeper understanding of how neural networks work, it will be important to brush up your math skills in each of these domains (in order, linear algebra and then Calculus). These videos present the concepts visually and give you some questions to check your understanding.
+
+If you're strapped for time the most important topics to review are:
+
+[Vectors](https://www.3blue1brown.com/lessons/vectors)
+
+[Chain rule & Dot Products](https://www.3blue1brown.com/lessons/chain-rule-and-product-rule)
+
+[Abstract Vector Spaces](https://www.3blue1brown.com/lessons/abstract-vector-spaces)
+
+**AT2 KBA — Work on it over the break!**
+
 ---
 **"Eliot Wrote" by Nancy Kress** (2008)
    - This story focuses on an AI developed to replicate the literary style of T.S. Eliot, examining the possibilities and limits of AI in creative endeavors.

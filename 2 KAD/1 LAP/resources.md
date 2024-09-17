@@ -74,16 +74,11 @@ Lab:
 ---
 <!-- Session 10 Resources Go Here -->
 
+[Vectors](https://www.youtube.com/watch?v=fNk_zzaMoSs)
+
 Tensors:
+
 [Vectors and Tensors](https://youtu.be/f5liqUk0ZTw?si=Kbu-3dZr6AUp-5W0)
-[StatsQuest Tensors](https://www.youtube.com/watch?v=L35fFDpwIM4)
-
-StatsQuest order of watching for pytorch lab:
-
-[StatsQuest Essential Matrix Algebra for Neural Networks, Clearly Explained!!!](https://www.youtube.com/watch?v=ZTt9gsGcdDo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=94)
-[The Essential Main Ideas of Neural Networks](https://www.youtube.com/watch?v=CqOfi41LfDw&t=0s)
-[The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ&list=PLblh5JKOoLUIxGDQs4LFFD--41Vzf-ME1&index=3)
-[Neural Networks Pt. 3: ReLU In Action!!!](https://www.youtube.com/watch?v=68BZ5f7P94E)
 
 Acceleration:
 
