@@ -1,12 +1,12 @@
 ---
-footer: "![height:50px](../../common_resources/images/footer.png)"
+footer: "![height:50px](images/footer.png)"
 marp: true
 theme: nmt-theme
 ---
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## Week 5: Identify an Opportunity for Task Automation
 
@@ -153,7 +153,7 @@ p {
 - Evaluating Machine Learning Opportunities
 - Completing Tasks 2, 3, and 4 of Assessment 1 in class
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ---
 ## Questions & Answers
@@ -162,4 +162,4 @@ p {
 
 Contact: jordan.hill@nmtafe.wa.edu.au
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)

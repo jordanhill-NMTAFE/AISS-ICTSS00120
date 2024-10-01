@@ -1,12 +1,12 @@
 ---
-footer: "![height:50px](../../common_resources/images/footer.png)"
+footer: "![height:50px](images/footer.png)"
 marp: true
 theme: nmt-theme
 ---
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## Week 8: Homework Resources Introduction & Key Concepts
 
@@ -164,7 +164,7 @@ Useful resources for this week:
 
 Contact: jordan.hill@nmtafe.wa.edu.au
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ---
 
@@ -176,4 +176,4 @@ Contact: jordan.hill@nmtafe.wa.edu.au
 2. Read on the concept of Convolutional Neural Networks (CNNs) for the next session.
 3. Prepare questions based on the videos and reading materials.
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)

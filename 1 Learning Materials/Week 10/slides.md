@@ -1,5 +1,5 @@
 ---
-footer: "![height:50px](../../common_resources/images/footer.png)"
+footer: "![height:50px](images/footer.png)"
 marp: true
 theme: nmt-theme
 # math: mathjax
@@ -8,7 +8,7 @@ math: mathjax
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## Week 10: Fundamentals in Deep Learning & Introduction to Machine Vision
 
@@ -162,8 +162,8 @@ p {
 ---
 <div style="display:flex; justify-content: space-between;">
 <!-- <h3> Hello </h3> -->
-<video controls autoplay loop width="500"> <source src="soccer.mp4" type="video/mp4"> </video>
-<video controls autoplay loop width="500"> <source src="sam.mp4" type="video/mp4"> </video>
+<video controls autoplay loop width="500"> <source src="images/soccer.mp4" type="video/mp4"> </video>
+<video controls autoplay loop width="500"> <source src="images/sam.mp4" type="video/mp4"> </video>
 
 </div>
 
@@ -204,4 +204,4 @@ Contact: jordan.hill@nmtafe.wa.edu.au
 2. Read about RNNs and their applications.
 3. Watch related videos on deep learning and CNNs.
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)

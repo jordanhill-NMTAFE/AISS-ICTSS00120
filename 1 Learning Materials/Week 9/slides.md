@@ -1,21 +1,22 @@
 ---
-footer: "![height:50px](../../../common_resources/images/footer.png)"
+footer: "![height:50px](images/footer.png)"
 marp: true
 theme: nmt-theme
 ---
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
-
 ## Week 9: Deep Learning Foundations - Introduction to Neural Networks
 
 Lecturer: Jordan Hill
 
 <style scoped>
-p {
-  text-align: right;
+  p {
+    text-align: right;
 }
 </style>
+
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ---
 

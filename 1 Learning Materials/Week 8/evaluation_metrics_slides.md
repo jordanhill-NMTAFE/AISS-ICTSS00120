@@ -1,5 +1,5 @@
 ---
-footer: "![height:50px](../../common_resources/images/footer.png)"
+footer: "![height:50px](images/footer.png)"
 marp: true
 theme: nmt-theme
 math: mathjax
@@ -7,7 +7,7 @@ math: mathjax
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## Evaluation Metrics
 
@@ -221,4 +221,4 @@ Using multiple metrics provides a more comprehensive evaluation of the model's p
 
 Contact: jordan.hill@nmtafe.wa.edu.au
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)

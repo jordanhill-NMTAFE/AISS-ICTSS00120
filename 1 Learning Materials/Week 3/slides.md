@@ -1,12 +1,12 @@
 ---
-footer: "![height:50px](../../common_resources/images/footer.png)"
+footer: "![height:50px](images/footer.png)"
 marp: true
 theme: nmt-theme
 ---
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## Week 3: Essentials of ML and DL Technologies
 
@@ -372,7 +372,7 @@ plt.show()
 
 Contact: jordan.hill@nmtafe.wa.edu.au
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ---
 
@@ -382,7 +382,7 @@ Contact: jordan.hill@nmtafe.wa.edu.au
 
 **Next Week's topics:**  <br> - Implementation Risks <br> - Ethics in AI, including Australia’s AI Ethics Framework <br> - Alignment
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ---
 
@@ -400,4 +400,4 @@ Choose one of the readings from the last 3 weeks:
 
 *Think:* How well does the AI Ethics Principles address issues raised in our readings?
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)

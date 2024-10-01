@@ -1,6 +1,6 @@
 ---
 
-footer: "![height:50px](../../common_resources/images/footer.png)"
+footer: "![height:50px](images/footer.png)"
 marp: true
 theme: nmt-theme
 
@@ -8,7 +8,7 @@ theme: nmt-theme
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## Week 2: Data for Machine Learning
 
@@ -47,7 +47,7 @@ p {
 
 ---
 
-<!-- ![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg) -->
+<!-- ![bg blur:1px contrast:90%](images/ai-gaze.jpg) -->
 
 ## Introduction to IPython and Kaggle
 
@@ -80,7 +80,7 @@ p {
 - **APIs:** Data from web services such as Twitter, OpenWeatherMap, etc.
 - **Internal Data:** Company databases, CRM systems, and internal APIs.
 
-![bg ](../../common_resources/images/blue_ripple.jpg)
+![bg ](images/blue_ripple.jpg)
 
 <!-- What kinds of data sources are available to you at your work? -->
 
@@ -323,7 +323,7 @@ As data scientists, we have a moral obligation to ensure we develop systems ethi
 
 
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## Data Preprocessing for ML
 
@@ -353,7 +353,7 @@ As data scientists, we have a moral obligation to ensure we develop systems ethi
 
 ---
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ## In-Class Activity
 
@@ -407,7 +407,7 @@ As data scientists, we have a moral obligation to ensure we develop systems ethi
 **Q&A**
 - Any Questions from today's session??
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
 ---
 
@@ -418,5 +418,5 @@ As data scientists, we have a moral obligation to ensure we develop systems ethi
 - Dive deeper into supervised and unsupervised learning techniques.
 - Intro to sci-kit learn
 
-![bg blur:1px contrast:90%](../../common_resources/images/ai-gaze.jpg)
+![bg blur:1px contrast:90%](images/ai-gaze.jpg)
 
