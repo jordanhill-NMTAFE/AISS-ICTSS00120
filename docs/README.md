@@ -15,6 +15,7 @@ Welcome to the AI Skillset course! We're thrilled to have you join us on this ex
 - [Week 8 Hyperparameter Tuning](week8_Hyperparameter_Tuning_slides.html)
 - [Week 8 Resources](week8_Resource%20slides.html)
 - [Week 9](week9.html)
+- [Week 11](week11.html)
 
 ## What You'll Learn
 
