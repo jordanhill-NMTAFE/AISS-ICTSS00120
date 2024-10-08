@@ -14,6 +14,7 @@ Guide students to work in pairs to establish clear business objectives for their
 - Who are the main stakeholders involved?
 
 **Notes:**
+
 <textarea rows="10" cols="80"></textarea>
 
 
@@ -26,6 +27,7 @@ Guide students to work in pairs to establish clear business objectives for their
 2. Discuss with your partner how these objectives align with the organization's goals.
 
 **Business Objectives:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 3: Assess the Current Situation
@@ -37,6 +39,7 @@ Guide students to work in pairs to establish clear business objectives for their
 - Are there any existing solutions or systems in place?
 
 **Current Situation Analysis:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 4: Establish Project Goals
@@ -48,6 +51,7 @@ Guide students to work in pairs to establish clear business objectives for their
 2. Identify KPIs (Key Performance Indicators) to measure success.
 
 **Project Goals and KPIs:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 5: Develop a Project Plan (Outline)
@@ -58,6 +62,7 @@ Guide students to work in pairs to establish clear business objectives for their
 - Draft a one-page project plan outline with timelines and responsibilities.
 
 **Project Plan Outline:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ## Example Deliverables:

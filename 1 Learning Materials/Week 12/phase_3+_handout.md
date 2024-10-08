@@ -9,6 +9,7 @@
 - Ensure data is aligned with project objectives from AT1.
 
 **Selected Data Notes:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 2: Clean Data
@@ -16,6 +17,7 @@
 - Ensure data quality fit for modeling.
 
 **Cleaning Actions Taken:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 3: Construct Data
@@ -23,6 +25,7 @@
 - Select important features that contribute to better model performance.
 
 **Feature Engineering:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 4: Integrate Data
@@ -30,6 +33,7 @@
 - Ensure data is ready for the modeling phase.
 
 **Integration Actions:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ---
@@ -40,6 +44,7 @@
 - Consider different algorithms and their suitability.
 
 **Modeling Techniques:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 2: Generate Test Design
@@ -47,6 +52,7 @@
 - Determine training and testing datasets.
 
 **Test Design Plan:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 3: Build Model
@@ -54,6 +60,7 @@
 - Experiment with parameter tuning to improve results.
 
 **Model Building Notes:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 4: Assess Model
@@ -61,6 +68,7 @@
 - Adapt models as required.
 
 **Model Assessment:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ---
@@ -71,6 +79,7 @@
 - Review model results and interpretations.
 
 **Evaluation Results:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 2: Review Process
@@ -78,6 +87,7 @@
 - Identify improvements and document learnings.
 
 **Process Review Notes:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 3: Determine Next Steps
@@ -85,6 +95,7 @@
 - Outline any further iterations required.
 
 **Next Steps Consideration:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ---
@@ -95,6 +106,7 @@
 - Consider user training and seamless integration.
 
 **Deployment Plan:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 2: Deploy Model
@@ -102,6 +114,7 @@
 - Monitor initial execution to ensure no issues.
 
 **Deployment Actions:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 3: Produce Final Report
@@ -109,6 +122,7 @@
 - Include insights, recommendations, and reflections.
 
 **Final Report Outline:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ---

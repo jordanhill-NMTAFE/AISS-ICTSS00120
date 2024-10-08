@@ -11,6 +11,7 @@ Guide students to thoroughly understand their data, ensuring it aligns with thei
 - Verify the data sources for accessibility and reliability.
 
 **Data Collection Notes:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 2: Describe the Data
@@ -22,6 +23,7 @@ Guide students to thoroughly understand their data, ensuring it aligns with thei
 - What are the data types (numerical, categorical, etc.)?
 
 **Data Description:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 3: Explore the Data
@@ -33,6 +35,7 @@ Guide students to thoroughly understand their data, ensuring it aligns with thei
 2. Note any initial insights or hypotheses.
 
 **EDA Plan and Insights:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ### Step 4: Verify Data Quality
@@ -44,6 +47,7 @@ Guide students to thoroughly understand their data, ensuring it aligns with thei
 - Are there outliers that could skew results?
 
 **Data Quality Assessment:**
+
 <textarea rows="10" cols="80"></textarea>
 
 ## Example Deliverables:
