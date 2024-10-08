@@ -35,7 +35,7 @@ p {
 
 ## Introduction to Sci-Kit Learn
 <!-- _class: img -->
-![width:400px](images/scikit-learn.png)
+[![width:400px](images/scikit-learn.png)](https://scikit-learn.org/stable/)
 
 - **What is Sci-Kit Learn?**
   - Open-source machine learning library for Python.
@@ -46,13 +46,10 @@ p {
 - **Why Sci-Kit Learn?**
   - Rich set of machine learning algorithms.
   - Excellent documentation and community support.
-  - Integrated with Python data stack.
 
-[Official Documentation](https://scikit-learn.org/stable/)
 
 ---
 
-<!-- _class: img -->
 
 ![bg 95%](https://www.labellerr.com/blog/content/images/size/w2000/2023/02/bannerSupervised-vs.-Unsupervised-Learning-1.webp)
 
@@ -197,8 +194,6 @@ Semi-supervised learning is a machine learning technique that leverages both lab
 4. **Generative Models**:
   - Learn the distribution of the data and generate new data points. Use methods such as [Variational Autoencoders](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) (VAEs) or [Generative Adversarial Networks](https://developers.google.com/machine-learning/gan/gan_structure) (GANs) to enhance the learning process.
 
-5. **Consistency Regularization**:
-  - Encourage the model to produce consistent predictions for unlabeled data points, even when they are perturbed in some way (e.g., adding noise).
 
 ---
 

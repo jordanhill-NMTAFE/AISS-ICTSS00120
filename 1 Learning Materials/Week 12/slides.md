@@ -117,7 +117,7 @@ p {
   - **Explore Data**
   - **Verify Data Quality**
 
-![bg right:40%](images/data-exploration.jpg)
+![bg right:40%](https://cdn.chimpify.net/5f896ecda8587281208b456f/2021/05/mmt-SoM-datenSindDasNeueWasser-1200x627-blog-1.png)
 
 ---
 
@@ -132,7 +132,7 @@ p {
   - Data visualization
   - Statistical analysis
 
-![bg left:40%](images/data-quality.jpg)
+![bg left:40%](https://www.gozonewifi.com/wp-content/uploads/data-collection-for-marketing.jpg)
 
 ---
 
@@ -185,20 +185,23 @@ p {
 - **Evaluation Metrics** (from Week 8)
   - Used in the **Evaluation** phase.
 
-![bg left:40%](images/integration.jpg)
+![bg left:40% fit](https://i1.sndcdn.com/artworks-I9z2c6gx6G5zu2Z6-JD6l1A-t500x500.jpg)
 
 ---
 
-## Interactive Demo: Applying CRISP-DM
+## Worked Example: Applying CRISP-DM
 
-- **Scenario**: Implementing a machine learning model for customer churn prediction.
+- **Scenario**: Let's apply CRISP-DM to detect breast cancer!
 - **Steps**:
   - Discuss business objectives.
   - Explore and prepare the dataset.
   - Choose and build a model.
   - Evaluate the model's performance.
 
-![bg right:40%](images/interactive-demo.jpg)
+
+[Kaggle Notebook ![bg right:30% 60%](https://img.freepik.com/premium-vector/vector-single-cartoon-spiral-notebook-isolated-white-background-vector-illustration_939711-1289.jpg?w=1480)](https://www.kaggle.com/code/jordanhillnmtafe/crisp-dm-worked-example-session-11-ai-skillset) 
+
+
 
 ---
 
@@ -208,14 +211,24 @@ p {
 - **How can you apply CRISP-DM to your projects?**
 - **What challenges might you face in each phase?**
 
-![bg left:40%](images/questions.jpg)
+![bg left:40%](https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/question-mark_ver_1.jpg)
 
 ---
 
-## Next Week: Final Project Preparation
+## Next Week's agenda: <br>Back to Transformers! Transformers and Final Project Preparation
 
-- **Apply CRISP-DM** to your project ideas.
-- **Prepare datasets** for modeling.
-- **Outline your project plan** using the CRISP-DM framework.
+**For next week:**
+I *highly* recommend you try to watch this walkthrough by Andrej Karpathy (ex-OpenAI/ex-Tesla)
 
-![bg right:40%](images/next-steps.jpg)
+**[Andrej Karpathy: Let's build GPT: from scratch, in code, spelled out.](https://youtu.be/kCc8FmEb1nY)**
+
+[Check out the Notebook on Colab](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing)
+[Github for video](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa250c2dtY1hiQzNuZ1NiMlJTVVFleEJ5Z3U5QXxBQ3Jtc0ttNlkzQ0JqZUxHMVZUQVNubW05elFUajF1VUgxUTNRMDVnc3dMTnlQckJOX1RYZG9ZVkNDckIyeUhCTnR5ZGU0NnllbFlxSVNEVWhWN2V5QTBUU1JtaENyT0J5Q3h2RURJeFF6dnBEeVhWMzR5Wm9wSQ&q=https%3A%2F%2Fgithub.com%2Fkarpathy%2Fng-video-lecture&v=kCc8FmEb1nY)
+
+<div style="display: flex; justify-content: end;">
+
+
+
+![width:13em](https://m.media-amazon.com/images/I/71miW4s+qJL.jpg)
+
+</div>
