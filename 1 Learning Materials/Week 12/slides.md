@@ -229,6 +229,6 @@ I *highly* recommend you try to watch this walkthrough by Andrej Karpathy (ex-Op
 
 
 
-![width:13em](https://m.media-amazon.com/images/I/71miW4s+qJL.jpg)
+![width:8em](https://m.media-amazon.com/images/I/71miW4s+qJL.jpg)
 
 </div>
