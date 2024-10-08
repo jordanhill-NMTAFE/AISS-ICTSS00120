@@ -5,17 +5,39 @@
 
 Welcome to the AI Skillset course! We're thrilled to have you join us on this exciting journey into the world of Artificial Intelligence. This course is designed to provide you with a comprehensive understanding of AI, from the fundamental principles to cutting-edge technologies. Whether you're a novice or have some experience in AI, this course will help you enhance your skills and prepare you for the evolving landscape of AI applications.
 
-## Slides
+## Learning Plan
+### Session 1
+- [Introduction to Artificial Intelligence, Machine Learning, and Deep Learning](week1.html)
+### Session 2
+- [Data for Machine Learning](week2.html)
+### Session 3
+- [Essentials of ML and DL Technologies](week3.html)
+### Session 4
+- Data Bias and Ethics in AI (Discussion / set readings):
+  - **"I Have No Mouth, and I Must Scream" by Harlan Ellison** (1968)
+  - **"Robbie" by Isaac Asimov** (1940)
+  - **"The Moon is a Harsh Mistress" by Robert A. Heinlein** (1966) (Chapter 1)
 
-- [Week 1](week1.html)
-- [Week 2](week2.html)
-- [Week 3](week3.html)
-- [Week 5](week5.html)
-- [Week 8 Evaluation Metrics](week8_evaluation_metrics_slides.html)
-- [Week 8 Hyperparameter Tuning](week8_Hyperparameter_Tuning_slides.html)
-- [Week 8 Resources](week8_Resource%20slides.html)
-- [Week 9](week9.html)
-- [Week 11](week11.html)
+### Session 5
+- [Lecture Slides 5](week5.html)
+### Session 6 — *Assessment Work*
+### Session 7 — *Presentations*
+### Session 8 — Optimization & Evaluation
+- [Lecture Slides 8 Evaluation Metrics](week8_evaluation_metrics_slides.html)
+- [Lecture Slides 8 Hyperparameter Tuning](week8_Hyperparameter_Tuning_slides.html)
+- [Lecture Slides 8 Resources](week8_Resource%20slides.html)
+### Session 9
+- [Lecture Slides 9](week9.html)
+### Term Break
+### Session 10
+- [Lecture Slides 10](week10.html)
+### Session 11
+- [Lecture Slides 11](week11.html)
+### Session 12
+- [Lecture Slides 12](week12.html)
+  - [Phase 1 Handout](phase_1_handout.html)
+  - [Phase 2 Handout](phase_2_handout.html)
+  - [Phase 3+ Handout](phase_3+_handout.html)
 
 ## What You'll Learn
 

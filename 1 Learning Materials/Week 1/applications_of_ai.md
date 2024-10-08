@@ -1,5 +1,5 @@
 ---
-footer: "![height:50px](images/footer.png)"
+footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
 marp: true
 theme: nmt-theme
 

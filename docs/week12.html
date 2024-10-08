@@ -501,9 +501,10 @@
           display: grid;
           font-family: Helvetica, Arial, sans-serif;
           grid-template: "current dragbar next" minmax(140px, 1fr) "current dragbar note" 2fr "info    dragbar note" 3em;
-          grid-template-columns:
-            minmax(3px, var(--bespoke-marp-presenter-split-ratio, 66%))
-            0 minmax(3px, 1fr);
+          grid-template-columns: minmax(
+              3px,
+              var(--bespoke-marp-presenter-split-ratio, 66%)
+            ) 0 minmax(3px, 1fr);
           height: 100%;
           left: 0;
           position: absolute;
@@ -2523,31 +2524,52 @@
 
       /* @theme nmt-theme */
       div#\:\$p > svg > foreignObject > :where(section):not([root]) {
-        --main-bg-color: #f8f9fa;
-        --main-text-color: #080808;
-        --main-text-bg-color: rgb(248, 249, 250, 0.95);
-        --header-bg-color: rgb(217, 39, 46, 0.9);
+        --main-text-color: #333333; /* Darken text color for better contrast */
+        --main-bg-color: #ffffff; /* Use a lighter background for more contrast */
+        --main-text-bg-color: #ffffff;
+        --header-bg-color: rgb(217, 39, 46, 1);
         --header-text-color: #f8f9fa;
         --subheader-bg-color: rgb(0, 0, 20, 0.5);
         --subheader-text-color: #f8f9fa;
         --border-color: #d9272e;
       }
       div#\:\$p > svg > foreignObject > section * {
-        font-family: "Arial", sans-serif;
+        font-family: "Arial", "Helvetica", sans-serif;
       }
       div#\:\$p > svg > foreignObject > section {
+        padding: 60px;
         background-color: var(--main-bg-color);
         color: var(--main-text-color);
         font-size: 28px;
         justify-content: start;
         display: flex;
-        /* padding: 40px; */
-        /* border-left: 10px solid var(--border-color); */
         border-top: 0.5em solid var(--border-color);
         border-bottom: 0.5em solid var(--border-color);
       }
       div#\:\$p > svg > foreignObject > section {
         --marpit-root-font-size: 28px;
+      }
+
+      /* Font Size */
+      div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) {
+        font-size: 50px;
+      }
+      div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) {
+        font-size: 40px;
+      }
+      div#\:\$p > svg > foreignObject > section li,
+      div#\:\$p > svg > foreignObject > section p {
+        font-size: 26px;
+      }
+
+      /* Padding */
+      div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),
+      div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),
+      div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),
+      div#\:\$p > svg > foreignObject > section ol,
+      div#\:\$p > svg > foreignObject > section p,
+      div#\:\$p > svg > foreignObject > section ul {
+        padding: 0.3em;
       }
       div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),
       div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),
@@ -2566,9 +2588,7 @@
         /* padding-left: 2em; */
       }
       div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) {
-        padding: 0.25em 0.25em 0.25em 0.25em;
-        margin: 0em 0em 0em 0em;
-        font-size: 44px;
+        padding: 0.25em 0.25em 0.25em 0.5em;
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
       }
@@ -2576,19 +2596,16 @@
         padding: 0.25em 2em 0.25em 0.5em;
         margin: 0em 0em 0em 0em;
         text-align: left;
-        font-size: 36px;
         background-color: var(--subheader-bg-color);
         color: var(--subheader-text-color);
       }
       div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) {
         padding: 0.25em 0em 0.25em 0.25em;
         margin: 0.25em 0em 0em 0em;
-        font-size: 30px;
         color: var(--border-color);
       }
       div#\:\$p > svg > foreignObject > section ol,
       div#\:\$p > svg > foreignObject > section ul {
-        font-size: 24px;
         padding-left: 0px;
         /* margin: 0em 0em;
   padding: 0em; */
@@ -2596,13 +2613,19 @@
         margin: 0.1em 0em 0em 0em;
       }
       div#\:\$p > svg > foreignObject > section li {
-        margin: 0em 2em 0em 2em;
+        /* margin: 0em 2em 0em 2em; */
         padding: 0em 0em 0em 0em;
-        /* margin: 0em; */
-        /* padding: 0em; */
-        /* padding: 0.1em; */
-        /* padding-left: 0.5em; */
-        /* margin-bottom: 10px; */
+      }
+      div#\:\$p > svg > foreignObject > section ul {
+        list-style-type: disc;
+        padding-left: 1em;
+      }
+      div#\:\$p > svg > foreignObject > section ol {
+        list-style-type: decimal;
+        padding-left: 1em;
+      }
+      div#\:\$p > svg > foreignObject > section li {
+        margin: 0.5em 0;
       }
       div#\:\$p > svg > foreignObject > section code {
         background-color: var(--subheader-bg-color);
@@ -2644,30 +2667,18 @@
         display: flex;
         justify-content: right;
       }
-
-      /* Slide footer */
-      div#\:\$p > svg > foreignObject > section footer {
-        /* align-self: flex-end; */
-        position: fixed;
-        z-index: -10;
-        /* left: 0px;
-  bottom: 0px; */
-        /* position: fixed; */
-        /* right: 40px; */
-        /* bottom: 20px; */
-        /* left: auto; */
-
-        /* bottom: 1em; */
-        /* font-size: 0.8em; */
-        left: 61em;
-        top: 0em;
+      div#\:\$p > svg > foreignObject > section footer img {
+        visibility: hidden;
       }
-
-      /* img {
-  position: fixed;
-  left: 12em;
-} */
-      div#\:\$p > svg > foreignObject > section[data-marpit-scope-UPn1PHpQ] p {
+      div#\:\$p > svg > foreignObject > section.lead footer img {
+        visibility: visible;
+      }
+      div#\:\$p > svg > foreignObject > section.centre,
+      div#\:\$p > svg > foreignObject > section.lead {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      div#\:\$p > svg > foreignObject > section[data-marpit-scope-4m5GqTu4] p {
         text-align: right;
       }
       div#\:\$p
@@ -2812,13 +2823,13 @@
       <svg data-marpit-svg="" viewBox="0 0 1280 720">
         <foreignObject width="1280" height="720"
           ><section
-            data-marpit-scope-UPn1PHpQ=""
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-marpit-scope-4m5GqTu4=""
+            data-footer=""
             data-class="lead"
             data-theme="nmt-theme"
             lang="en-AU"
             class="lead"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--class:lead;--theme:nmt-theme;"
+            style="--footer: ; --class: lead; --theme: nmt-theme"
             data-marpit-advanced-background="background"
           >
             <div
@@ -2835,25 +2846,29 @@
         ><foreignObject width="1280" height="720"
           ><section
             id="1"
-            data-marpit-scope-UPn1PHpQ=""
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-marpit-scope-4m5GqTu4=""
+            data-footer=""
             data-class="lead"
             data-theme="nmt-theme"
             lang="en-AU"
             class="lead"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--class:lead;--theme:nmt-theme;"
+            style="--footer: ; --class: lead; --theme: nmt-theme"
             data-marpit-advanced-background="content"
           >
-            <h1 id="ictss00120---br-artificial-intelligence-skill-set">
-              ICTSS00120 - <br /> Artificial Intelligence Skill Set
+            <h1 id="ictss00120---artificial-intelligence-skill-set">
+              ICTSS00120 - Artificial Intelligence Skill Set
             </h1>
 
-            <h2 id="week-2-data-for-machine-learning">
-              Week 2: Data for Machine Learning
+            <h2 id="week-12-understanding-crisp-dm">
+              Week 12: Understanding CRISP-DM
             </h2>
             <p>Lecturer: Jordan Hill</p>
             <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
             </footer>
           </section> </foreignObject
         ><foreignObject
@@ -2861,8 +2876,8 @@
           height="720"
           data-marpit-advanced-background="pseudo"
           ><section
-            data-marpit-scope-UPn1PHpQ=""
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-marpit-scope-4m5GqTu4=""
+            data-footer=""
             data-class="lead"
             data-theme="nmt-theme"
             lang="en-AU"
@@ -2875,80 +2890,60 @@
         <foreignObject width="1280" height="720"
           ><section
             id="2"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="todays-agenda">Today's Agenda</h2>
-            <ul>
-              <li>Introduction and Objectives</li>
-              <li>IPython Environment and Kaggle</li>
-              <li>Types of Data and Data Sources</li>
-              <li>Understanding ML Attributes</li>
-              <li>Relevant Algorithms for Datasets</li>
-              <li>Data Preprocessing Techniques (Briefly)</li>
-              <li>
-                In-Class Activity: Introduction to Kaggle environment and Data
-                Cleaning
-              </li>
-              <li>Summary and Q&amp;A</li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="3"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="--footer: ; --theme: nmt-theme"
           >
             <h2 id="learning-objectives">Learning Objectives</h2>
             <ul>
-              <li>Understand the IPython environment and how to use Kaggle.</li>
-              <li>Identify key data sources for machine learning.</li>
               <li>
-                Differentiate between structured, unstructured, labelled, and
-                unlabelled data.
+                <strong
+                  >Understand the CRISP-DM methodology and its importance in
+                  AI/ML projects.</strong
+                >
               </li>
               <li>
-                Comprehend ML attributes: data attributes, model attributes, and
-                target attributes.
+                <strong
+                  >Apply Phase 1 – Business Understanding of CRISP-DM to a case
+                  study.</strong
+                >
               </li>
               <li>
-                Recognize relevant algorithms for different types of datasets.
+                <strong
+                  >Recognize the key activities in Phase 2 – Data
+                  Understanding.</strong
+                >
               </li>
               <li>
-                Grasp data biases and methods for generating balanced data.
-              </li>
-              <li>
-                Introduction to data preprocessing techniques such as
-                randomizing, deduplication, and data cleaning.
-              </li>
-              <li>
-                Understand the importance of creating training, validation, and
-                test subsets.
+                <strong
+                  >Explore how Phases 3, 4, &amp; 5 integrate with prior
+                  learning.</strong
+                >
               </li>
             </ul>
             <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
             </footer>
           </section>
         </foreignObject></svg
       ><svg data-marpit-svg="" viewBox="0 0 1280 720">
         <foreignObject width="1280" height="720"
           ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="left"
+            data-marpit-advanced-background-split="right"
           >
             <div
               data-marpit-advanced-background-container="true"
@@ -2956,670 +2951,47 @@
             >
               <figure
                 style="
-                  background-image: url('images/ipython.png');
+                  background-image: url('https://www.ibm.com/docs/en/SS3RA7_sub/modeler_crispdm_ddita/clementine/images/crisp_process.jpg');
                   background-size: contain;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="67%" height="720" x="33%"
-          ><section
-            id="4"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="left"
-          >
-            <h2 id="introduction-to-ipython-and-kaggle">
-              Introduction to IPython and Kaggle
-            </h2>
-            <h4 id="br-br-what-is-it-and-why-do-we-use-it">
-              <br /> <img src="images/IPy_header.png" alt="" /> <br /> What is
-              it? And why do we use it??
-            </h4>
-            <ul>
-              <li>
-                Interactive computing environment for writing and sharing Python
-                code.
-              </li>
-              <li>Supports visualization, markdown, and LaTeX.</li>
-              <li>
-                <strong>Why Important?</strong>
-                <ul>
-                  <li>Facilitates exploratory data analysis.</li>
-                  <li>Enhances code readability and sharing.</li>
-                  <li>Enables reproducibility of experimentation results</li>
-                </ul>
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="left"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="left"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('images/kaggle.png');
-                  background-size: 80%;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="67%" height="720" x="33%"
-          ><section
-            id="5"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="left"
-          >
-            <p><img src="images/kaggle-logo.svg" alt="" /></p>
-            <ul>
-              <li>
-                Online platform for data science competitions and collaboration.
-              </li>
-              <li>
-                Provides datasets, code snippets, and a notebook environment.
-              </li>
-              <li>
-                Provides GPU accelerated environment for working with vision and
-                LLM tasks!
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="left"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-            data-marpit-advanced-background="background"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="background-image: url('images/blue_ripple.jpg')"
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="1280" height="720"
-          ><section
-            id="6"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-            data-marpit-advanced-background="content"
-          >
-            <h2 id="key-data-sources">Key Data Sources</h2>
-            <p><strong>Identifying Key Data Sources:</strong></p>
-            <ul>
-              <li>
-                <strong>Public Repositories:</strong> Examples include UCI ML
-                Repository, Kaggle Datasets, and government open data websites.
-              </li>
-              <li>
-                <strong>APIs:</strong> Data from web services such as Twitter,
-                OpenWeatherMap, etc.
-              </li>
-              <li>
-                <strong>Internal Data:</strong> Company databases, CRM systems,
-                and internal APIs.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:50%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="right"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('images/structuredvsunstructured.png');
-                  background-size: contain;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="50%" height="720"
-          ><section
-            id="7"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:50%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="right"
-          >
-            <h2 id="types-of-data">Types of Data</h2>
-            <p><strong>Structured Data:</strong></p>
-            <ul>
-              <li>Clearly defined data types.</li>
-              <li>Organized in rows and columns.</li>
-              <li>Examples: Databases, spreadsheets.</li>
-            </ul>
-            <p><strong>Unstructured Data:</strong></p>
-            <ul>
-              <li>No predefined structure.</li>
-              <li>Text, images, videos, etc...</li>
-              <li>Examples: Emails, social media posts.</li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="right"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="right"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('images/labelled%20vs%20unlabelled.png');
-                  background-size: contain;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="67%" height="720"
-          ><section
-            id="8"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="right"
-          >
-            <h2 id="types-of-data-machine-learning--ai">
-              Types of Data (Machine Learning / AI)
-            </h2>
-            <p><strong>Labelled Data:</strong></p>
-            <ul>
-              <li>Each data point is assigned a label.</li>
-              <li>Used for supervised learning.</li>
-              <li>Example: Emails labelled as ‘spam’ or ‘not spam’.</li>
-            </ul>
-            <p><strong>Unlabelled Data:</strong></p>
-            <ul>
-              <li>No labels are assigned to data points.</li>
-              <li>Used for unsupervised learning.</li>
-              <li>
-                Example: Customer purchase data without any categorization.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="right"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="right"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('https://editor.analyticsvidhya.com/uploads/729834.png');
-                  background-size: 90%;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="67%" height="720"
-          ><section
-            id="9"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="right"
-          >
-            <h2 id="relevant-algorithms-for-labelled--unlabelled-data">
-              Relevant Algorithms for Labelled &amp; Unlabelled Data
-            </h2>
-            <h6 id="labelled-datasets">Labelled Datasets:</h6>
-            <ul>
-              <li>
-                <strong>Supervised Learning:</strong>
-                <ul>
-                  <li>
-                    Regression: Linear Regression.
-                    <a
-                      href="https://www.youtube.com/watch?v=ek0yyL8iV7I&amp;list=PLzH6n4zXuckpfMu_4Ff8E7Z1behQks5ba&amp;index=12"
-                      >Data Regression</a
-                    >
-                  </li>
-                  <li>
-                    Classification: Decision Trees, SVM,<br /> Naive Bayes, KNN.
-                    <a
-                      href="https://www.youtube.com/watch?v=1opLSwlqBSI&amp;list=PLzH6n4zXuckpfMu_4Ff8E7Z1behQks5ba&amp;index=10"
-                      >Classification in ML</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <h6 id="unlabelled-datasets">Unlabelled Datasets:</h6>
-            <ul>
-              <li>
-                <strong>Unsupervised Learning:</strong>
-                <ul>
-                  <li>
-                    Clustering: K-Means, DBSCAN.
-                    <a href="https://www.youtube.com/watch?v=yR7k19YBqiw"
-                      >What is K-Means?</a
-                    >
-                  </li>
-                  <li>
-                    Dimensionality Reduction: PCA, LDA.
-                    <a
-                      href="https://www.youtube.com/watch?v=TJdH6rPA-TI&amp;list=PLzH6n4zXuckpfMu_4Ff8E7Z1behQks5ba&amp;index=8"
-                      >What is PCA?</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="right"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="right"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('https://miro.medium.com/v2/resize:fit:557/1*cJVzTJ8zhstJQKdfFw1Yhw.png');
-                  background-size: 90%;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="67%" height="720"
-          ><section
-            id="10"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="right"
-          >
-            <h2 id="understanding-ml-attributes">
-              Understanding ML Attributes
-            </h2>
-            <p><strong>ML Attributes:</strong></p>
-            <ul>
-              <li>
-                <img
-                  class="emoji"
-                  draggable="false"
-                  alt="➡️"
-                  src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg"
-                  data-marp-twemoji=""
-                />
-                <strong>Data Attributes:</strong> Features or predictors used to
-                train a model.
-              </li>
-              <li>
-                <strong>Model Attributes:</strong> Parameters of the model.
-              </li>
-              <li>
-                <strong>Target Attributes:</strong> The outcome variable the
-                model is predicting.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="right"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="right"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('https://beckmw.files.wordpress.com/2013/11/neuralnet_plot.jpg?w=584');
-                  background-size: 90%;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="67%" height="720"
-          ><section
-            id="11"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="right"
-          >
-            <h2 id="understanding-ml-attributes-1">
-              Understanding ML Attributes
-            </h2>
-            <p><strong>ML Attributes:</strong></p>
-            <ul>
-              <li>
-                <strong>Data Attributes:</strong> Features or predictors used to
-                train a model.
-              </li>
-              <li>
-                <img
-                  class="emoji"
-                  draggable="false"
-                  alt="➡️"
-                  src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg"
-                  data-marp-twemoji=""
-                />
-                <strong>Model Attributes:</strong> Parameters of the model.
-              </li>
-              <li>
-                <strong>Target Attributes:</strong> The outcome variable the
-                model is predicting.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="right"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="right"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*MvXwdaK9r1wL48ivk7TOgw.png');
-                  background-size: 90%;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="67%" height="720"
-          ><section
-            id="12"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:33%;"
-            data-marpit-advanced-background="content"
-            data-marpit-advanced-background-split="right"
-          >
-            <h2 id="understanding-ml-attributes-2">
-              Understanding ML Attributes
-            </h2>
-            <p><strong>ML Attributes:</strong></p>
-            <ul>
-              <li>
-                <strong>Data Attributes:</strong> Features or predictors used to
-                train a model.
-              </li>
-              <li>
-                <strong>Model Attributes:</strong> Parameters of the model.
-              </li>
-              <li>
-                <img
-                  class="emoji"
-                  draggable="false"
-                  alt="➡️"
-                  src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg"
-                  data-marp-twemoji=""
-                />
-                <strong>Target Attributes:</strong> The outcome variable the
-                model is predicting.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-            data-marpit-advanced-background-split="right"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:40%;"
-            data-marpit-advanced-background="background"
-            data-marpit-advanced-background-split="right"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('https://images.prismic.io/sketchplanations/f2fdb7cb-f126-4897-ad78-4fd11c743172_SP+723+-+Sampling+bias.png?auto=compress,format');
-                  background-size: 90%;
                 "
               ></figure>
             </div></section></foreignObject
         ><foreignObject width="60%" height="720"
           ><section
-            id="13"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            id="3"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;--marpit-advanced-background-split:40%;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="content"
             data-marpit-advanced-background-split="right"
           >
-            <h2 id="understanding-data-biases">Understanding Data Biases</h2>
-            <p><strong>Statistical Bias:</strong></p>
+            <h2 id="what-is-crisp-dm">What is CRISP-DM?</h2>
             <ul>
               <li>
-                <strong>Definition:</strong> Systematic error introduced into
-                data collection.
+                <strong>CRISP-DM</strong> stands for
+                <strong>Cross-Industry Standard Process for Data Mining</strong
+                >.
               </li>
               <li>
-                <strong>Examples:</strong>
-                <ul>
-                  <li>Sampling bias.</li>
-                  <li>Measurement bias.</li>
-                </ul>
+                It provides a <strong>structured approach</strong> for planning
+                and executing data mining projects.
               </li>
               <li>
-                <strong>Mitigation Techniques:</strong>
-                <ul>
-                  <li>Ensure diverse dataset collection.</li>
-                  <li>Resampling or reweighting data.</li>
-                </ul>
+                Widely used in industry for guiding data science and machine
+                learning projects.
               </li>
             </ul>
             <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
             </footer>
           </section> </foreignObject
         ><foreignObject
@@ -3627,7 +2999,7 @@
           height="720"
           data-marpit-advanced-background="pseudo"
           ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
             style=""
@@ -3638,512 +3010,45 @@
       ><svg data-marpit-svg="" viewBox="0 0 1280 720">
         <foreignObject width="1280" height="720"
           ><section
-            id="14"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            id="4"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="--footer: ; --theme: nmt-theme"
           >
-            <h2 id="bias-is-a-broader-conversation-when-it-comes-to-ai-systems">
-              Bias is a broader conversation when it comes to AI systems
+            <h2 id="what-do-we-already-know-about-project-management">
+              What do we already know about project management?
             </h2>
-            <ol>
-              <li>
-                Cognitive Bias — Bias fed by limitations in our own cognition
-                &amp; perspective
-              </li>
-              <li>Statistical Bias — Affects the quality of our models</li>
-              <li>
-                Prejudice / Descrimination — Prejudice on the basis of race,
-                sex, age, etc...
-              </li>
-              <li>Conflicts of Interest — Corruption / vested interests</li>
-            </ol>
-            <p>
-              <em
-                >The world may be biased in ways we don't want to perpetuate!<br />
-                We want to design AI systems that are benevolent and
-                beneficial.</em
-              >
-            </p>
-            <p>
-              As data scientists, we have a moral obligation to ensure we
-              develop systems ethically. Notions of <strong>good</strong> &amp;
-              <strong>bad</strong>, <strong>right</strong> &amp;
-              <strong>wrong</strong> are highly relevant to the design of AI
-              systems.<br /> <strong>Question your Data!</strong>
-            </p>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="15"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-class="lead"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            class="lead"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--class:lead;--theme:nmt-theme;"
-          >
-            <h1 id="how-can-we-actually-identify--deal-with-statistical-bias">
-              How can we actually identify &amp; deal with
-              <em>statistical</em> bias?
-            </h1>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="16"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="identifying-and-reducing-statistical-bias">
-              Identifying and Reducing Statistical Bias
-            </h2>
-            <h3 id="methods-for-identifying-statistical-bias">
-              Methods for Identifying Statistical Bias
-            </h3>
-            <ul>
-              <li>
-                <strong>Exploratory Data Analysis (EDA):</strong>
-                <ul>
-                  <li>
-                    Use visualizations (e.g., histograms, box plots) to detect
-                    distributions and outliers.
-                  </li>
-                  <li>
-                    Summarize data using descriptive statistics (mean, median,
-                    mode).
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Statistical Tests:</strong>
-                <ul>
-                  <li>
-                    Perform tests (e.g., Chi-square test, T-test) to check for
-                    bias in dataset distributions.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Correlation Analysis:</strong>
-                <ul>
-                  <li>
-                    Evaluate correlations between features to identify
-                    multicollinearity issues.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Audit for Missing Data:</strong>
-                <ul>
-                  <li>
-                    Identify patterns in missing data to detect if data is
-                    missing at random (MAR) or not at random (MNAR).
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="17"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="generating-balanced-data">Generating Balanced Data</h2>
-            <p><strong>Generating Balanced Data:</strong></p>
-            <ul>
-              <li>
-                <strong>Techniques to Balance Data:</strong>
-                <ul>
-                  <li>
-                    <a
-                      href="https://imbalanced-learn.org/stable/over_sampling.html"
-                      >Oversampling minority class.</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://imbalanced-learn.org/stable/under_sampling.html"
-                      >Undersampling majority class.</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html#smote"
-                      >SMOTE (Synthetic Minority Over-sampling Technique)</a
-                    >.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="18"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="reducing-statistical-bias-in-datasets">
-              Reducing Statistical Bias in Datasets
-            </h2>
-            <ol>
-              <li>
-                <p>
-                  <strong>Data Collection/Preperation Improvements:</strong>
-                </p>
-                <ul>
-                  <li>
-                    Use random sampling of larger populations to avoid an
-                    <strong>introduced</strong> sampling bias when collecting
-                    data.
-                  </li>
-                  <li>Ensure diverse and representative dataset collection.</li>
-                </ul>
-              </li>
-              <li>
-                <p><strong>Data Resampling Techniques:</strong></p>
-                <ul>
-                  <li>
-                    <strong>Oversampling:</strong> Increase the number of
-                    minority class samples.
-                    <ul>
-                      <li>
-                        Example:
-                        <a
-                          href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html#smote"
-                          >SMOTE (Synthetic Minority Over-sampling Technique)</a
-                        >.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Undersampling:</strong> Reduce the number of
-                    majority class samples.
-                    <ul>
-                      <li>
-                        Example:
-                        <a
-                          href="https://imbalanced-learn.org/stable/references/generated/imblearn.under_sampling.RandomUnderSampler.html"
-                          >Random undersampling.</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ol>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="19"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="reducing-statistical-bias-in-datasets-1">
-              Reducing Statistical Bias in Datasets
-            </h2>
-            <ol start="3">
-              <li>
-                <p><strong>Data Augmentation:</strong></p>
-                <ul>
-                  <li>Create synthetic data points to balance datasets.</li>
-                  <li>
-                    Techniques include geometric transformations for images,
-                    paraphrasing for text.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <p><strong>Normalization and Standardization:</strong></p>
-                <ul>
-                  <li>
-                    Scale numerical features to have similar ranges, reducing
-                    the impact of features with larger scales.
-                  </li>
-                  <li>
-                    Normalize data to have a mean of zero and a standard
-                    deviation of one.
-                  </li>
-                </ul>
-              </li>
-            </ol>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="20"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="reducing-statistical-bias-in-datasets-2">
-              Reducing Statistical Bias in Datasets
-            </h2>
-            <ol start="5">
-              <li>
-                <p><strong>Cross-Validation:</strong></p>
-                <ul>
-                  <li>
-                    Use K-fold cross-validation to ensure bias isn’t introduced
-                    through data splitting.
-                  </li>
-                  <li>
-                    Helps in assessing model performance on different subsets of
-                    data.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <p><strong>Bias Correction Algorithms:</strong></p>
-                <ul>
-                  <li>
-                    Implement algorithms designed to reduce bias, such as
-                    reweighting or adversarial de-biasing.
-                  </li>
-                </ul>
-              </li>
-            </ol>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="21"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="the-importance-of-balance-in-data">
-              The Importance of Balance in Data
-            </h2>
-            <ul>
-              <li>
-                Imbalanced datasets can lead to biased models that favor
-                majority classes.
-              </li>
-              <li>
-                Balancing the data ensures that the model treats all classes
-                equally and performs better on minority classes.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="22"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h3 id="techniques-to-balance-data">Techniques to Balance Data:</h3>
-            <ol>
-              <li>
-                <p>
-                  <strong>Oversampling</strong><br />
-                  <strong>Definition:</strong> Increasing the number of samples
-                  in the minority class to match the majority class.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Undersampling</strong><br />
-                  <strong>Definition:</strong> Reducing the number of samples in
-                  the majority class to match the minority class.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Data Augmentation</strong><br />
-                  <strong>Definition:</strong> Creating new data points to add
-                  to the dataset, often used for image or text data.
-                </p>
-              </li>
-            </ol>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="23"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="key-techniques-explained">Key Techniques Explained</h2>
-            <h3 id="smote-synthetic-minority-over-sampling-technique">
-              SMOTE (Synthetic Minority Over-sampling Technique)
-            </h3>
-            <ul>
-              <li>
-                <strong>How It Works:</strong>
-                <ul>
-                  <li>
-                    For each minority class sample, find its k-nearest
-                    neighbors.
-                  </li>
-                  <li>
-                    Randomly select one of the neighbors and create a synthetic
-                    sample along the line between the original sample and its
-                    neighbor.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <h3 id="random-undersampling">Random Undersampling</h3>
-            <ul>
-              <li>
-                <strong>How It Works:</strong>
-                <ul>
-                  <li>Randomly remove samples from the majority class.</li>
-                  <li>
-                    This reduces the number of majority class samples to match
-                    the number of minority class samples.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="24"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h3 id="data-augmentation-for-images">
-              Data Augmentation for Images
-            </h3>
-            <ul>
-              <li>
-                <strong>How It Works:</strong>
-                <ul>
-                  <li>
-                    Apply transformations such as rotations, flips, crops, and
-                    color adjustments to existing images.
-                  </li>
-                  <li>
-                    This generates new, varied images while preserving labels.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <h3 id="data-augmentation-for-text">Data Augmentation for Text</h3>
-            <ul>
-              <li>
-                <p><strong>How It Works:</strong></p>
-                <ul>
-                  <li>
-                    Generate new sentences with the same meaning but different
-                    structure.
-                  </li>
-                  <li>
-                    Use techniques such as paraphrasing, synonym replacement, or
-                    back-translation.
-                  </li>
-                </ul>
-                <p>
-                  It seems like OpenAI forgot to do this last one with
-                  &quot;delve&quot;,<br /> ChatGPT seems to really like it for
-                  some reason...
-                </p>
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="25"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-class="centre"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            class="centre"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--class:centre;--theme:nmt-theme;"
-          >
-            <h1 id="whoops">Whoops!</h1>
-
+            <h3 id="agile-waterfall">Agile? Waterfall?</h3>
             <p>
               <img
-                src="https://pshapira.net/wp-content/uploads/2024/03/image-2.png?w=640"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.crosscountry-consulting.com%2Fwp-content%2Fuploads%2F2022%2F12%2FAdobeStock_393555482-scaled.jpeg&amp;f=1&amp;nofb=1&amp;ipt=a1de54011726add9c207911514503170d41f693e41005af76be7e32228f2eaa8&amp;ipo=images"
                 alt=""
-                style="width: 28em"
+                style="width: 50em; height: 18em"
               />
             </p>
             <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
             </footer>
           </section>
         </foreignObject></svg
       ><svg data-marpit-svg="" viewBox="0 0 1280 720">
         <foreignObject width="1280" height="720"
           ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="right"
           >
             <div
               data-marpit-advanced-background-container="true"
@@ -4151,184 +3056,40 @@
             >
               <figure
                 style="
-                  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk');
-                  filter: blur(1px) contrast(90%);
+                  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/CRISP-DM_Process_Diagram.png/639px-CRISP-DM_Process_Diagram.png');
+                  background-size: contain;
                 "
               ></figure>
             </div></section></foreignObject
-        ><foreignObject width="1280" height="720"
+        ><foreignObject width="60%" height="720"
           ><section
-            id="26"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            id="5"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="right"
           >
-            <h2 id="data-preprocessing-for-ml">Data Preprocessing for ML</h2>
-            <p>
-              <strong>Randomizing:</strong> Shuffle data to prevent order
-              effects.<br /> <strong>Deduplication:</strong> Remove duplicate
-              records.<br /> <strong>Data Cleaning:</strong> Handle missing
-              values, correct inconsistencies.
-            </p>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-            data-marpit-advanced-background="background"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('images/data_preprocessing_flowchart.jpg');
-                  background-size: 60%;
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="1280" height="720"
-          ><section
-            id="27"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-            data-marpit-advanced-background="content"
-          >
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section> </foreignObject
-        ><foreignObject
-          width="1280"
-          height="720"
-          data-marpit-advanced-background="pseudo"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style=""
-            data-marpit-advanced-background="pseudo"
-          ></section
-        ></foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="28"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="creating-data-subsets">Creating Data Subsets</h2>
-            <p><strong>Creating Data Subsets:</strong></p>
-            <ul>
-              <li>
-                <strong>Training Subset:</strong> Used to train the model.
-              </li>
-              <li>
-                <strong>Validation Subset:</strong> Used to tune model
-                parameters.
-              </li>
-              <li>
-                <strong>Test Subset:</strong> Used to evaluate the final model
-                performance.
-              </li>
-            </ul>
-            <p>
-              <a
-                href="https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets"
-                >Good Overview Wikipedia</a
-              >
-            </p>
-            <p><strong>Why Important?</strong></p>
-            <ul>
-              <li>Ensures the model generalizes well to unseen data.</li>
-              <li>Helps in detecting overfitting and underfitting.</li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-            data-marpit-advanced-background="background"
-          >
-            <div
-              data-marpit-advanced-background-container="true"
-              data-marpit-advanced-background-direction="horizontal"
-            >
-              <figure
-                style="
-                  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk');
-                  filter: blur(1px) contrast(90%);
-                "
-              ></figure>
-            </div></section></foreignObject
-        ><foreignObject width="1280" height="720"
-          ><section
-            id="29"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-            data-marpit-advanced-background="content"
-          >
-            <h2 id="in-class-activity">In-Class Activity</h2>
-            <p><strong>Activity:</strong></p>
-            <ul>
-              <li>Load a dataset into Kaggle.</li>
-              <li>Evaluate its suitability for machine learning.</li>
-              <li>
-                Visualize the dataset and perform initial exploratory data
-                analysis.
-              </li>
-            </ul>
-            <p>
-              <a
-                href="https://github.com/jordanhill-NMTAFE/AISS-ICTSS00120/blob/main/1%20Learning%20Materials/Week%202/lab.md"
-                >Lab Sheet</a
-              >
-            </p>
+            <h2 id="crisp-dm-phases-overview">CRISP-DM Phases Overview</h2>
             <ol>
-              <li>Log in to Kaggle.</li>
-              <li>Find a dataset.</li>
-              <li>Load it into a notebook.</li>
-              <li>
-                Visualize basic statistics and charts. (ChatGPT/Co-pilot can
-                help with this!)
-              </li>
+              <li><strong>Business Understanding</strong></li>
+              <li><strong>Data Understanding</strong></li>
+              <li><strong>Data Preparation</strong></li>
+              <li><strong>Modeling</strong></li>
+              <li><strong>Evaluation</strong></li>
+              <li><strong>Deployment</strong></li>
             </ol>
             <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
             </footer>
           </section> </foreignObject
         ><foreignObject
@@ -4336,7 +3097,220 @@
           height="720"
           data-marpit-advanced-background="pseudo"
           ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style=""
+            data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="right"
+          ></section
+        ></foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            id="6"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="--footer: ; --theme: nmt-theme"
+          >
+            <h2 id="why-do-we-need-this">Why do we need this?</h2>
+            <h3
+              id="you-will-be-expected-to-implement-crisp-dm-throughout-your-final-project"
+            >
+              You will be expected to implement CRISP-DM throughout your final
+              project
+            </h3>
+            <h3 id="today-we-will-work-through-each-stage-in-depth">
+              Today we will work through each stage in-depth
+            </h3>
+            <h4 id="reference-materials">
+              <strong>Reference Materials:</strong>
+            </h4>
+            <div
+              style="
+                display: flex;
+                justify-content: space-around;
+                margin-left: 8em;
+              "
+            >
+              <p>
+                <a
+                  href="https://www.oreilly.com/library/view/machine-learning-pocket/9781492047537/ch02.html"
+                  ><img
+                    src="https://learning.oreilly.com/covers/urn:orm:book:9781492047537/400w/"
+                    alt=""
+                    style="width: 200px; height: 300px"
+                /></a>
+              </p>
+              <p>
+                <a
+                  href="https://learning.oreilly.com/library/view/r-data-mining/9781787124462/05ec6eb6-bd0b-4180-ac01-21f83d8afcc7.xhtml"
+                  ><img
+                    src="https://learning.oreilly.com/covers/urn:orm:book:9781787124462/400w/"
+                    alt=""
+                    style="width: 200px; height: 300px"
+                /></a>
+              </p>
+              <p>
+                <a href="https://www.datascience-pm.com/crisp-dm-2/"
+                  ><img
+                    src="https://www.datascience-pm.com/wp-content/uploads/2024/01/CRISP-DM-thumb-300x300.png"
+                    alt=""
+                    style="height: 300px"
+                /></a>
+              </p>
+            </div>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section>
+        </foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="right"
+          >
+            <div
+              data-marpit-advanced-background-container="true"
+              data-marpit-advanced-background-direction="horizontal"
+            >
+              <figure
+                style="
+                  background-image: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/a-business-man-that-looks-worried-about-questions-floating-around-in-his-head_SKqWJuv0Bj_thumb.jpg');
+                "
+              ></figure>
+            </div></section></foreignObject
+        ><foreignObject width="60%" height="720"
+          ><section
+            id="7"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="right"
+          >
+            <h2 id="phase-1-business-understanding">
+              Phase 1: Business Understanding
+            </h2>
+            <ul>
+              <li>
+                <strong>Objective</strong>: Understand the project objectives
+                and requirements from a business perspective.
+              </li>
+              <li>
+                <strong>Key Steps</strong>:
+                <ul>
+                  <li><strong>Determine Business Objectives</strong></li>
+                  <li><strong>Assess the Situation</strong></li>
+                  <li><strong>Establish Data Mining Goals</strong></li>
+                  <li><strong>Produce Project Plan</strong></li>
+                </ul>
+              </li>
+            </ul>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section> </foreignObject
+        ><foreignObject
+          width="1280"
+          height="720"
+          data-marpit-advanced-background="pseudo"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style=""
+            data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="right"
+          ></section
+        ></foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="--footer: ; --theme: nmt-theme"
+            data-marpit-advanced-background="background"
+          >
+            <div
+              data-marpit-advanced-background-container="true"
+              data-marpit-advanced-background-direction="horizontal"
+            >
+              <figure
+                style="
+                  background-image: url('https://t3.ftcdn.net/jpg/00/72/98/56/360_F_72985661_LU1Xk0YQiPBwOuesuuJgwTn0NPlwP8ob.jpg');
+                "
+              ></figure>
+            </div></section></foreignObject
+        ><foreignObject width="1280" height="720"
+          ><section
+            id="8"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="--footer: ; --theme: nmt-theme"
+            data-marpit-advanced-background="content"
+          >
+            <h2 id="activity-define-business-objectives">
+              Activity: Define Business Objectives
+            </h2>
+            <ul>
+              <li>
+                <strong>In Groups</strong>:
+                <ul>
+                  <li>
+                    Choose a hypothetical business scenario or use your project
+                    idea.
+                  </li>
+                  <li>
+                    <strong>Identify</strong> the main business objectives.
+                  </li>
+                  <li>
+                    <strong>Discuss</strong> potential challenges and
+                    requirements.
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Share</strong> your findings with the class.</li>
+            </ul>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section> </foreignObject
+        ><foreignObject
+          width="1280"
+          height="720"
+          data-marpit-advanced-background="pseudo"
+          ><section
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
             style=""
@@ -4346,139 +3320,61 @@
       ><svg data-marpit-svg="" viewBox="0 0 1280 720">
         <foreignObject width="1280" height="720"
           ><section
-            id="30"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <p>
-              <strong
-                >Questions to Explore &amp; Discuss with your Peers:</strong
-              >
-            </p>
-            <ul>
-              <li>
-                What kind of data (structured/unstructured; labelled/unlabelled)
-                is this?
-              </li>
-              <li>What preprocessing steps might be necessary?</li>
-              <li>What biases might exist in the data?</li>
-              <li>
-                Are there any biases in the data? How could you identify them?
-              </li>
-              <li>What could be done to correct bias?</li>
-              <li>
-                How would you split the data into training, validation, and test
-                sets?
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="31"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="summary">Summary</h2>
-            <ul>
-              <li>Introduced to IPython, Kaggle, and key data sources.</li>
-              <li>Discussed types of data and ML attributes.</li>
-              <li>Covered relevant algorithms for different datasets.</li>
-              <li>Understood data biases and techniques for balanced data.</li>
-              <li>
-                Learned data preprocessing steps and importance of data subsets.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            id="32"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
-          >
-            <h2 id="key-takeaways">Key Takeaways</h2>
-            <ul>
-              <li>
-                <strong>IPython and Kaggle:</strong> Essential tools for data
-                manipulation and collaboration.
-              </li>
-              <li>
-                <strong>Data Types:</strong> Understanding structured vs.
-                unstructured and labelled vs. unlabelled data.
-              </li>
-              <li>
-                <strong>ML Attributes:</strong> Importance of data attributes,
-                model attributes, and target attributes.
-              </li>
-              <li>
-                <strong>Algorithms:</strong> Supervised and unsupervised
-                learning techniques.
-              </li>
-              <li>
-                <strong>Bias and Balancing:</strong> Techniques to identify and
-                mitigate biases in datasets.
-              </li>
-              <li>
-                <strong>Preprocessing:</strong> Critical steps in preparing data
-                for machine learning.
-              </li>
-            </ul>
-            <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
-            </footer>
-          </section>
-        </foreignObject></svg
-      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
-        <foreignObject width="1280" height="720"
-          ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
-            data-theme="nmt-theme"
-            lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="right"
           >
             <div
               data-marpit-advanced-background-container="true"
               data-marpit-advanced-background-direction="horizontal"
             >
               <figure
-                style="
-                  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk');
-                  filter: blur(1px) contrast(90%);
-                "
+                style="background-image: url('images/data-exploration.jpg')"
               ></figure>
             </div></section></foreignObject
-        ><foreignObject width="1280" height="720"
+        ><foreignObject width="60%" height="720"
           ><section
-            id="33"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            id="9"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="right"
           >
-            <h2 id="questions--answers">Questions &amp; Answers</h2>
-            <p><strong>Q&amp;A</strong></p>
+            <h2 id="phase-2-data-understanding">Phase 2: Data Understanding</h2>
             <ul>
-              <li>Any Questions from today's session??</li>
+              <li>
+                <strong>Objective</strong>: Collect initial data and become
+                familiar with it.
+              </li>
+              <li>
+                <strong>Key Steps</strong>:
+                <ul>
+                  <li><strong>Collect Initial Data</strong></li>
+                  <li><strong>Describe Data</strong></li>
+                  <li><strong>Explore Data</strong></li>
+                  <li><strong>Verify Data Quality</strong></li>
+                </ul>
+              </li>
             </ul>
             <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
             </footer>
           </section> </foreignObject
         ><foreignObject
@@ -4486,54 +3382,451 @@
           height="720"
           data-marpit-advanced-background="pseudo"
           ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
             style=""
             data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="right"
           ></section
         ></foreignObject></svg
       ><svg data-marpit-svg="" viewBox="0 0 1280 720">
         <foreignObject width="1280" height="720"
           ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="left"
           >
             <div
               data-marpit-advanced-background-container="true"
               data-marpit-advanced-background-direction="horizontal"
             >
               <figure
-                style="
-                  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk');
-                  filter: blur(1px) contrast(90%);
-                "
+                style="background-image: url('images/data-quality.jpg')"
               ></figure>
             </div></section></foreignObject
-        ><foreignObject width="1280" height="720"
+        ><foreignObject width="60%" height="720" x="40%"
           ><section
-            id="34"
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            id="10"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
-            style="--footer:![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg);--theme:nmt-theme;"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
             data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="left"
           >
-            <h2 id="next-week">Next Week</h2>
-            <p><strong>Next Week:</strong></p>
+            <h2 id="importance-of-data-collection">
+              Importance of Data Collection
+            </h2>
             <ul>
-              <li>Essentials of ML and DL Technologies.</li>
               <li>
-                Dive deeper into supervised and unsupervised learning
-                techniques.
+                <strong>Accurate and relevant data</strong> is critical for
+                model success.
               </li>
-              <li>Intro to sci-kit learn</li>
+              <li>
+                <strong>Data Quality Checks</strong>:
+                <ul>
+                  <li>Missing values</li>
+                  <li>Outliers</li>
+                  <li>Data consistency</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Tools and Techniques</strong>:
+                <ul>
+                  <li>Data visualization</li>
+                  <li>Statistical analysis</li>
+                </ul>
+              </li>
             </ul>
             <footer>
-              <img src="images/footer.png" alt="" style="height: 50px" />
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section> </foreignObject
+        ><foreignObject
+          width="1280"
+          height="720"
+          data-marpit-advanced-background="pseudo"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style=""
+            data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="left"
+          ></section
+        ></foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="right"
+          >
+            <div
+              data-marpit-advanced-background-container="true"
+              data-marpit-advanced-background-direction="horizontal"
+            >
+              <figure
+                style="background-image: url('images/modeling-evaluation.jpg')"
+              ></figure>
+            </div></section></foreignObject
+        ><foreignObject width="60%" height="720"
+          ><section
+            id="11"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="right"
+          >
+            <h2 id="phases-3-4--5-preparation-modeling-evaluation">
+              Phases 3, 4, &amp; 5: Preparation, Modeling, Evaluation
+            </h2>
+            <h3 id="phase-3-data-preparation">
+              <strong>Phase 3: Data Preparation</strong>
+            </h3>
+            <ul>
+              <li>Clean and format data for modeling.</li>
+              <li>Feature selection and engineering.</li>
+            </ul>
+            <h3 id="phase-4-modeling"><strong>Phase 4: Modeling</strong></h3>
+            <ul>
+              <li>Select modeling techniques.</li>
+              <li>Build and test models.</li>
+            </ul>
+            <h3 id="phase-5-evaluation">
+              <strong>Phase 5: Evaluation</strong>
+            </h3>
+            <ul>
+              <li>Evaluate model performance.</li>
+              <li>Check if business objectives are met.</li>
+            </ul>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section> </foreignObject
+        ><foreignObject
+          width="1280"
+          height="720"
+          data-marpit-advanced-background="pseudo"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style=""
+            data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="right"
+          ></section
+        ></foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="left"
+          >
+            <div
+              data-marpit-advanced-background-container="true"
+              data-marpit-advanced-background-direction="horizontal"
+            >
+              <figure
+                style="background-image: url('images/integration.jpg')"
+              ></figure>
+            </div></section></foreignObject
+        ><foreignObject width="60%" height="720" x="40%"
+          ><section
+            id="12"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="left"
+          >
+            <h2 id="integrating-crisp-dm-with-prior-learning">
+              Integrating CRISP-DM with Prior Learning
+            </h2>
+            <ul>
+              <li>
+                <strong>Data Preprocessing Techniques</strong> (from Week 2)
+                <ul>
+                  <li>Applied during <strong>Data Preparation</strong>.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Algorithm Selection</strong> (from Week 3)
+                <ul>
+                  <li>Relevant in the <strong>Modeling</strong> phase.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Evaluation Metrics</strong> (from Week 8)
+                <ul>
+                  <li>Used in the <strong>Evaluation</strong> phase.</li>
+                </ul>
+              </li>
+            </ul>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section> </foreignObject
+        ><foreignObject
+          width="1280"
+          height="720"
+          data-marpit-advanced-background="pseudo"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style=""
+            data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="left"
+          ></section
+        ></foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="right"
+          >
+            <div
+              data-marpit-advanced-background-container="true"
+              data-marpit-advanced-background-direction="horizontal"
+            >
+              <figure
+                style="background-image: url('images/interactive-demo.jpg')"
+              ></figure>
+            </div></section></foreignObject
+        ><foreignObject width="60%" height="720"
+          ><section
+            id="13"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="right"
+          >
+            <h2 id="interactive-demo-applying-crisp-dm">
+              Interactive Demo: Applying CRISP-DM
+            </h2>
+            <ul>
+              <li>
+                <strong>Scenario</strong>: Implementing a machine learning model
+                for customer churn prediction.
+              </li>
+              <li>
+                <strong>Steps</strong>:
+                <ul>
+                  <li>Discuss business objectives.</li>
+                  <li>Explore and prepare the dataset.</li>
+                  <li>Choose and build a model.</li>
+                  <li>Evaluate the model's performance.</li>
+                </ul>
+              </li>
+            </ul>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section> </foreignObject
+        ><foreignObject
+          width="1280"
+          height="720"
+          data-marpit-advanced-background="pseudo"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style=""
+            data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="right"
+          ></section
+        ></foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="left"
+          >
+            <div
+              data-marpit-advanced-background-container="true"
+              data-marpit-advanced-background-direction="horizontal"
+            >
+              <figure
+                style="background-image: url('images/questions.jpg')"
+              ></figure>
+            </div></section></foreignObject
+        ><foreignObject width="60%" height="720" x="40%"
+          ><section
+            id="14"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="left"
+          >
+            <h2 id="questions--discussion">Questions &amp; Discussion</h2>
+            <ul>
+              <li>
+                <strong>Any questions about the CRISP-DM methodology?</strong>
+              </li>
+              <li>
+                <strong>How can you apply CRISP-DM to your projects?</strong>
+              </li>
+              <li>
+                <strong>What challenges might you face in each phase?</strong>
+              </li>
+            </ul>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
+            </footer>
+          </section> </foreignObject
+        ><foreignObject
+          width="1280"
+          height="720"
+          data-marpit-advanced-background="pseudo"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style=""
+            data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="left"
+          ></section
+        ></foreignObject></svg
+      ><svg data-marpit-svg="" viewBox="0 0 1280 720">
+        <foreignObject width="1280" height="720"
+          ><section
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="background"
+            data-marpit-advanced-background-split="right"
+          >
+            <div
+              data-marpit-advanced-background-container="true"
+              data-marpit-advanced-background-direction="horizontal"
+            >
+              <figure
+                style="background-image: url('images/next-steps.jpg')"
+              ></figure>
+            </div></section></foreignObject
+        ><foreignObject width="60%" height="720"
+          ><section
+            id="15"
+            data-footer=""
+            data-theme="nmt-theme"
+            lang="en-AU"
+            style="
+              --footer: ;
+              --theme: nmt-theme;
+              --marpit-advanced-background-split: 40%;
+            "
+            data-marpit-advanced-background="content"
+            data-marpit-advanced-background-split="right"
+          >
+            <h2 id="next-week-final-project-preparation">
+              Next Week: Final Project Preparation
+            </h2>
+            <ul>
+              <li><strong>Apply CRISP-DM</strong> to your project ideas.</li>
+              <li><strong>Prepare datasets</strong> for modeling.</li>
+              <li>
+                <strong>Outline your project plan</strong> using the CRISP-DM
+                framework.
+              </li>
+            </ul>
+            <footer>
+              <img
+                src="https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg"
+                alt=""
+                style="height: 50px"
+              />
             </footer>
           </section>
           <script>
@@ -4670,29 +3963,15 @@
           height="720"
           data-marpit-advanced-background="pseudo"
           ><section
-            data-footer="![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+            data-footer=""
             data-theme="nmt-theme"
             lang="en-AU"
             style=""
             data-marpit-advanced-background="pseudo"
+            data-marpit-advanced-background-split="right"
           ></section
         ></foreignObject>
       </svg>
-    </div>
-    <div class="bespoke-marp-note" data-index="3" tabindex="0">
-      <p>
-        ![bg blur:1px
-        contrast:90%](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk)
-      </p>
-    </div>
-    <div class="bespoke-marp-note" data-index="5" tabindex="0">
-      <p>What kinds of data sources are available to you at your work?</p>
-    </div>
-    <div class="bespoke-marp-note" data-index="8" tabindex="0">
-      <p>[PCA vs LDA](https://www.youtube.com/watch?v=cQcrwtDRajs)</p>
-    </div>
-    <div class="bespoke-marp-note" data-index="21" tabindex="0">
-      <p>![bg right:40% 100%](images/data_balancing.png)</p>
     </div>
     <script>
       /*!! License: https://unpkg.com/@marp-team/marp-cli@3.4.0/lib/bespoke.js.LICENSE.txt */
