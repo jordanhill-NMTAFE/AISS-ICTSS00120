@@ -157,7 +157,7 @@ Preview for next session (Main Concepts):
 
 *Code Investigation: card classifier what does ReLU do?*
 
-##### Week 13: Intro to Language Models Llama and Gemma
+##### Week 13: Intro to Language Models — Small Text Models
   -	Who is LoRA?
   - Fine-tuning Large Language Models
   - Model sizes & related challenges

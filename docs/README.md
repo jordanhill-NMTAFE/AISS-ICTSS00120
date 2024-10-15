@@ -17,7 +17,6 @@ Welcome to the AI Skillset course! We're thrilled to have you join us on this ex
   - **"I Have No Mouth, and I Must Scream" by Harlan Ellison** (1968)
   - **"Robbie" by Isaac Asimov** (1940)
   - **"The Moon is a Harsh Mistress" by Robert A. Heinlein** (1966) (Chapter 1)
-
 ### Session 5
 - [Lecture Slides 5](week5.html)
 ### Session 6 — *Assessment Work*
@@ -38,6 +37,9 @@ Welcome to the AI Skillset course! We're thrilled to have you join us on this ex
   - [Phase 1 Handout](phase_1_handout.html)
   - [Phase 2 Handout](phase_2_handout.html)
   - [Phase 3+ Handout](phase_3+_handout.html)
+### Session 13
+- [Lecture Slides 13](week13.html)
+
 
 ## What You'll Learn
 
