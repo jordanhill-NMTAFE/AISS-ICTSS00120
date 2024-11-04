@@ -38,7 +38,7 @@ Evaluation metrics are critical for assessing the performance of machine learnin
 
 ---
 
-#### Question 4: Training, Validation, and Test Data in Machine Learning Model Development (502.KE5)
+#### Question 4: Training, Validation, and Test Data in Machine Learning Model Development (502 KE2)
 *Explain the difference between training data, validation data, and test data in the context of a machine learning model's development life cycle. Discuss the crucial role each data type plays and why it's important to have distinct sets for developing robust AI models.*
 
 ```
@@ -50,7 +50,7 @@ Training data is used to fit the model’s parameters, validation data is used t
 
 ---
 
-#### Question 5: Determining Predictive Accuracy of ML Models (502.KE6)
+#### Question 5: Determining Predictive Accuracy of ML Models (502 KE5 & KE6)
 *Explain the importance of determining the predictive accuracy of machine learning models using target data. Describe the methods used to do so and discuss how this accuracy measurement contributes to the overall evaluation and efficacy of a model in production environments. Provide examples of how predictive accuracy affects decision-making in real-world applications.*
 
 ```
@@ -106,32 +106,32 @@ Examples:
 
 ---
 
-#### Question 9: Evaluating Machine Learning Model Outputs (ICTAII501 KE14)
-*Explain the importance of comparing expected and actual outputs in machine learning models. Discuss methodologies used to assess the performance of a model, particularly in terms of alignment with expected outcomes. Provide examples from both supervised and unsupervised learning contexts to illustrate different approaches for evaluating model outputs.*
+#### Question 9: Characteristics of Key Logic in Algorithms (ICTAII501 KE14)
+*Describe the characteristics of the key logic in decision tree algorithms. Discuss how these characteristics influence the decision-making process within the algorithm.*
 
 ```
 Example Response:
-Comparing expected and actual outputs ensures model accuracy. Methodologies include confusion matrix for classification tasks and silhouette score for clustering. For supervised learning, comparing predicted and true labels reveals misclassifications. In unsupervised learning, clustering performance is assessed against ground-truth labels to determine grouping efficacy.
+Decision tree algorithms use a tree-like model of decisions and their possible consequences. Key characteristics include nodes representing tests on attributes, branches representing outcomes of tests, and leaf nodes representing class labels or decisions. This logical structure allows for clear, interpretable decision-making. For example, decision trees are used in credit scoring to evaluate the risk of loan applicants based on their financial history and other attributes.
 ```
 ---
-*Students should explain the importance of comparison, discuss assessment methodologies, and provide examples from both supervised and unsupervised contexts.*
+*Students should describe the key logic of decision trees, discuss its influence on decision-making, and provide real-world examples of their application.*
 
 ---
 
-#### Question 10: Evaluating ML Model Accuracy (ICTAII501 KE15)
-*Discuss the importance of comparing expected and actual outputs in machine learning models. Describe the methodologies and techniques used to assess model performance, particularly in the context of supervised learning. Provide real-world examples to illustrate how discrepancies between expected and actual outputs are analyzed and addressed.* 
+#### Question 10: Methods to Compare Expected and Actual ML Outputs (ICTAII501 KE15)
+*Explain the methods used to compare expected and actual outputs in machine learning models, focusing on classification algorithms.*
 
 ```
 Example Response:
-Comparing expected and actual outputs is crucial for model validation. Techniques include accuracy, precision, recall, and F1-score. For instance, in fraud detection, discrepancies between predicted and actual labels highlight model weaknesses, guiding improvements through techniques like error analysis and algorithm adjustment.
+Methods to compare expected and actual outputs in classification algorithms include using a confusion matrix, which provides insights into true positives, false positives, true negatives, and false negatives. Accuracy metrics, such as precision and recall, further evaluate model performance. For instance, in spam detection, these methods help identify misclassified emails, guiding improvements in the model's filtering capabilities.
 ```
 ---
-*Students should highlight the importance of comparison, describe assessment techniques in supervised learning, and provide real-world examples.*
+*Students should explain methods for comparing outputs in classification algorithms, describe relevant techniques, and provide real-world examples of their application.*
 
 ---
 
 #### Question 11: Understanding Feature Engineering in Machine Learning (ICTAII502 KE2 - Feature Engineering)
-*Explain the role of feature engineering in the machine learning process. Describe the techniques and approaches used in feature engineering to improve model accuracy and efficiency. Provide practical examples of how effectively engineered features can impact the performance of machine learning models.*
+*Explain the role of feature engineering in the machine learning process. Describe the techniques and approaches used in feature engineering to improve model accuracy and efficiency.*
 
 ```
 Example Response:
@@ -143,7 +143,7 @@ Feature engineering transforms raw data into meaningful features, enhancing mode
 ---
 
 #### Question 12: Application of CRISP-DM and Software Development Methodologies in ML Deployment (ICTAII501 KE17 & ICTAII502 KE4)
-*Discuss how the Cross-Industry Standard Process for Data Mining (CRISP-DM) and software development methodologies can be applied to determine machine learning deployment requirements for end users. Describe each methodology and provide examples of how they facilitate effective deployment of ML models.*
+*Discuss how the Cross-Industry Standard Process for Data Mining (CRISP-DM) and software development methodologies can be applied to determine machine learning deployment requirements for end users.*
 
 ```
 Example Response:
@@ -155,7 +155,7 @@ CRISP-DM provides a structured approach for data mining projects, including phas
 ---
 
 #### Question 13: Understanding Organizational Policies and Legislative Requirements in ML Projects (ICTAII502 KE9)
-*Explain the importance of adhering to organizational policies and legislative requirements when conducting machine learning projects. Provide examples of specific policies or legislation that might impact the deployment and operation of ML models within an organizational context.*
+*Explain the importance of adhering to organizational policies and legislative requirements when conducting machine learning projects.*
 
 ```
 Example Response:

@@ -40,11 +40,12 @@ mapping:
     criteria:
     knowledge:
       ICTAII502:
-        - 5
+        - 2
   - #5
     criteria:
     knowledge:
       ICTAII502:
+        - 5
         - 6
   - #6
     criteria:
@@ -98,7 +99,6 @@ mapping:
     knowledge:
       ICTAII502:
         - 7
-        - 14
   - #16
     criteria:
     knowledge:
@@ -153,7 +153,7 @@ Carefully read each question and provide a detailed response that includes examp
 ---
 
 
-#### Question 4: Training, Validation, and Test Data in Machine Learning Model Development (502.KE5)
+#### Question 4: Training, Validation, and Test Data in Machine Learning Model Development (502 KE2 (training, validation, and test data))
 
 *Explain the difference between training data, validation data, and test data in the context of a machine learning model's development life cycle. Discuss the crucial role each data type plays and why it's important to have distinct sets for developing robust AI models.*
 
@@ -161,7 +161,7 @@ Carefully read each question and provide a detailed response that includes examp
 
 ---
 
-#### Question 5: Determining Predictive Accuracy of ML Models (502.KE6)
+#### Question 5: Determining Predictive Accuracy of ML Models (502 KE5 & KE6)
 
 *Explain the importance of determining the predictive accuracy of machine learning models using target data. Describe the methods used to do so and discuss how this accuracy measurement contributes to the overall evaluation and efficacy of a model in production environments. Provide examples of how predictive accuracy affects decision-making in real-world applications.*
 
@@ -199,16 +199,16 @@ Carefully read each question and provide a detailed response that includes examp
 
 
 
-#### Question 9: Evaluating Machine Learning Model Outputs (ICTAII501 KE14)
-*Explain the importance of comparing expected and actual outputs in machine learning models. Discuss methodologies used to assess the performance of a model, particularly in terms of alignment with expected outcomes. Provide examples from both supervised and unsupervised learning contexts to illustrate different approaches for evaluating model outputs.*
+#### Question 9: Characteristics of Key Logic in Algorithms (ICTAII501 KE14)
+*Describe the characteristics of the key logic in decision tree algorithms. Discuss how these characteristics influence the decision-making process within the algorithm.*
 
 *Your answer here.*
 
 ---
 
 
-#### Question 10: Evaluating ML Model Accuracy (ICTAII501 KE15)
-*Discuss the importance of comparing expected and actual outputs in machine learning models. Describe the methodologies and techniques used to assess model performance, particularly in the context of supervised learning. Provide real-world examples to illustrate how discrepancies between expected and actual outputs are analyzed and addressed.* 
+#### Question 10: Methods to Compare Expected and Actual ML Outputs (ICTAII501 KE15)
+*Explain the methods used to compare expected and actual outputs in machine learning models, focusing on classification algorithms.*
 
 *Your answer here.*
 

@@ -264,6 +264,23 @@ Principles include model interpretability and robustness. Techniques like cross-
 
 ---
 
+#### Question 20: Advantages and Disadvantages of AI, ML, and DL (401.KE3)
+*Describe the key advantages and disadvantages of implementing AI, ML, and DL technologies in organizations. Provide examples to illustrate how these technologies can both positively and negatively impact business operations.*
+
+```
+Example Response:
+Advantages:
+- **Enhanced Decision-Making**: AI and ML provide data-driven insights, improving strategic planning.
+- **Automation**: Automates routine tasks, freeing up human resources for more complex work.
+
+Disadvantages:
+- **High Implementation Costs**: Initial setup and maintenance expenses can be significant.
+- **Data Privacy Concerns**: Handling sensitive data raises ethical and security concerns.
+```
+---
+*Students should discuss advantages and disadvantages, providing examples of both positive and negative impacts.*
+
+---
 ### Marking Checklist
 
 #### Question Completion:

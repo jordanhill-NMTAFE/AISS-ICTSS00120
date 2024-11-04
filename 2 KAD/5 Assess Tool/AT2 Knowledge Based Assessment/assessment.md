@@ -129,7 +129,11 @@ mapping:
       ICTAII501:
         - 2
         - 3
-
+  - #  20
+    criteria:
+    knowledge:
+      ICTAII401:
+        - 3
 
 ---
 
@@ -319,6 +323,14 @@ Describe at least three such tasks/processes commonly automated in similar organ
 #### Question 19: Industry-Recognised Machine Learning Principles and Techniques (501.KE2 & 501.KE3)
 
 *Identify and explain several industry-recognised principles and techniques in machine learning. Discuss how these are applied in practice to improve the automation of work tasks and enhance organisational productivity. Provide real-world examples to illustrate the application of these principles and techniques.*
+
+*Your answer here.*
+
+---
+
+
+#### Question 20: Advantages and Disadvantages of AI, ML, and DL (401.KE3)
+*Describe the key advantages and disadvantages of implementing AI, ML, and DL technologies in organizations. Provide examples to illustrate how these technologies can both positively and negatively impact business operations.*
 
 *Your answer here.*
 
