@@ -2,12 +2,13 @@
 footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
 marp: true
 theme: nmt-theme
+# Session 6: Evaluating Machine Learning Opportunities
 ---
 
 <!-- _class: lead -->
 # ICTSS00120 - <br> Artificial Intelligence Skill Set
 
-## Week 6: Evaluating Machine Learning Opportunities
+## Session 6: Evaluating Machine Learning Opportunities
 
 Lecturer: Jordan Hill
 

@@ -2,7 +2,7 @@
 footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
 marp: true
 theme: nmt-theme
-
+# Session 1: Introduction to Artificial Intelligence, Machine Learning, and Deep Learning
 ---
 
 <!-- _class: lead -->

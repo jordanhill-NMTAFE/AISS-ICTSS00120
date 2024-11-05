@@ -1,45 +1,45 @@
-
 # Welcome to the AI Skillset Course Materials
 
 ## Introduction
 
-Welcome to the AI Skillset course! We're thrilled to have you join us on this exciting journey into the world of Artificial Intelligence. This course is designed to provide you with a comprehensive understanding of AI, from the fundamental principles to cutting-edge technologies. Whether you're a novice or have some experience in AI, this course will help you enhance your skills and prepare you for the evolving landscape of AI applications.
+Welcome to the AI Skillset course! 
+
+We're thrilled to have you join us on this exciting journey into the world of Artificial Intelligence. This course is designed to provide you with a comprehensive understanding of AI, from the fundamental principles to cutting-edge technologies. Whether you're a novice or have some experience in AI, this course will help you enhance your skills and prepare you for the evolving landscape of AI applications.
 
 ## Learning Plan
 ### Session 1
-- [Introduction to Artificial Intelligence, Machine Learning, and Deep Learning](week1.html)
+- [Lecture Slides 1](week1_slides.html)
 ### Session 2
-- [Data for Machine Learning](week2.html)
+- [Lecture Slides 2](week2_slides.html)
 ### Session 3
-- [Essentials of ML and DL Technologies](week3.html)
+- [Lecture Slides 3](week3_slides.html)
 ### Session 4
 - Data Bias and Ethics in AI (Discussion / set readings):
   - **"I Have No Mouth, and I Must Scream" by Harlan Ellison** (1968)
   - **"Robbie" by Isaac Asimov** (1940)
   - **"The Moon is a Harsh Mistress" by Robert A. Heinlein** (1966) (Chapter 1)
 ### Session 5
-- [Lecture Slides 5](week5.html)
+- [Lecture Slides 5](week5_slides.html)
+### Session 6
+- [Lecture Slides 6](week6_slides.html)
 ### Session 6 — *Assessment Work*
 ### Session 7 — *Presentations*
-### Session 8 — Optimization & Evaluation
-- [Lecture Slides 8 Evaluation Metrics](week8_evaluation_metrics_slides.html)
-- [Lecture Slides 8 Hyperparameter Tuning](week8_Hyperparameter_Tuning_slides.html)
-- [Lecture Slides 8 Resources](week8_Resource%20slides.html)
 ### Session 9
-- [Lecture Slides 9](week9.html)
-### Term Break
+- [Lecture Slides 9](week9_slides.html)
 ### Session 10
-- [Lecture Slides 10](week10.html)
+- [Lecture Slides 10](week10_slides.html)
 ### Session 11
-- [Lecture Slides 11](week11.html)
+- [Lecture Slides 11](week11_slides.html)
+- [week11 phase 1 handout](week11_week11_phase_1_handout.html)
+- [week11 phase 2 handout](week11_week11_phase_2_handout.html)
+- [week11 phase 3+ handout](week11_week11_phase_3+_handout.html)
 ### Session 12
-- [Lecture Slides 12](week12.html)
-  - [Phase 1 Handout](phase_1_handout.html)
-  - [Phase 2 Handout](phase_2_handout.html)
-  - [Phase 3+ Handout](phase_3+_handout.html)
+- [Lecture Slides 12](week12_slides.html)
+- [week12 phase 1 handout](week12_week12_phase_1_handout.html)
+- [week12 phase 2 handout](week12_week12_phase_2_handout.html)
+- [week12 phase 3+ handout](week12_week12_phase_3+_handout.html)
 ### Session 13
-- [Lecture Slides 13](week13.html)
-
+- [Lecture Slides 13](week13_slides.html)
 
 ## What You'll Learn
 
@@ -65,13 +65,6 @@ Welcome to the AI Skillset course! We're thrilled to have you join us on this ex
 - **Textbooks and Articles**: Recommended readings will be provided.
 - **Support**: Teaching assistants and instructors are available during office hours for additional help.
 
-<!-- ## Getting Started
-
-1. **Setup**: Make sure you have the necessary software installed (Python, Jupyter, relevant libraries). Instructions can be found [here].
-2. **Join the Community**: Participate in the course forum [link to forum] to connect with peers and instructors.
-3. **Orientation**: Attend the orientation session [date and time] to get familiar with the course structure and expectations.
-4. **First Assignment**: Complete your first introductory assignment [link to assignment] by [due date]. -->
-
 ## Expectations
 
 - **Active Participation**: Engage in discussions, labs, and project work.
@@ -84,11 +77,9 @@ Welcome to the AI Skillset course! We're thrilled to have you join us on this ex
 For any questions or concerns, please reach out to us:
 - **Email**: jordan.hill@nmtafe.wa.edu.au
 - **Office Hours**: By Appointment
-<!-- - **Forum**: [WIP] -->
 
 We look forward to an exciting and productive semester. Let's explore the fascinating world of AI together!
 
 ---
 
 Happy Learning!
-

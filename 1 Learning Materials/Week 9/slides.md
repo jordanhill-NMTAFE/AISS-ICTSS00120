@@ -2,6 +2,7 @@
 footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
 marp: true
 theme: nmt-theme
+# Session 9: Deep Learning Foundations - Introduction to Neural Networks
 ---
 
 <!-- _class: lead -->

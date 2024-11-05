@@ -2,15 +2,17 @@
 footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
 marp: true
 theme: nmt-theme
+# title: Session 12: Introduction to Transformers and Hugging Face
 ---
 
 <!-- _class: lead -->
-# ICTSS00120 - Artificial Intelligence Skill Set
+# ICTSS00120 - <br> Artificial Intelligence Skill Set
 ![bg blur:1px contrast:90%](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk)
 
-## Week 12: Understanding CRISP-DM
+## Session 12: Introduction to Transformers and Hugging Face
 
 Lecturer: Jordan Hill
+
 
 <style scoped>
 p {
@@ -22,213 +24,199 @@ p {
 
 ---
 
-
 ## Learning Objectives
 
-- **Understand the CRISP-DM methodology and its importance in AI/ML projects.**
-- **Apply Phase 1 – Business Understanding of CRISP-DM to a case study.**
-- **Recognize the key activities in Phase 2 – Data Understanding.**
-- **Explore how Phases 3, 4, & 5 integrate with prior learning.**
+- Understand the basic concepts of Transformer models.
+- Explore the architecture and applications of Transformers.
+- Introduction to Hugging Face and its tools.
+- Learn how to get started with Transformers using Hugging Face.
 
 ---
 
-## What is CRISP-DM?
+## What is a Transformer?
 
-- **CRISP-DM** stands for **Cross-Industry Standard Process for Data Mining**.
-- It provides a **structured approach** for planning and executing data mining projects.
-- Widely used in industry for guiding data science and machine learning projects.
 
-![bg right:40% fit](https://www.ibm.com/docs/en/SS3RA7_sub/modeler_crispdm_ddita/clementine/images/crisp_process.jpg)
+
+![bg](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F7485933d-06de-47d1-a3f1-734b0d379df4_1200x630.jpeg)
 
 ---
 
-## What do we already know about project management?
+## What is a Transformer?
 
-### Agile? Waterfall?
 
-![width:50em height:18em](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.crosscountry-consulting.com%2Fwp-content%2Fuploads%2F2022%2F12%2FAdobeStock_393555482-scaled.jpeg&f=1&nofb=1&ipt=a1de54011726add9c207911514503170d41f693e41005af76be7e32228f2eaa8&ipo=images)
 
+
+### Overview
+
+- **Transformer**: A deep learning model designed for handling sequential data, introduced in the paper *"Attention is All You Need"* by Vaswani et al.
+- **Core Component**: Attention mechanism which allows the model to focus on different parts of the input sequence.
+
+
+![bg right:40% fit](https://miro.medium.com/v2/resize:fit:1400/1*BHzGVskWGS_3jEcYYi6miQ.png)
+
+---
+
+## Transformer Architecture
+
+### Key Components
+
+- **Encoder-Decoder Structure**:
+  - **Encoder**: Processes the input data and generates a representation.
+  - **Decoder**: Uses the representation from the encoder to generate the output.
+
+- **Attention Mechanisms**:
+  - **Self-Attention**: Allows the model to weigh the importance of different words in a sentence relative to each other.
+  - **Multi-Head Attention**: Multiple attention mechanisms run in parallel to capture different aspects of the data.
+
+![bg fit](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F7485933d-06de-47d1-a3f1-734b0d379df4_1200x630.jpeg)
 
 ---
 
-## CRISP-DM Phases Overview
-
-1. **Business Understanding**
-2. **Data Understanding**
-3. **Data Preparation**
-4. **Modeling**
-5. **Evaluation**
-6. **Deployment**
-
-![bg right:40% fit](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/CRISP-DM_Process_Diagram.png/639px-CRISP-DM_Process_Diagram.png)
-
----
-## Why do we need this?
-
-### You will be expected to implement CRISP-DM throughout your final project
-
-### Today we will work through each stage in-depth
-
-#### **Reference Materials:**
-<div style="display: flex; justify-content:space-around; margin-left:8em">
-
-[![height:300px width:200px](https://learning.oreilly.com/covers/urn:orm:book:9781492047537/400w/)](https://www.oreilly.com/library/view/machine-learning-pocket/9781492047537/ch02.html)
-
-[![height:300px width:200px](https://learning.oreilly.com/covers/urn:orm:book:9781787124462/400w/)](https://learning.oreilly.com/library/view/r-data-mining/9781787124462/05ec6eb6-bd0b-4180-ac01-21f83d8afcc7.xhtml)
-
-[![height:300px](https://www.datascience-pm.com/wp-content/uploads/2024/01/CRISP-DM-thumb-300x300.png)](https://www.datascience-pm.com/crisp-dm-2/)
-
+<div style="display:flex; justify-content: center;">
+<iframe width="100%" height="580" src="https://www.youtube.com/embed/wjZofJX0v4M" title="But what is a GPT?  Visual intro to transformers | Chapter 5, Deep Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ---
 
-## Phase 1: Business Understanding
 
-- **Objective**: Understand the project objectives and requirements from a business perspective.
-- **Key Steps**:
-  - **Determine Business Objectives**
-  - **Assess the Situation**
-  - **Establish Data Mining Goals**
-  - **Produce Project Plan**
+## Applications of Transformers
 
-![bg right:40%](https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/a-business-man-that-looks-worried-about-questions-floating-around-in-his-head_SKqWJuv0Bj_thumb.jpg)
+### Real-World Use Cases
 
----
+- **Natural Language Processing (NLP)**:
+  - Machine Translation
+  - Text Summarization
+  - Question Answering
+  - Sentiment Analysis
 
-
-## Activity: Define Business Objectives
-
-- **In Groups**:
-  - Choose a hypothetical business scenario or use your project idea.
-  - **Identify** the main business objectives.
-  - **Discuss** potential challenges and requirements.
-- **Share** your findings with the class.
-
-![bg](https://t3.ftcdn.net/jpg/00/72/98/56/360_F_72985661_LU1Xk0YQiPBwOuesuuJgwTn0NPlwP8ob.jpg)
-
----
-
-## Phase 2: Data Understanding
-
-- **Objective**: Collect initial data and become familiar with it.
-- **Key Steps**:
-  - **Collect Initial Data**
-  - **Describe Data**
-  - **Explore Data**
-  - **Verify Data Quality**
-
-![bg right:40%](https://cdn.chimpify.net/5f896ecda8587281208b456f/2021/05/mmt-SoM-datenSindDasNeueWasser-1200x627-blog-1.png)
-
----
-
-## Importance of Data Collection
-
-- **Accurate and relevant data** is critical for model success.
-- **Data Quality Checks**:
-  - Missing values
-  - Outliers
-  - Data consistency
-- **Tools and Techniques**:
-  - Data visualization
-  - Statistical analysis
-
-![bg left:40%](https://www.gozonewifi.com/wp-content/uploads/data-collection-for-marketing.jpg)
-
----
-
-## Phases 3, 4, & 5: Preparation, Modeling, Evaluation
-
-<table>
-
-<tr>
-
-<td>
-
-### Phase 3: Data Preparation
-<td>
-
-### Phase 4: Modeling
-
-<td>
-
-### Phase 5: Evaluation
-
-</tr>
-
-<tr>
-<td>
-
-- Clean and format data for modeling.
-- Feature selection and engineering.
-
-<td>
-
-- Select modeling techniques.
-- Build and test models.
-
-<td>
-
-- Evaluate model performance.
-- Check if business objectives are met.
-
-</table>
+- **Other Domains**:
+  - Protein Folding
+  - Image Recognition (Vision Transformers - ViTs)
+  - DNA Sequence Analysis
 
 
 ---
 
-## Integrating CRISP-DM with Prior Learning
+## Hugging Face!
 
-- **Data Preprocessing Techniques** (from Week 2)
-  - Applied during **Data Preparation**.
-- **Algorithm Selection** (from Week 3)
-  - Relevant in the **Modeling** phase.
-- **Evaluation Metrics** (from Week 8)
-  - Used in the **Evaluation** phase.
+![bg right:40% 90%](https://huggingface.co/front/assets/huggingface_logo-noborder.svg)
 
-![bg left:40% fit](https://i1.sndcdn.com/artworks-I9z2c6gx6G5zu2Z6-JD6l1A-t500x500.jpg)
+### Overview
+
+- **Hugging Face**: An open-source AI research organization known for its NLP library called Transformers.
+- **Transformers Library**: Provides pre-trained models and tools to easily integrate transformers into various applications.
 
 ---
 
-## Worked Example: Applying CRISP-DM
+## Introduction to Hugging Face
 
-- **Scenario**: Let's apply CRISP-DM to detect breast cancer!
-- **Steps**:
-  - Discuss business objectives.
-  - Explore and prepare the dataset.
-  - Choose and build a model.
-  - Evaluate the model's performance.
+### Key Features
 
+- **Model Hub**: Repository of pre-trained models.
+- **Datasets**: Access to a wide range of datasets for different tasks.
+- **Inference API**: Easily deploy models for prediction.
 
-[Kaggle Notebook ![bg right:30% 60%](https://img.freepik.com/premium-vector/vector-single-cartoon-spiral-notebook-isolated-white-background-vector-illustration_939711-1289.jpg?w=1480)](https://www.kaggle.com/code/jordanhillnmtafe/crisp-dm-worked-example-session-11-ai-skillset) 
-
+![bg right:40% 90%](https://huggingface.co/front/assets/huggingface_logo-noborder.svg)
 
 
 ---
 
-## Questions & Discussion
+## Getting Started with Hugging Face
 
-- **Any questions about the CRISP-DM methodology?**
-- **How can you apply CRISP-DM to your projects?**
-- **What challenges might you face in each phase?**
+### Step-by-Step Guide
 
-![bg left:40%](https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/question-mark_ver_1.jpg)
+1. **Install the Transformers Library**:
+   ```bash
+   pip install transformers
+   ```
+
+2. **Import and Load a Pre-trained Model**:
+   ```python
+   from transformers import pipeline
+
+   # Load a pre-trained model for sentiment analysis
+   classifier = pipeline("sentiment-analysis")
+   ```
+---
+## Getting Started with Hugging Face
+
+
+3. **Make Predictions**:
+   ```python
+   result = classifier("I love using the Hugging Face library!")
+   print(result)
+   ```
+
+4. **Explore the Model Hub**:
+   - Visit [Hugging Face Model Hub](https://huggingface.co/models) to find models for different tasks.
+
 
 ---
 
-## Next Week's agenda: <br>Back to Transformers! Transformers and Final Project Preparation
+## Lab: Hands-On with Hugging Face
 
-**For next week:**
-I *highly* recommend you try to watch this walkthrough by Andrej Karpathy (ex-OpenAI/ex-Tesla)
+### Objectives
 
-**[Andrej Karpathy: Let's build GPT: from scratch, in code, spelled out.](https://youtu.be/kCc8FmEb1nY)**
+- **Explore the Hugging Face Model Hub**.
+- **Load and Fine-tune a Pre-trained Transformer Model**.
+- **Evaluate the Model on a Custom Dataset**.
 
-[Check out the Notebook on Colab](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-?usp=sharing)
-[Github for video](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa250c2dtY1hiQzNuZ1NiMlJTVVFleEJ5Z3U5QXxBQ3Jtc0ttNlkzQ0JqZUxHMVZUQVNubW05elFUajF1VUgxUTNRMDVnc3dMTnlQckJOX1RYZG9ZVkNDckIyeUhCTnR5ZGU0NnllbFlxSVNEVWhWN2V5QTBUU1JtaENyT0J5Q3h2RURJeFF6dnBEeVhWMzR5Wm9wSQ&q=https%3A%2F%2Fgithub.com%2Fkarpathy%2Fng-video-lecture&v=kCc8FmEb1nY)
-
-<div style="display: flex; justify-content: end;">
-
+---
+## Lab: Hands-On with Hugging Face
 
 
-![width:8em](https://m.media-amazon.com/images/I/71miW4s+qJL.jpg)
+### Steps
 
-</div>
+1. **Explore the Model Hub**:
+   - Find a model suitable for your task.
+
+2. **Load the Model and Tokenizer**:
+   ```python
+   from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+   model_name = "bert-base-uncased"
+   tokenizer = AutoTokenizer.from_pretrained(model_name)
+   model = AutoModelForSequenceClassification.from_pretrained(model_name)
+   ```
+
+---
+## Lab: Hands-On with Hugging Face
+
+
+3. **Fine-Tune the Model**:
+   - Use the `Trainer` API to fine-tune the model on your dataset.
+
+4. **Evaluate the Model**:
+   - Use the evaluation metrics to assess model performance.
+
+
+---
+
+## Summary and Q&A
+
+### Summary:
+- Introduction to Transformer models and their architecture.
+- Overview of Hugging Face and its tools.
+- Hands-on guide to getting started with Transformers using Hugging Face.
+- Application examples in NLP and other domains like DNA analysis in marine biology.
+
+### Q&A:
+- Any questions about today's topics?
+
+Contact: jordan.hill@nmtafe.wa.edu.au
+
+![bg blur:1px contrast:90%](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk)
+
+---
+
+## Homework
+
+**Next Week**: Cover the CRISP-DM process for machine learning projects.
+
+### Tasks:
+1. Review the key concepts covered today.
+2. Explore the Hugging Face Model Hub and try loading different models.
+3. Watch related videos on Transformers and their applications.
+4. Prepare questions for the guest lecture by Philipp Bayer.
+
+![bg blur:1px contrast:90%](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk)

@@ -3,6 +3,8 @@ footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-
 marp: true
 theme: nmt-theme
 math: mathjax
+# Session 8: Evaluation Metrics
+
 ---
 
 <!-- _class: lead -->
