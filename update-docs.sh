@@ -41,10 +41,10 @@ We're thrilled to have you join us on this exciting journey into the world of Ar
 EOL
 
 # Loop through each session and add the corresponding slide link
-for i in {1..13}; do
+for i in {1..18}; do
     # Check if the slide file exists for the session
+    echo "### Session $i" >> docs/README.md
     if [ -f "$SLIDES_DIR/week${i}_slides.html" ]; then
-        echo "### Session $i" >> docs/README.md
         echo "- [Lecture Slides $i](week${i}_slides.html)" >> docs/README.md
     fi
 
@@ -59,19 +59,31 @@ for i in {1..13}; do
 
     # Manually add content for Session 6
     if [ "$i" -eq 6 ]; then
-        echo "### Session 6 — *Assessment Work*" >> docs/README.md
+        echo "— *Assessment Work*" >> docs/README.md
     fi
 
     # Manually add content for Session 7
     if [ "$i" -eq 7 ]; then
-        echo "### Session 7 — *Presentations*" >> docs/README.md
+        echo "— *Presentations*" >> docs/README.md
+    fi
+
+    if [ "$i" -eq 16 ]; then
+        echo "— *Project Work*" >> docs/README.md
+    fi
+
+    if [ "$i" -eq 17 ]; then
+        echo "— *Project Work*" >> docs/README.md
+    fi
+
+    if [ "$i" -eq 18 ]; then
+        echo "— *Final Projects due*" >> docs/README.md
     fi
 
     # Check for any handouts for the session
-    for handout in "$SLIDES_DIR/week${i}"_*_handout.html; do
+    for handout in "$SLIDES_DIR/week${i}"*"_handout.html"; do
         if [ -f "$handout" ]; then
             handout_name=$(basename "$handout")
-            echo "- [$(echo "$handout_name" | sed 's/_/ /g' | sed 's/.html//')](week${i}_$(basename "$handout"))" >> docs/README.md
+            echo "- [$(echo "$handout_name" | sed 's/_/ /g' | sed 's/.html//')](week${i}_handout_$(echo "$handout_name" | sed 's/week${i}_handout_//'))" >> docs/README.md
         fi
     done
 done

@@ -9,10 +9,15 @@ We're thrilled to have you join us on this exciting journey into the world of Ar
 ## Learning Plan
 ### Session 1
 - [Lecture Slides 1](week1_slides.html)
+- [week11 phase 1 handout](week1_handout_week11_phase_1_handout.html)
+- [week11 phase 2 handout](week1_handout_week11_phase_2_handout.html)
+- [week11 phase 3+ handout](week1_handout_week11_phase_3+_handout.html)
+- [week15 project mentoring handout](week1_handout_week15_project_mentoring_handout.html)
 ### Session 2
 - [Lecture Slides 2](week2_slides.html)
 ### Session 3
 - [Lecture Slides 3](week3_slides.html)
+### Session 4
 ### Session 4
 - Data Bias and Ethics in AI (Discussion / set readings):
   - **"I Have No Mouth, and I Must Scream" by Harlan Ellison** (1968)
@@ -22,24 +27,33 @@ We're thrilled to have you join us on this exciting journey into the world of Ar
 - [Lecture Slides 5](week5_slides.html)
 ### Session 6
 - [Lecture Slides 6](week6_slides.html)
-### Session 6 — *Assessment Work*
-### Session 7 — *Presentations*
+— *Assessment Work*
+### Session 7
+— *Presentations*
+### Session 8
 ### Session 9
 - [Lecture Slides 9](week9_slides.html)
 ### Session 10
 - [Lecture Slides 10](week10_slides.html)
 ### Session 11
 - [Lecture Slides 11](week11_slides.html)
-- [week11 phase 1 handout](week11_week11_phase_1_handout.html)
-- [week11 phase 2 handout](week11_week11_phase_2_handout.html)
-- [week11 phase 3+ handout](week11_week11_phase_3+_handout.html)
+- [week11 phase 1 handout](week11_handout_week11_phase_1_handout.html)
+- [week11 phase 2 handout](week11_handout_week11_phase_2_handout.html)
+- [week11 phase 3+ handout](week11_handout_week11_phase_3+_handout.html)
 ### Session 12
 - [Lecture Slides 12](week12_slides.html)
-- [week12 phase 1 handout](week12_week12_phase_1_handout.html)
-- [week12 phase 2 handout](week12_week12_phase_2_handout.html)
-- [week12 phase 3+ handout](week12_week12_phase_3+_handout.html)
 ### Session 13
 - [Lecture Slides 13](week13_slides.html)
+### Session 14
+- [Lecture Slides 14](week14_slides.html)
+### Session 15
+- [week15 project mentoring handout](week15_handout_week15_project_mentoring_handout.html)
+### Session 16
+— *Project Work*
+### Session 17
+— *Project Work*
+### Session 18
+— *Final Projects due*
 
 ## What You'll Learn
 
