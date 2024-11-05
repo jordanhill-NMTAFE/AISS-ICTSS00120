@@ -16,7 +16,7 @@ find "1 Learning Materials" -name "*_handout.md" -exec sh -c '
     base_name=$(basename "$file" .md | tr "_" " " | tr "[:upper:]" "[:lower:]")
     additional_text=$(echo "$base_name" | tr " " "_" | tr "[:upper:]" "[:lower:]")
     output_file="${dir_name}_${additional_text}.html"
-    marp "$file" -o "docs/$output_file" --html --theme northmetro.css
+    pandoc --from=markdown --to=html --standalone --output="docs/$output_file" --mathjax "$file"
   done
 ' sh {} +
 
@@ -43,14 +43,28 @@ EOL
 # Loop through each session and add the corresponding slide link
 for i in {1..18}; do
     # Check if the slide file exists for the session
+    echo >> docs/README.md
     echo "### Session $i" >> docs/README.md
-    if [ -f "$SLIDES_DIR/week${i}_slides.html" ]; then
-        echo "- [Lecture Slides $i](week${i}_slides.html)" >> docs/README.md
-    fi
+    echo >> docs/README.md
+    for slide_file in "$SLIDES_DIR"/week${i}_*"slides.html"; do
+        if [ -f "$slide_file" ]; then
+            # Split the filename by '_' and remove the first and last elements
+            IFS='_' read -r -a parts <<< "$(basename "$slide_file" .html)"
+            unset parts[0]  # Remove the first element
+            # Remove the last element by slicing the array
+            parts=("${parts[@]::${#parts[@]}-1}")
+            # Join the remaining parts to form a unique identifier
+            unique_identifier=$(IFS='_'; echo "${parts[*]}")
+            # If the unique identifier is empty, use the original filename without extension
+            if [ -z "$unique_identifier" ]; then
+                unique_identifier=$(basename "$slide_file" .html)
+            fi
+            echo "- [$unique_identifier]($(basename "$slide_file"))" >> docs/README.md
+        fi
+    done
 
     # Manually add content for Session 4
     if [ "$i" -eq 4 ]; then
-        echo "### Session 4" >> docs/README.md
         echo "- Data Bias and Ethics in AI (Discussion / set readings):" >> docs/README.md
         echo "  - **\"I Have No Mouth, and I Must Scream\" by Harlan Ellison** (1968)" >> docs/README.md
         echo "  - **\"Robbie\" by Isaac Asimov** (1940)" >> docs/README.md
@@ -80,10 +94,10 @@ for i in {1..18}; do
     fi
 
     # Check for any handouts for the session
-    for handout in "$SLIDES_DIR/week${i}"*"_handout.html"; do
+    for handout in "$SLIDES_DIR/week${i}_"*"handout.html"; do
         if [ -f "$handout" ]; then
             handout_name=$(basename "$handout")
-            echo "- [$(echo "$handout_name" | sed 's/_/ /g' | sed 's/.html//')](week${i}_handout_$(echo "$handout_name" | sed 's/week${i}_handout_//'))" >> docs/README.md
+            echo "- [$(echo "$handout_name" | sed 's/_/ /g' | sed 's/.html//')]($(echo "$handout_name" | sed 's/week${i}_//; s/ /_/g'))" >> docs/README.md
         fi
     done
 done

@@ -7,52 +7,86 @@ Welcome to the AI Skillset course!
 We're thrilled to have you join us on this exciting journey into the world of Artificial Intelligence. This course is designed to provide you with a comprehensive understanding of AI, from the fundamental principles to cutting-edge technologies. Whether you're a novice or have some experience in AI, this course will help you enhance your skills and prepare you for the evolving landscape of AI applications.
 
 ## Learning Plan
+
 ### Session 1
-- [Lecture Slides 1](week1_slides.html)
-- [week11 phase 1 handout](week1_handout_week11_phase_1_handout.html)
-- [week11 phase 2 handout](week1_handout_week11_phase_2_handout.html)
-- [week11 phase 3+ handout](week1_handout_week11_phase_3+_handout.html)
-- [week15 project mentoring handout](week1_handout_week15_project_mentoring_handout.html)
+
+- [week1_slides](week1_slides.html)
+
 ### Session 2
-- [Lecture Slides 2](week2_slides.html)
+
+- [week2_slides](week2_slides.html)
+
 ### Session 3
-- [Lecture Slides 3](week3_slides.html)
+
+- [week3_slides](week3_slides.html)
+
 ### Session 4
-### Session 4
+
 - Data Bias and Ethics in AI (Discussion / set readings):
   - **"I Have No Mouth, and I Must Scream" by Harlan Ellison** (1968)
   - **"Robbie" by Isaac Asimov** (1940)
   - **"The Moon is a Harsh Mistress" by Robert A. Heinlein** (1966) (Chapter 1)
+
 ### Session 5
-- [Lecture Slides 5](week5_slides.html)
+
+- [week5_slides](week5_slides.html)
+
 ### Session 6
-- [Lecture Slides 6](week6_slides.html)
+
+- [week6_slides](week6_slides.html)
 — *Assessment Work*
+
 ### Session 7
+
 — *Presentations*
+
 ### Session 8
+
+- [evaluation_metrics](week8_evaluation_metrics_slides.html)
+- [hyperparameter_tuning](week8_hyperparameter_tuning_slides.html)
+- [resources](week8_resources_slides.html)
+
 ### Session 9
-- [Lecture Slides 9](week9_slides.html)
+
+- [week9_slides](week9_slides.html)
+
 ### Session 10
-- [Lecture Slides 10](week10_slides.html)
+
+- [week10_slides](week10_slides.html)
+
 ### Session 11
-- [Lecture Slides 11](week11_slides.html)
-- [week11 phase 1 handout](week11_handout_week11_phase_1_handout.html)
-- [week11 phase 2 handout](week11_handout_week11_phase_2_handout.html)
-- [week11 phase 3+ handout](week11_handout_week11_phase_3+_handout.html)
+
+- [week11_slides](week11_slides.html)
+- [week11 phase 1 handout](week11_phase_1_handout.html)
+- [week11 phase 2 handout](week11_phase_2_handout.html)
+- [week11 phase 3+ handout](week11_phase_3+_handout.html)
+
 ### Session 12
-- [Lecture Slides 12](week12_slides.html)
+
+- [week12_slides](week12_slides.html)
+
 ### Session 13
-- [Lecture Slides 13](week13_slides.html)
+
+- [week13_slides](week13_slides.html)
+
 ### Session 14
-- [Lecture Slides 14](week14_slides.html)
+
+- [week14_slides](week14_slides.html)
+
 ### Session 15
-- [week15 project mentoring handout](week15_handout_week15_project_mentoring_handout.html)
+
+- [week15 project mentoring handout](week15_project_mentoring_handout.html)
+
 ### Session 16
+
 — *Project Work*
+
 ### Session 17
+
 — *Project Work*
+
 ### Session 18
+
 — *Final Projects due*
 
 ## What You'll Learn
