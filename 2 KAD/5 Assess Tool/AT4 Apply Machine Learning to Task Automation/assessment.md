@@ -17,7 +17,7 @@ observation_checklist:
 
 observation_checklist_header: "Before submission, you MUST review your process in-person with your lecturer, this may be done in-class or by appointment."
 
-observation_checklist_footer: "You should fill out this process checklist as you progress through the assessment task. You should confer with your lecturer at each stage of the process to confirm you are on-track for each checkpoint. \n
+observation_checklist_footer: "![height:50px](footer.png)"
 Where a checkpoint specifies required personnel, you can choose either confer with your lecturer (acting as your supervisor) or with your actual supervisor if you are performing this task in your actual workplace. If you choose the latter, you must provide your lecturer with some form of evidence that you have conferred with your supervisor (preferably in the form of signed meeting minutes or a post-meeting follow up email summarizing the key points of discussion)."
 
 qualification_national_code_and_title: "ICTSS00120 - Artificial Intelligence Skill Set"

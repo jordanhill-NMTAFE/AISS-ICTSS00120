@@ -1,6 +1,6 @@
 ---
 
-footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
 # Session 2: Data for Machine Learning

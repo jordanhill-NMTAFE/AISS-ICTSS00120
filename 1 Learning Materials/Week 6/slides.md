@@ -1,5 +1,5 @@
 ---
-footer: "![height:50px](https://www.woolorama.com.au/custom/public/images/north-metro-tafe-logo.jpg)"
+footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
 # Session 6: Evaluating Machine Learning Opportunities
