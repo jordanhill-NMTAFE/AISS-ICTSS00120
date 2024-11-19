@@ -200,7 +200,7 @@ Carefully read each question and provide a detailed response that includes examp
 
 
 #### Question 9: Characteristics of Key Logic in Algorithms (ICTAII501 KE14)
-*Describe the characteristics of the key logic in decision tree algorithms. Discuss how these characteristics influence the decision-making process within the algorithm.*
+*Describe the characteristics of the key logic in neural network algorithms. Discuss how these characteristics influence their potential applications.*
 
 *Your answer here.*
 
@@ -217,21 +217,21 @@ Carefully read each question and provide a detailed response that includes examp
 
 #### Question 11: Understanding Feature Engineering in Machine Learning (ICTAII502 KE2 - Feature Engineering)
 
-*Explain the role of feature engineering in the machine learning process. Describe the techniques and approaches used in feature engineering to improve model accuracy and efficiency. Provide practical examples of how effectively engineered features can impact the performance of machine learning models.*
+*Explain the role of feature engineering in the machine learning process. Describe the techniques and approaches used in feature engineering to improve model accuracy and efficiency.*
 
 *Your answer here*
 
 ---
 
 #### Question 12: Application of CRISP-DM and Software Development Methodologies in ML Deployment (ICTAII501 KE17 & ICTAII502 KE4)
-*Discuss how the Cross-Industry Standard Process for Data Mining (CRISP-DM) and software development methodologies can be applied to determine machine learning deployment requirements for end users. Describe each methodology and provide examples of how they facilitate effective deployment of ML models.*
+*Discuss how the Cross-Industry Standard Process for Data Mining (CRISP-DM) and software development methodologies can be applied to determine machine learning deployment requirements for end users.*
 
 *Your answer here.*
 
 ---
 
 #### Question 13: Understanding Organizational Policies and Legislative Requirements in ML Projects (ICTAII502 KE9)
-*Explain the importance of adhering to organizational policies and legislative requirements when conducting machine learning projects. Provide examples of specific policies or legislation that might impact the deployment and operation of ML models within an organizational context.*
+*Explain the importance of adhering to organizational policies and legislative requirements when conducting machine learning projects.*
 
 *Your answer here.*
 

@@ -107,14 +107,14 @@ Examples:
 ---
 
 #### Question 9: Characteristics of Key Logic in Algorithms (ICTAII501 KE14)
-*Describe the characteristics of the key logic in decision tree algorithms. Discuss how these characteristics influence the decision-making process within the algorithm.*
+*Describe the characteristics of the key logic in neural network algorithms. Discuss how these characteristics influence their potential applications.*
 
 ```
 Example Response:
-Decision tree algorithms use a tree-like model of decisions and their possible consequences. Key characteristics include nodes representing tests on attributes, branches representing outcomes of tests, and leaf nodes representing class labels or decisions. This logical structure allows for clear, interpretable decision-making. For example, decision trees are used in credit scoring to evaluate the risk of loan applicants based on their financial history and other attributes.
+Neural network algorithms are inspired by the structure and function of the human brain. Key characteristics include layers of interconnected nodes (neurons) organized into an input layer, one or more hidden layers, and an output layer. Each neuron processes input data using activation functions and passes the result to the next layer. Neural networks learn by adjusting the weights of the connections between neurons through a learning process called backpropagation, aiming to minimize the difference between predicted and actual outputs. This allows them to model complex, non-linear relationships in data. For example, neural networks are used in image recognition to identify objects within pictures by learning intricate patterns and features from pixel data.
 ```
 ---
-*Students should describe the key logic of decision trees, discuss its influence on decision-making, and provide real-world examples of their application.*
+*Students should describe the key logic of neural networks, discuss its influence on decision-making, and provide real-world examples of their application.*
 
 ---
 
@@ -209,7 +209,7 @@ Vision Transformers (ViT) apply transformer architectures to image data by divid
 ### Marking Checklist
 
 #### Question Completion:
-- Student provided comprehensive responses to all questions.
+- Student provided satisfactory responses to all questions.
 - Responses include examples, explanations, and references to course materials.
 
 ---

@@ -22,9 +22,19 @@ Organizations use CNNs to automate tasks such as quality control in manufacturin
 ---
 
 #### Question 2: Describe Tasks and Processes Automated Using AI/ML/DL Technologies (501.KE1 & 401.KE2)
-*Consider the various tasks and processes within an organization that may be automated including: creating and managing email campaigns, using chatbots and automated messaging platforms, analyzing trends within datasets, hiring and recruitment, employee help desk support services, and generating customer support logs and tickets. Describe at least three such tasks/processes commonly automated in similar organizations.*
 
-*For each task, explain how Artificial Intelligence (AI), Machine Learning (ML), or Deep Learning (DL) technologies can be applied to improve efficiency or outcomes. Provide specific examples to illustrate these applications within a real-world organizational context.*
+*Consider the various tasks and processes within an organization that may be automated.*
+
+Consider the following applications:
+
+-	Creating and managing email campaigns
+-	Using chatbots and automated messaging platforms
+-	Analyzing trends within datasets
+-	Hiring and recruitment
+-	Employee help desk support services
+-	Generating customer support logs and tickets
+
+Describe at least three such tasks/processes commonly automated in similar organizations.
 
 ```
 Example Response:
@@ -74,14 +84,17 @@ Data quality is crucial for ML model performance.
 
 ---
 
-#### Question 5: Training and Evaluation Data Sets in Machine Learning (501.KE8)
-*Explain the distinction between training subsets and evaluation subsets within machine learning datasets. Describe their roles and importance in the lifecycle of an ML model.*
+#### Question 5: Training and Evaluation Data Sets in Machine Learning (501.KE8 & 502.KE2)
+*Explain the distinction between training subsets and evaluation or test subsets within machine learning datasets. Describe their roles during training and evaluation stages of model development. For example, why would you need a validation and test, can you give an example of models that would need this?*
+
 
 ```
 Example Response:
-Training subsets are used to fit the machine learning model. They provide the data on which the model learns and adjusts its parameters.
+In machine learning, **training subsets** are used to fit models by providing the data on which they learn and adjust parameters. This allows the model to recognize patterns and make predictions based on the input data.
 
-Evaluation subsets (validation and test data) are used to assess the model's performance. The validation set tunes hyperparameters and prevents overfitting by providing feedback on model accuracy during training. The test set evaluates the final model performance on unseen data, ensuring it generalizes well to new samples.
+**Evaluation subsets**, comprising validation and test data, play distinct roles during training and evaluation stages. The **validation set** tunes hyperparameters and prevents overfitting by providing feedback on model accuracy during training. This helps in selecting the best model configuration. The **test set** evaluates the final model's performance on unseen data, ensuring it generalizes well to new samples.
+
+For example, when developing a neural network for image classification, the training set teaches the model to identify features of images. The validation set might be used to adjust the number of layers or learning rate. After training, the test set assesses how accurately the model classifies new, unseen images, confirming its effectiveness.
 ```
 ---
 *Students should clearly define training, validation, and test subsets, and explain their roles and importance in the ML model lifecycle.*
@@ -115,21 +128,7 @@ Programming languages are crucial for developing machine learning algorithms. Py
 
 ---
 
-#### Question 8: Training, Validation, and Test Data (502.KE2 - Training, Validation, and Test Data)
-*Explain the difference between training data, validation data, and test data in the context of a machine learning model's development life cycle.*
-
-```
-Example Response:
-- **Training Data**: Used to train the model and adjust parameters.
-- **Validation Data**: Used during training to optimize hyperparameters and prevent overfitting.
-- **Test Data**: Used after training to evaluate model performance on unseen data.
-```
----
-*Students should clearly explain the differences and roles of training, validation, and test data.*
-
----
-
-#### Question 9: Data Sources (502.KE2 - Data Sources)
+#### Question 8: Data Sources (502.KE2 - Data Sources)
 *Identify and describe different types of data sources commonly used in machine learning projects. How does the origin or type of data source impact the choice of machine learning model or the preprocessing steps required?*
 
 ```
@@ -141,7 +140,7 @@ Common data sources include structured databases, unstructured social media data
 
 ---
 
-#### Question 10: Attribute Names (502.KE2 - Attribute Names)
+#### Question 9: Attribute Names (502.KE2 - Attribute Names)
 *Discuss how the selection and naming of attributes can influence model training and results. Provide examples of well-defined attribute names versus poor choices and their potential implications.*
 
 ```
@@ -153,7 +152,7 @@ Clear, descriptive attribute names enhance model interpretability and debugging.
 
 ---
 
-#### Question 11: Target Data (502.KE2 - Target Data)
+#### Question 10: Target Data (502.KE2 - Target Data)
 *Define target data within the scope of machine learning tasks and elaborate on its significance during model training and evaluation.*
 
 ```
@@ -165,7 +164,7 @@ Target data represents the expected output for each input example. It guides mod
 
 ---
 
-#### Question 12: Key Algorithms for Labeled and Unlabeled Data (501.KE9 & 501.KE10)
+#### Question 11: Key Algorithms for Labeled and Unlabeled Data (501.KE9 & 501.KE10)
 *Explain the key differences between algorithms used for handling labeled data and those handling unlabeled data.*
 
 ```
@@ -177,8 +176,8 @@ Labeled data algorithms (e.g., logistic regression) predict specific outputs. Un
 
 ---
 
-#### Question 13: Characteristics of Learning Types (501.KE12 & 502.KE1)
-*Define and compare the four primary learning paradigms in machine learning.*
+#### Question 12: Characteristics of Learning Types (501.KE12 & 502.KE1)
+*Define and compare the four categories of learning techniques in machine learning: supervised, unsupervised, semi-supervised, and reinforcement learning.*
 
 ```
 Example Response:
@@ -192,19 +191,23 @@ Example Response:
 
 ---
 
-#### Question 14: Key Features and Functions of Learning Algorithms (502.KE2 - Learning Algorithms)
-*Discuss the fundamental logic underpinning learning algorithms in machine learning.*
+#### Question 13: Key Features and Functions of Learning Algorithms (502.KE2 - Learning Algorithms)
+*Focus on the learning algorithm of **Decision Trees**. Explain the fundamental principles that underpin how decision trees learn from data and make decisions. Describe how these principles influence their decision-making capabilities. Provide examples of decision tree algorithms commonly used in the field, detailing their basic functions and operations.*
 
 ```
 Example Response:
-Learning algorithms operate on extracting patterns from data to make decisions. Common algorithms include decision trees for classification and linear regression for continuous prediction.
+Decision Trees are supervised learning algorithms utilized for both classification and regression tasks. They learn by recursively partitioning the data into subsets based on the values of input features, forming a tree-like structure of decision rules. At each node, the algorithm selects the feature that provides the best split according to criteria like Gini impurity or information gain (entropy). This splitting continues until a stopping condition is met, such as reaching a maximum depth or having a minimum number of samples in a node.
+
+These principles influence their decision-making capabilities by allowing the model to make decisions through a series of simple if-then rules derived from the data features. This makes decision trees highly interpretable, as one can trace the path from the root to a leaf node to understand how a decision was made.
+
 ```
 ---
-*Students should discuss the logic of learning algorithms and provide examples of common algorithms.*
+
+*Students should explain the underlying principles of decision tree algorithms and illustrate with examples of widely-used decision tree algorithms.*
 
 ---
 
-#### Question 15: Key Implementation Risks for AI, ML, and DL Technologies (401.KE4)
+#### Question 14: Key Implementation Risks for AI, ML, and DL Technologies (401.KE4)
 *Identify and discuss key risks associated with implementing AI, ML, and DL technologies.*
 
 ```
@@ -216,31 +219,49 @@ Key risks include data privacy issues, bias in AI models, and high implementatio
 
 ---
 
-#### Question 16: Organizational Policies and Procedures in AI Implementation (401.KE6 & 501.KE16 & 501.KE18)
-*Explain the significance of secure practices, organizational policies, and legislative requirements.*
+#### Question 15: Organizational Policies and Procedures in AI Implementation (401.KE6 & 501.KE16 & 501.KE18)
+*Choose one ethics principle from [Australia's AI Ethics Principles](https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles/australias-ai-ethics-principles). Reflect on how this principle could be implemented through organizational policies, highlighting any challenges that could present themselves regarding ethics in relation to AI implementations.*
 
 ```
 Example Response:
-Secure practices ensure data integrity and privacy. Organizational policies guide ethical AI use. Legislative requirements prevent misuse and protect stakeholder interests.
+Adopting secure and safe practices when implementing AI, ML, and DL technologies in the workplace is essential to protect sensitive data and maintain system integrity. Adherence to organizational policies and procedures ensures that AI initiatives align with the company's ethical standards, risk management strategies, and operational goals. Compliance with legislative requirements, such as data protection laws and industry regulations, helps prevent legal repercussions and fosters trust among clients and stakeholders.
+
+Behavioral science plays a crucial role by providing insights into how humans interact with AI systems, guiding the design of user-friendly and socially acceptable technologies. Data governance is vital for establishing standards and protocols for data quality, security, and accessibility, ensuring that AI models are trained on accurate and ethically sourced data. Ethical considerations and respect for human rights are imperative to prevent biases, discrimination, and unfair practices within AI applications. 
+
+By integrating secure practices, adhering to policies and laws, and considering behavioral science, data governance, ethics, and human rights, organizations can implement AI solutions that are safe, effective, and socially responsible. This holistic approach not only mitigates risks but also enhances the reputation and credibility of the organization.
 ```
 ---
 *Students should discuss the importance of secure practices, organizational policies, and legislative requirements.*
 
 ---
 
-#### Question 17: Characteristics of Unbiased and Biased Datasets (501.KE6)
-*Define unbiased and biased datasets. Discuss implications and strategies for dealing with biased datasets.*
+#### Question 16: Characteristics of Unbiased and Biased Datasets (501.KE6)
+*Define what constitutes an unbiased dataset and a biased dataset in the context of machine learning. Discuss the potential implications and risks of using biased datasets in AI model development and deployment, including real-world examples where bias has affected outcomes. Provide strategies for detecting and mitigating data bias to ensure fair and equitable AI systems.*
+
 
 ```
 Example Response:
-An unbiased dataset accurately represents the population. A biased dataset skews results, leading to unfair AI models. Strategies to mitigate bias include diversifying training data and using fairness metrics.
+An unbiased dataset in machine learning is one that accurately reflects the complete diversity and distribution of the population it is intended to model, without overrepresenting or underrepresenting any subgroup. This ensures that the machine learning model trained on such data can generalize well and make fair predictions across all segments of the population. Conversely, a biased dataset is characterized by systematic errors or imbalances that favor certain groups over others, leading to models that can produce skewed or discriminatory outcomes.
+
+The use of biased datasets in AI model development can result in significant risks and negative implications. For example, models may perpetuate social biases, discriminate against minority groups, and make unfair decisions that affect individuals' lives. A notable real-world example is the COMPAS algorithm used in the US criminal justice system, which was found to be biased against African American individuals, leading to unfair risk assessments. Another example is facial recognition technology performing poorly on women and people of color due to biased training data.
+
+To detect and mitigate data bias, strategies include:
+
+- **Data Assessment and Preprocessing**: Analyze the dataset for imbalances or anomalies. Use techniques like re-sampling, stratification, or data augmentation to balance the dataset.
+- **Fairness Metrics**: Employ statistical measures such as demographic parity, equal opportunity, or disparate impact ratio to evaluate and monitor model fairness across different subgroups.
+- **Diverse Data Collection**: Ensure that data collection processes are inclusive and representative of all relevant populations.
+- **Algorithmic Techniques**: Implement fairness-aware machine learning algorithms that are designed to minimize bias.
+- **Human Oversight and Ethical Guidelines**: Involve interdisciplinary teams to oversee AI development and adhere to ethical standards and regulations to promote accountability and transparency.
+
+By proactively addressing data bias, organizations can develop AI systems that are more fair, equitable, and trustworthy.
+
 ```
 ---
 *Students should define unbiased and biased datasets and discuss strategies to mitigate bias.*
 
 ---
 
-#### Question 18: Australia’s Artificial Intelligence Ethics Framework (501.KE18)
+#### Question 17: Australia’s Artificial Intelligence Ethics Framework (501.KE18)
 *Discuss Australia’s AI Ethics Framework.*
 
 ```
@@ -252,19 +273,38 @@ Australia’s AI Ethics Framework includes principles such as fairness, transpar
 
 ---
 
-#### Question 19: Industry-Recognised Machine Learning Principles and Techniques (501.KE2 & 501.KE3)
-*Identify and explain machine learning principles and techniques applied in practice.*
+#### Question 18: Industry-Recognised Machine Learning Principles and Techniques (501.KE2 & 501.KE3)
+*Below are some examples of industry-recognised machine learning principles and techniques:
+
+- Model Interpretability and Explainability
+- Data Privacy and Security
+- Fairness and Bias Mitigation
+- Robustness and Reliability
+- Scalability and Efficiency
+- Ethical AI Practices
+- Cross-Validation
+- Feature Engineering
+- Regularization Techniques
+- Ensemble Methods
+- Hyperparameter Tuning
+- Dimensionality Reduction
+
+Choose three of these principles and/or techniques and define them, explaining their significance in machine learning applications.*
 
 ```
 Example Response:
-Principles include model interpretability and robustness. Techniques like cross-validation and feature engineering enhance model performance and reliability. Examples include using cross-validation to prevent overfitting in financial models.
+1. **Model Interpretability and Explainability**: The extent to which a human can understand the reasoning behind a machine learning model's decisions or predictions. This principle emphasizes transparency and explainability, ensuring that stakeholders can trust and effectively manage AI systems.
+
+2. **Robustness**: The ability of a machine learning model to maintain its performance when faced with varying conditions, such as noise, outliers, or adversarial inputs. Robustness ensures that models are reliable and perform consistently in real-world scenarios.
+
+3. **Fairness**: Ensuring that the outcomes of machine learning models are unbiased and do not discriminate against any individual or group. This principle involves identifying and mitigating biases in data and algorithms to promote equitable and ethical AI practices.
 ```
 ---
 *Students should identify principles and techniques, providing examples of their application in practice.*
 
 ---
 
-#### Question 20: Advantages and Disadvantages of AI, ML, and DL (401.KE3)
+#### Question 19: Advantages and Disadvantages of AI, ML, and DL (401.KE3)
 *Describe the key advantages and disadvantages of implementing AI, ML, and DL technologies in organizations. Provide examples to illustrate how these technologies can both positively and negatively impact business operations.*
 
 ```

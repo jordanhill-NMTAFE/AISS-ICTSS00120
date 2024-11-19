@@ -1,10 +1,1 @@
-2024-10-08 15:36:46,308 - root - INFO - We are not rendering knowledge elements in LAPs
-2024-10-08 15:36:46,468 - src.utils.uoc - DEBUG - Fetching page https://training.gov.au/training/details/ICTAII401
-2024-10-08 15:36:46,475 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): training.gov.au:443
-2024-10-08 15:36:47,901 - urllib3.connectionpool - DEBUG - https://training.gov.au:443 "GET /training/details/ICTAII401 HTTP/11" 200 13936
-2024-10-08 15:36:48,638 - src.utils.uoc - DEBUG - Fetching page https://training.gov.au/training/details/ICTAII501
-2024-10-08 15:36:48,639 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): training.gov.au:443
-2024-10-08 15:36:50,604 - urllib3.connectionpool - DEBUG - https://training.gov.au:443 "GET /training/details/ICTAII501 HTTP/11" 200 14539
-2024-10-08 15:36:51,665 - src.utils.uoc - DEBUG - Fetching page https://training.gov.au/training/details/ICTAII502
-2024-10-08 15:36:51,665 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): training.gov.au:443
-2024-10-08 15:36:53,996 - urllib3.connectionpool - DEBUG - https://training.gov.au:443 "GET /training/details/ICTAII502 HTTP/11" 200 14282
+2024-11-12 13:35:26,756 - root - INFO - We are not rendering knowledge elements in LAPs

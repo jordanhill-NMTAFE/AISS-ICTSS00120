@@ -87,6 +87,7 @@ We're thrilled to have you join us on this exciting journey into the world of Ar
 
 ### Session 18
 
+- [week18_slides](week18_slides.html)
 — *Final Projects due*
 
 ## What You'll Learn
