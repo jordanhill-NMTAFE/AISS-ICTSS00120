@@ -121,7 +121,7 @@ p {
 - **Applications**:
   - Image recognition, object detection, and video analytics.
 
-![bg right:40%](https://miro.medium.com/max/2400/1*I-x3cPWBnh9RRYh07mKiyA.jpeg)
+![bg right:35%](./images/nn.png)
 
 ---
 
