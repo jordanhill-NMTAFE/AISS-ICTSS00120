@@ -116,13 +116,13 @@ You are encouraged to choose a topic for your final project of interest to yours
 ### Assessment 1: AT1 Identify Opportunities for AI Task Automation
 
 Demonstrate your understanding of AI and it's applications for industry
-**Due Week 7 (August 30th)**
+**Due Week 7**
 
 
 ### Assessment 2: AT2 Knowledge-Based Assessment (Weeks 1–6)
 
 You will demonstrate an initial knowledge of general concepts relating to AI.
-**Due Week 10 (September 20th)**
+**Due Week 10**
 
 ---
 
@@ -133,12 +133,12 @@ You will demonstrate an initial knowledge of general concepts relating to AI.
 
 ### Assessment 3: AT3 Knowledge Based Assessment (Weeks 8-13)
 You will demonstrate specific technical knowledge of deep learning processes and concepts.
-**Due Week 15 (1 November)**
+**Due Week 15**
 
 
 ### Assessment 4: AT4 Apply Machine Learning to Task Automation
 Final project using machine learning to automate work tasks.
-**Due Week 18 (22nd November)**
+**Due Week 18**
 
 ---
 

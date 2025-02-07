@@ -1,6 +1,6 @@
 ---
 qualification_national_code_and_title: "ICTSS00120 - Artificial Intelligence Skill Set"
-delivery_period: 2024, S2
+delivery_period: 2025, S1
 cluster_name: "Artificial Intelligence Skill Set"
 
 units:
@@ -19,7 +19,6 @@ delivery_location/s: Perth
 #TODO:
 student_to_supply: | 
   
-  - USB (at least 16GB)
   - Adequate home workstation for out of class activities
   - Student's personal notes
   - Kaggle and or Huggingface account (Free).
@@ -43,6 +42,11 @@ lecturers:
     email: jordan.hill@nmtafe.wa.edu.au
     contact_time: in-class or by appointment
     campus/room: Perth 306
+  - name: Hong Fu
+    phone: --
+    email: hong.fu@nmtafe.wa.edu.au
+    contact_time: in-class or by appointment
+    campus/room: Perth 406
 
 
 assessments:
