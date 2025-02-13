@@ -276,7 +276,7 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 #### Question 13: Key Features and Functions of Learning Algorithms (502.KE2 - Learning Algorithms)
 
-*Focus on the learning algorithm of* **Decision Trees**. *Explain the fundamental principles that underpin how decision trees learn from data and make decisions. Describe how these principles influence their decision-making capabilities. Provide examples of decision tree algorithms commonly used in the field, detailing their basic functions and operations.*
+*Focus on the learning algorithm of **Decision Trees**. Explain the fundamental principles that underpin how decision trees learn from data and make decisions. Describe how these principles influence their decision-making capabilities. Provide examples of decision tree algorithms commonly used in the field, detailing their basic functions and operations.*
 
 *Your answer here.*
 
@@ -308,7 +308,8 @@ Describe at least three such tasks/processes commonly automated in similar organ
 
 #### Question 17: Australia’s Artificial Intelligence Ethics Framework (501.KE18)
 
-*Discuss the key principles and guidelines outlined in Australia’s Artificial Intelligence Ethics Framework. Explain how these principles can be applied to the design, development, implementation, and operation of AI systems within an organization to ensure ethical, transparent, and responsible use of artificial intelligence.*
+*Name at least two key principles outlined in Australia’s Artificial Intelligence Ethics Framework. Explain why these principles are important when considering the design, development, implementation, and operation of AI systems within an organization to ensure ethical, transparent, and responsible use of artificial intelligence.*
+
 
 *Your answer here.*
 

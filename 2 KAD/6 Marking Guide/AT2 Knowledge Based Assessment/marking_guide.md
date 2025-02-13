@@ -262,34 +262,56 @@ By proactively addressing data bias, organizations can develop AI systems that a
 ---
 
 #### Question 17: Australia’s Artificial Intelligence Ethics Framework (501.KE18)
-*Discuss Australia’s AI Ethics Framework.*
+*Name at least two key principles outlined in Australia’s Artificial Intelligence Ethics Framework. Explain why these principles are important when considering the design, development, implementation, and operation of AI systems within an organization to ensure ethical, transparent, and responsible use of artificial intelligence.*
 
 ```
 Example Response:
-Australia’s AI Ethics Framework includes principles such as fairness, transparency, and privacy. Applying these ensures ethical AI use, promoting trust and accountability.
+Two key principles outlined in Australia's AI Ethics Framework are **Fairness** and **Accountability**.
+
+**Fairness**: The principle of fairness ensures that AI systems are designed and implemented to be inclusive and not to discriminate against any individuals or groups. This is crucial during the design and development phases, where data selection and model training must be carefully managed to prevent biases that could lead to unfair outcomes. In implementation and operation, fairness promotes equitable treatment of all users, enhancing trust and acceptance of AI technologies within the organization and wider society.
+
+**Accountability**: Accountability requires that organizations and individuals involved in the development and operation of AI systems are responsible for their outcomes. This principle is important throughout the AI lifecycle. During design and development, clear documentation and oversight are needed to track decision-making processes. In implementation and operation, mechanisms should be in place to address and rectify any negative impacts caused by the AI system. Accountability ensures that there is transparency in actions taken and that stakeholders can trust the organization to manage AI ethically.
+
+Applying these principles is essential to ensure ethical, transparent, and responsible use of artificial intelligence within an organization. They help in building systems that are trustworthy and aligned with societal values, thereby fostering public confidence and meeting regulatory requirements.
 ```
----
-*Students should discuss key principles and their application in ethical AI use.*
 
 ---
 
 #### Question 18: Industry-Recognised Machine Learning Principles and Techniques (501.KE2 & 501.KE3)
-*Below are some examples of industry-recognised machine learning principles and techniques:
+*Below are some examples of industry-recognised machine learning principles and techniques:*
 
-- Model Interpretability and Explainability
-- Data Privacy and Security
-- Fairness and Bias Mitigation
-- Robustness and Reliability
-- Scalability and Efficiency
-- Ethical AI Practices
-- Cross-Validation
-- Feature Engineering
-- Regularization Techniques
-- Ensemble Methods
-- Hyperparameter Tuning
-- Dimensionality Reduction
+<table>
+  <tr>
+    <th>Principles</th>
+    <th>Techniques</th>
+  </tr>
+  <tr>
+    <td>Model Interpretability and Explainability</td>
+    <td>Cross-Validation</td>
+  </tr>
+  <tr>
+    <td>Data Privacy and Security</td>
+    <td>Feature Engineering</td>
+  </tr>
+  <tr>
+    <td>Fairness and Bias Mitigation</td>
+    <td>Regularization Techniques</td>
+  </tr>
+  <tr>
+    <td>Robustness and Reliability</td>
+    <td>Ensemble Methods</td>
+  </tr>
+  <tr>
+    <td>Scalability and Efficiency</td>
+    <td>Hyperparameter Tuning</td>
+  </tr>
+  <tr>
+    <td>Ethical AI Practices</td>
+    <td>Dimensionality Reduction</td>
+  </tr>
+</table>
 
-Choose three of these principles and/or techniques and define them, explaining their significance in machine learning applications.*
+*Choose three of these principles and/or techniques and define them, explaining their significance in machine learning applications.*
 
 ```
 Example Response:

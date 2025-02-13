@@ -87,7 +87,7 @@ Supervised learning uses labeled data to train models while unsupervised learnin
 ---
 
 #### Question 8: Exploring ML Learning Paradigms (ICTAII501 KE11)
-*Provide a detailed comparison of semi-supervised, supervised, unsupervised, and reinforcement learning. For each learning paradigm, discuss the underlying principles, typical use cases, and the contexts in which each would be the most effective. Also, provide examples of specific applications or projects where each learning type has been successfully implemented.*
+*Provide a comparison of semi-supervised, supervised, unsupervised, and reinforcement learning. For each learning paradigm, discuss the underlying principles, typical use cases, and the contexts in which each would be the most effective. Also, provide examples of specific applications or projects where each learning type has been successfully implemented.*
 
 ```
 Example Response:
