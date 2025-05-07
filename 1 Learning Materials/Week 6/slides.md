@@ -60,15 +60,37 @@ p {
 
 ## Evaluating AI, ML, and DL
 
-- **Advantages**:
+<table style="margin: 2em 6em">
+<tr>
+<th>
+</th>
+<th>
+</th>
+</tr>
+<tr>
+<td>
+
+- **Advantages** (e.g.):
   - Increased efficiency
   - Enhanced decision-making
   - Cost reduction
+  - More accurate
+  - Data Efficient
 
-- **Disadvantages**:
+</td>
+
+<td>
+
+- **Disadvantages** (e.g.):
   - Implementation complexity
-  - Potential biases
+  - Potential bias
   - Ethical considerations
+  - Data hungry
+  - Resource intensive
+</td>
+</tr>
+
+</table>
 
 ---
 
@@ -81,31 +103,16 @@ p {
   - Maintain clear audit trails and model interpretability.
 
 - **Continuous Monitoring and Updating**:
-  - Regularly update models to ensure relevance.
+  - Regularly update models to ensure relevance.  
 
 ---
 
-## Useful Datasets for Automation
+## In-Class Activity: Group Peer-Review
 
-- **Characteristics of Valuable Datasets**:
-  - High-volume and high-quality data
-  - Diverse and representative samples
-  - Availability of metadata
-  
-**Activities**:
-- Identify existing datasets or potential data sources.
-- Assess their suitability for machine learning tasks.
-
----
-
-## In-Class Activity: Group Discussion
-
-1. Form small groups and select a business domain.
-2. Identify potential ML opportunities within that domain.
-3. Discuss potential datasets and their characteristics.
-4. Evaluate the pros and cons of implementing ML solutions.
-
-**Outcomes**: Prepare a brief presentation summarizing your findings.
+1. With the person next to you.
+2. Share the problem you have identified. (Part 1 of assessment 1.)
+3. Discuss potential datasets that might exist and identify possible target attributes.
+4. What challenges might present themselves in obtaining data?
 
 ---
 
