@@ -93,6 +93,10 @@ These 'pay attention' to the input and another sequence and uses the other seque
 
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0_4KEb08xrE?si=Bz7nyD53aY4D46ed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ## Transformer Architecture
 
 ### Key Components
@@ -273,67 +277,6 @@ A huge ecosystem of opensource client libraries!
 
 *But it also hides a lot of complexity from you!*
 
-
----
-
-## Fine-tuning a pretrained model
-
-### Pre training is incredibly expensive and it is unlikely you will get the opportunity to do any pre-training on LLMs unless you work for one of the BIG AI labs.
-
-### **Post-training is different though...**
-
-#### We are going to work through [chapter 3](https://huggingface.co/learn/llm-course/chapter3/1?fw=pt) of the [LLM course](https://huggingface.co/learn/llm-course/chapter1/1) on Huggingface 
-
----
-
-## Let's not forget **[TRL](https://huggingface.co/docs/trl/en/index)**
-
-### The Trainer API makes it so easy to do Supervised Fine-tuning!
-
-```python
-   from datasets import load_dataset
-   from trl import SFTConfig, SFTTrainer
-
-   dataset = load_dataset("stanfordnlp/imdb", split="train")
-
-   training_args = SFTConfig(
-      max_length=512,
-      output_dir="/tmp",
-   )
-   trainer = SFTTrainer(
-      "facebook/opt-350m",
-      train_dataset=dataset,
-      args=training_args,
-   )
-   trainer.train()
-
-```
-
----
-
-## Extension: TRL PPO with GPT-2 — Huh what is that?
-
-
-### Example: Look — copy — check
-[Lets look at this example notebook:](https://github.com/huggingface/trl/blob/main/examples/notebooks/gpt2-sentiment-control.ipynb)
-
-
-<div style="text-align: center;">
-  <img height="400px" src="https://camo.githubusercontent.com/e7a0a7d6aae554ba96bd89145ff4e1736148e70b583aebeefe16f926dffcf714/68747470733a2f2f68756767696e67666163652e636f2f64617461736574732f74726c2d696e7465726e616c2d74657374696e672f6578616d706c652d696d616765732f7265736f6c76652f6d61696e2f696d616765732f677074322d6374726c2d747261696e696e672d73657475702e706e67" />
-</div>
-
----
-
-
-We will use it to 
-
-3. **Fine-Tune the Model (using PPO!)**:
-   - Use the `Trainer` API to fine-tune the model on your dataset.
-
-4. **Evaluate the Model**:
-   - Use the evaluation metrics to assess model performance.
-
-
 ---
 
 ## Summary and Q&A
@@ -351,16 +294,3 @@ Contact: jordan.hill@nmtafe.wa.edu.au
 
 ![bg blur:1px contrast:90%](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk)
 
----
-
-## Homework
-
-**Next Week**: Cover the CRISP-DM process for machine learning projects.
-
-### Tasks:
-1. Review the key concepts covered today.
-2. Explore the Hugging Face Model Hub and try loading different models.
-3. Watch related videos on Transformers and their applications.
-4. Prepare questions for the guest lecture by Philipp Bayer.
-
-![bg blur:1px contrast:90%](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk)

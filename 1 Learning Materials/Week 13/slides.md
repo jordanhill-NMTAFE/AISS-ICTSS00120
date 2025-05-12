@@ -132,15 +132,129 @@ Language models enable machines to understand and generate human language by pre
 
 ---
 
+<!-- _class: lead -->
 
-<div style="display:flex; justify-content: center;">
-<iframe width="100%" height="580" src="https://www.youtube.com/embed/kCc8FmEb1nY" title="Building GPT-2 from Scratch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<!-- 
-- **Demo code and materials provided**: Follow along with the resources to implement GPT-2.
--->
+
+# Break
+## That was a lot, lets take a 30 min break
 
 ---
+
+<!-- _class: lead -->
+
+# What does training look like?
+
+---
+
+<div style="display:flex; justify-content: center;">
+<iframe width="100%" height="580" src="https://www.youtube.com/watch?v=NrO20Jb-hy0
+" title="Attention Mechanism" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+---
+
+## Model Sizes
+
+- **[Model Scale](https://github.com/huggingface/huggingface-llama-recipes?tab=readme-ov-file#local-inference)**:
+  - Small, Medium, Large, and Extra-Large models.
+
+---
+
+## Introducing LoRA: Low-Rank Adaptation
+
+- **What is LoRA?**: A technique for efficient fine-tuning of large language models.
+- **Purpose**: Reduces computational requirements by adapting only a subset of parameters.
+- **Benefits**:
+  - Faster training times.
+  - Lower memory consumption.
+  - Enables fine-tuning on smaller datasets.
+
+LoRA allows us to fine-tune large models like GPT-2 with minimal resources by updating low-rank matrices instead of the entire model.
+[Example Hugging Face](https://github.com/huggingface/huggingface-llama-recipes/blob/main/fine_tune/peft_finetuning.py)
+
+---
+
+## Fine-tuning Large Language Models
+
+- **Why Fine-tune?**: Tailor pre-trained models to specific tasks or domains.
+- **Methods**:
+  - Full model fine-tuning.
+  - **LoRA**: Fine-tune with low-rank adaptations.
+  - Parameter-efficient tuning techniques.
+- **Considerations**:
+  - Data availability and quality.
+  - Computational resources.
+  - Overfitting risks.
+
+Fine-tuning enhances model performance on specific tasks by adapting it with relevant data.
+
+---
+
+
+## Challenges & Solutions
+
+- **Challenges**:
+  - **Computational Resources**: Larger models require more memory and processing power.
+  - **Training Time**: Increased time for training and fine-tuning.
+  - **Deployment**: Difficulties in deploying large models on standard hardware.
+  - **Energy Consumption**: Higher energy costs and environmental impact.
+- **Solutions**:
+  - **Model Compression**: Techniques like pruning and quantization.
+  - **Efficient Fine-tuning**: Methods like LoRA and Adapter Layers.
+  - **Distributed Computing**: Leveraging multiple machines or cloud resources.
+
+Understanding the trade-offs of model sizes helps in making informed decisions for practical applications.
+
+---
+
+## Fine-tuning a pretrained model
+
+### Pre training is incredibly expensive and it is unlikely you will get the opportunity to do any pre-training on LLMs unless you work for one of the BIG AI labs.
+
+### **Post-training is different though...**
+
+#### We are going to work through [chapter 3](https://huggingface.co/learn/llm-course/chapter3/1?fw=pt) of the [LLM course](https://huggingface.co/learn/llm-course/chapter1/1) on Huggingface 
+
+---
+
+## Let's not forget **[TRL](https://huggingface.co/docs/trl/en/index)**
+
+### The Trainer API makes it so easy to do Supervised Fine-tuning!
+
+```python
+   from datasets import load_dataset
+   from trl import SFTConfig, SFTTrainer
+
+   dataset = load_dataset("stanfordnlp/imdb", split="train")
+
+   training_args = SFTConfig(
+      max_length=512,
+      output_dir="/tmp",
+   )
+   trainer = SFTTrainer(
+      "facebook/opt-350m",
+      train_dataset=dataset,
+      args=training_args,
+   )
+   trainer.train()
+
+```
+
+---
+
+## Extension: TRL PPO with GPT-2 — Huh what is that? 
+
+
+### Example: Look — copy — check
+[Lets look at this example notebook:](https://github.com/huggingface/trl/blob/main/examples/notebooks/gpt2-sentiment-control.ipynb)
+
+
+<div style="text-align: center;">
+  <img height="400px" src="https://camo.githubusercontent.com/e7a0a7d6aae554ba96bd89145ff4e1736148e70b583aebeefe16f926dffcf714/68747470733a2f2f68756767696e67666163652e636f2f64617461736574732f74726c2d696e7465726e616c2d74657374696e672f6578616d706c652d696d616765732f7265736f6c76652f6d61696e2f696d616765732f677074322d6374726c2d747261696e696e672d73657475702e706e67" />
+</div>
+
+---
+
 
 ## Activities
 
@@ -157,7 +271,7 @@ Language models enable machines to understand and generate human language by pre
 3. **Experimentation**
 
    - Generate text samples.
-   - Adjust parameters to see their effects.
+   - Do some fine-tuning
 
 ---
 
@@ -169,55 +283,19 @@ Language models enable machines to understand and generate human language by pre
 
 By constructing GPT-2, you'll gain hands-on experience with attention mechanisms in practice.
 
----
-## Introducing LoRA: Low-Rank Adaptation
 
-- **What is LoRA?**: A technique for efficient fine-tuning of large language models.
-- **Purpose**: Reduces computational requirements by adapting only a subset of parameters.
-- **Benefits**:
-  - Faster training times.
-  - Lower memory consumption.
-  - Enables fine-tuning on smaller datasets.
-
-LoRA allows us to fine-tune large models like GPT-2 with minimal resources by updating low-rank matrices instead of the entire model.
-[Example Hugging Face](https://github.com/huggingface/huggingface-llama-recipes/blob/main/fine_tune/peft_finetuning.py)
-
----
-## Fine-tuning Large Language Models
-
-- **Why Fine-tune?**: Tailor pre-trained models to specific tasks or domains.
-- **Methods**:
-  - Full model fine-tuning.
-  - **LoRA**: Fine-tune with low-rank adaptations.
-  - Parameter-efficient tuning techniques.
-- **Considerations**:
-  - Data availability and quality.
-  - Computational resources.
-  - Overfitting risks.
-
-Fine-tuning enhances model performance on specific tasks by adapting it with relevant data.
-
----
-## Model Sizes
-
-- **[Model Scale](https://github.com/huggingface/huggingface-llama-recipes?tab=readme-ov-file#local-inference)**:
-  - Small, Medium, Large, and Extra-Large models.
 
 ---
 
-## Challenges & Solutions
 
-- **Challenges**:
-  - **Computational Resources**: Larger models require more memory and processing power.
-  - **Training Time**: Increased time for training and fine-tuning.
-  - **Deployment**: Difficulties in deploying large models on standard hardware.
-  - **Energy Consumption**: Higher energy costs and environmental impact.
-- **Solutions**:
-  - **Model Compression**: Techniques like pruning and quantization.
-  - **Efficient Fine-tuning**: Methods like LoRA and Adapter Layers.
-  - **Distributed Computing**: Leveraging multiple machines or cloud resources.
 
-Understanding the trade-offs of model sizes helps in making informed decisions for practical applications.
+<div style="display:flex; justify-content: center;">
+<iframe width="100%" height="580" src="https://www.youtube.com/embed/kCc8FmEb1nY" title="Building GPT-2 from Scratch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<!-- 
+- **Demo code and materials provided**: Follow along with the resources to implement GPT-2.
+-->
+
 
 ---
 
@@ -240,7 +318,7 @@ Contact: Jordan.Hill@nmtafe.wa.edu.au
 
 ## Looking Ahead
 
-- **Next Topic**: On the Horizon: Vision Transformers (ViT)
+- **Next Topic**: Latest Developments
 - **Preparation**: Explore how transformers are applied in computer vision.
 
 Continue expanding your knowledge by seeing how attention mechanisms revolutionize different domains.
