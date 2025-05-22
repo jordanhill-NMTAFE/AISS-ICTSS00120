@@ -2,210 +2,153 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
+
 ---
 
-<!-- TODO: add images -->
 
 <!-- _class: lead -->
-# Week 14: Multi-modal Transformers: Integrating Vision, Audio, and Text
-
-## Lecturer: Jordan Hill
 
 ![bg](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afa6e72c-8df3-4d8a-aba0-d3d8c0404e28/dgeejdo-2636687f-dce2-4182-9061-f44831261ec0.jpg/v1/fill/w_922,h_866,q_70,strp/ai_gaze_by_roguedawg777_dgeejdo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6IlwvZlwvYWZhNmU3MmMtOGRmMy00ZDhhLWFiYTAtZDNkOGMwNDA0ZTI4XC9kZ2VlamRvLTI2MzY2ODdmLWRjZTItNDE4Mi05MDYxLWY0NDgzMTI2MWVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RSVY32rSmLLuV0Vdf0MN9WCvGH6IeAqAkeZPsUrWwqk)
+
+
+# Week 14: Fine-tuning & Post-Training of Language Models
+
+## Lecturer: Jordan Hill
 
 ---
 
 ## Learning Objectives
-
-- **Understand** the fundamentals of Multi-modal Transformers encompassing vision, audio, and text.
-- **Explore** how transformers integrate multiple data modalities.
-- **Discover** applications and implications of multi-modal learning across various domains.
-- **Discuss** ethical considerations in multi-modal AI systems.
-
-## Note on NLP Coverage
-
-- **Important Note**: While this course provides an overview of multi-modal transformers, it does not delve deeply into Natural Language Processing (NLP) specifics. Students interested in a comprehensive understanding of NLP beyond simple sentiment analysis etc. are encouraged to explore additional resources or courses dedicated to this field. 
-
-**See additional resources provided at the end of the presentation for extension in NLP**
-
+- Understand the concept of fine-tuning (Transfer Learning) and post-training in LLMs.
+- Explore how Hugging Face Trainer API facilitates supervised fine-tuning.
+- Segue into practical hands-on fine-tuning of an LLM.
+- Visualize how LLMs can store and adapt facts through fine-tuning.
 
 ---
 
-## Introduction to Multi-modal Transformers
+## From Pre-trained to Fine-tuned Models
 
-- **Definition**: Models that process and integrate multiple data types, such as **text**, **images**, and **audio**.
-- **Significance**:
-  - Bridges the gap between different modalities for richer understanding.
-  - Enhances performance in tasks requiring comprehension of visual, auditory, and textual information.
-  - Enables more natural and intuitive human-computer interactions.
+- **Pre-trained Models (Foundation Models):**
+  - Large language models trained on massive datasets.
+  - General knowledge and language understanding.
+  - Examples: GPT, BERT, LLaMA.
 
----
+- **Fine-tuning / Post-training:**
+  - Adapt the model to specific tasks or domains.
+  - Use supervised learning on task-specific data.
+  - Improves performance in specific applications like sentiment analysis, medical diagnosis, or customer support.
 
-## Stages of Multi-modal Transformers Data Processing
-
-1. **Data Encoding**:
-  - **Text**: Token embeddings using techniques like Word2Vec or BERT.
-  - **Vision**: Image patches transformed into visual embeddings using CNNs or Vision Transformers.
-  - **Audio**: Audio signals converted into spectrograms or embeddings using models like Wave2Vec.
-
-![bg right:50% fit](https://huggingface.co/gpt-omni/mini-omni2/resolve/main/data/figures/framework.jpeg)
+*Illustration: Foundation model + domain-specific data → Fine-tuned model*
 
 ---
 
-## Data Fusion
+## Why Fine-tune?
 
-2. **Modality Fusion**:
-  - **Fusion Techniques**:
-    - Early fusion (combining inputs)
-    - Late fusion (combining outputs)
-    - Hybrid approaches
-  - **Transformer Mechanisms**:
-    - Self-attention and cross-attention layers to learn intra- and inter-modal relationships.
+- Specialize general knowledge for niche tasks.
+- Reduce the need for training models from scratch.
+- Achieve better accuracy with less data.
+- Save computational resources.
 
-
-3. **Prediction**:
-  - The fused representation is used for downstream tasks like classification, generation, or retrieval.
+*Question:* How do we efficiently adapt an existing model?
 
 ---
 
-## Benefits of Using Multi-modal Transformers
+## Introduction to Hugging Face Trainer API
 
-- **Comprehensive Understanding**: Captures complex patterns and relationships across different modalities.
-- **Improved Accuracy**: Combining modalities often leads to better performance than single-modal models.
-- **Versatility**: Applicable to tasks in healthcare, entertainment, accessibility, and more.
-- **Enhanced User Experience**: Supports more interactive and immersive applications.
-
----
-
-## Why Multi-modal? — Applications
-
-### Audio-Visual Speech Recognition
-
-- **Combines** lip movements and audio for robust speech recognition.
-- **Use Case**: Understanding speech in noisy environments.
-
-### Video Captioning
-
-- **Generates** textual descriptions of video content by integrating visual frames and audio cues.
-- **Use Case**: Improving accessibility for visually impaired users.
-
----
-## Why Multi-modal? — Applications
-
-### Emotion Recognition
-
-- **Analyzes** facial expressions (vision), tone of voice (audio), and word choice (text).
-- **Use Case**: Customer service bots that can detect and respond to user emotions.
-
-### Cross-modal Retrieval
-
-- **Enables** searching for images using text queries or finding audio clips based on images.
-- **Use Case**: Multimedia databases and content recommendation systems.
+- A high-level interface for training, evaluation, and saving models.
+- Supports Transfer Learning / Fine-tuning with few lines of code.
+- Handles data loading, tokenization, batching, optimization, and evaluation.
 
 ---
 
-## Challenges in Multi-modal Learning
+## Demo Focus: Supervised Fine-tuning (SFT) of a Language Model
 
-- **Data Alignment**:
-  - Synchronizing modalities with different formats and time scales.
-  - Dealing with missing or noisy data in one or more modalities.
-
-- **Computational Complexity**:
-  - Increased model size and training time due to multiple data types.
-  - Requires significant computational resources and efficient algorithms.
-
-- **Interpretability**:
-  - Difficulty in understanding how models make decisions based on complex, fused data.
+- Use small domain-specific datasets (e.g., customer reviews, legal texts).
+- Leverage Hugging Face’s pre-trained models.
+- One code example can adapt a base model to your data.
 
 ---
 
-## Architectures for Multi-modal Transformers
+## Before the Demo: Understand the Key Concepts
 
-- **Modality-specific Encoders**:
-  - Separate encoders process each modality before fusion.
-  - Preserves modality-specific features.
-
-- **Joint Encoders**:
-  - Inputs from all modalities are combined from the start.
-  - May lead to better integration but can lose modality-specific nuances.
-
-- **Cross-modal Attention Mechanisms**:
-  - Allows the model to focus on relevant parts of different modalities.
-  - Enhances learning of inter-modal relationships.
+- **Transfer Learning:** Starting from a pre-trained model and further training it.
+- **What is SFT?** Supervised Fine-Tuning, using labeled data.
+- **Post-Training:** Additional training or adjustment after base training.
 
 ---
 
-## Ethical Considerations
+## Video 1: How might LLMs store facts | DL7 — Theory
 
-- **Privacy**:
-  - Handling sensitive information across modalities like voice and facial data.
-  - Need for robust data protection measures.
-
-- **Bias and Fairness**:
-  - Multi-modal data can reflect societal biases.
-  - Important to ensure fairness across different demographic groups.
-
-- **Consent and Transparency**:
-  - Users should be informed about how their data is used.
-  - Models should be transparent and explainable where possible.
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/9-Jl0dxWQs8" title="How might LLMs store facts | DL7" frameborder="0" allowfullscreen></iframe>
 
 ---
 
-## Workshop: Multi-modal Transformers in Action
+## Video 2: How AI Models Learn, Explained Visually — Training
 
-### Activity
-
-1. **Exploring Multi-modal Models**:
-   - Navigate HuggingFace to find models that integrate at least two different modes at the input or output stage; vision, audio, or text. 
-   (Could be text to text, text to image, image to text, text to audio, audio to text, etc.)
-    [Hugging Face Models](https://huggingface.co/models)
-
-2. **Select a model**.
-3. **Build a pipeline & test** using huggingface transformers and test the model with an example input.
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/NrO20Jb-hy0" title="How AI Models Learn, Explained Visually" frameborder="0" allowfullscreen></iframe>
 
 ---
 
-## Extension Activity: Research Your Model's Architecture
+<!-- _class: lead -->
 
-- **Research Task**: Investigate the main components and how the model integrates different modalities.
-- **Fusion Approach**: Identify and justify whether the model uses early, late, or hybrid fusion.
-- **Performance Insights**: Analyze the benefits and limitations of the fusion method.
+# Break
+## Let's take a 30-minute break before moving to the practical session
 
-This activity encourages you to delve deeper into understanding the architecture of your selected model.
+![bg](https://images.unsplash.com/photo-1512389142860-9c449e58a543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80)
 
-
----
-
-## Discussion
-
-#### **What challenges does multi-modal present as opposed to text-only models?**
-- **Data Integration Complexity**: Effectively combining and processing diverse data types (text, images, audio) requires sophisticated architectures to handle varying data structures and representations.
-
-- **Alignment and Synchronization**: Ensuring that multi-modal data is properly aligned in time and context can be difficult, especially when modalities have different sampling rates or missing data.
-
-- **Computational Demand**: Multi-modal models often require significantly more computational resources for training and inference due to their increased complexity and the volume of data.
-
-#### Anything else?
-
----
-# Resources for further skill development
-
-- Audio course: [Hugging Face](https://huggingface.co/learn/audio-course)
-- Computer Vision course (transformers): [Hugging Face](https://huggingface.co/learn/computer-vision-course/unit3/vision-transformers)
-- Computer Vision course (multimodal): [Hugging Face](https://huggingface.co/learn/computer-vision-course/unit4/multimodal-models)
+- Stretch your legs
+- Grab a coffee or water
+- Process what we've learned so far
 
 ---
 
-## Summary and Q&A
+## Transition to Practical: Using Hugging Face's Trainer API
 
-### Summary
+- We'll load a pre-trained model.
+- Fine-tune it on a small dataset.
+- Observe how the model adapts to new data.
+- Think of this as the "post-training" step: embedding new facts or tasks.
 
-- **Multi-modal Transformers** unlock new possibilities by integrating vision, audio, and text.
-- **Applications** are vast, impacting industries like entertainment, healthcare, and accessibility.
-- **Challenges** exist but can be addressed with thoughtful design and ethical considerations.
+---
 
-### Discussion Questions
+## Next: Hands-On Demo
 
-- How can multi-modal models enhance assistive technologies for people with disabilities?
-- What are potential risks of multi-modal AI, and how can we mitigate them?
+**Follow along with the Hugging Face course link:**  
+[Hugging Face LLM Course - Chapter 3](https://huggingface.co/learn/llm-course/chapter3/1?fw=pt)
 
+- Setup your environment.
+- Load a base model.
+- Prepare a small dataset.
+- Run the Trainer API for fine-tuning.
+- Observe the training logs and results.
+
+---
+
+``` 
+(Note: The code snippets will be provided in the demo session, or I can prepare an example script here if desired.)
+``` 
+
+---
+
+## Summary
+
+- Fine-tuning (SFT) adapts foundation models for specific tasks.
+- Hugging Face provides accessible tools to perform transfer learning.
+- Visualizations help us understand how models store facts and adapt during post-training.
+- The next step involves hands-on practice with real datasets.
+
+---
+
+## Questions?
+
+- How can fine-tuning improve your AI applications?
+- What challenges might you face when adapting large models?
+- How does understanding these updates help in your AI projects?
+
+---
+
+## Let's get started!
+
+*Prepare your environment and laptop for the demo.*  
+*Make sure your Hugging Face account is ready.*
+
+---
