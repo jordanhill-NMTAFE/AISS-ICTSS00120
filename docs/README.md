@@ -75,6 +75,7 @@ We're thrilled to have you join us on this exciting journey into the world of Ar
 
 ### Session 15
 
+- [week15_slides](week15_slides.html)
 - [week15 project mentoring handout](week15_project_mentoring_handout.html)
 
 ### Session 16
