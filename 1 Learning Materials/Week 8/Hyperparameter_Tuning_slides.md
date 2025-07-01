@@ -2,7 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 8: Hyperparameter Tuning
+title: Hyperparameter Tuning
 
 ---
 

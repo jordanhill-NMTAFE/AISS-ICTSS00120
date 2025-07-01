@@ -3,7 +3,7 @@ footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
 math: mathjax
-# Session 8: Evaluation Metrics
+title: Model Evaluation Metrics and Performance Analysis
 
 ---
 

@@ -2,7 +2,9 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 11: Understanding CRISP-DM
+title: CRISP-DM Methodology and Project Planning
+
+
 ---
 
 <!-- _class: lead -->

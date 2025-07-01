@@ -2,7 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 1: Introduction to Artificial Intelligence, Machine Learning, and Deep Learning
+title: Introduction to Artificial Intelligence, Machine Learning, and Deep Learning
 ---
 
 <!-- _class: lead -->

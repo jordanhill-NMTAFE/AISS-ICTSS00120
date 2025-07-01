@@ -3,7 +3,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 2: Data for Machine Learning
+title: Data for Machine Learning
 
 ---
 

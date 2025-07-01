@@ -2,7 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 8: Homework Resources Introduction & Key Concepts
+title: Neural Network Learning and Optimization Techniques
 
 ---
 

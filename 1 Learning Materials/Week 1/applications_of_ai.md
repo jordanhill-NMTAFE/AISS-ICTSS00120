@@ -2,7 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-
+title: Introduction to AI Applications
 ---
 
 ## Introduction to AI Applications

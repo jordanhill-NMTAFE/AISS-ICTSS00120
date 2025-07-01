@@ -2,7 +2,8 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 15: Applying LLMs as Agents in Agentic Workflows
+title: LLM Agents and Agentic Workflows
+
 ---
 
 <!-- _class: lead -->

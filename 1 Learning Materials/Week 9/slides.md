@@ -1,8 +1,9 @@
 ---
 footer: "![height:50px](footer.png)"
 marp: true
-theme: nmt-theme
-# Session 9: Deep Learning Foundations - Introduction to Neural Networks
+theme: nmt-theme 
+title: Deep Learning Foundations and Neural Network Architecture
+
 ---
 
 <!-- _class: lead -->

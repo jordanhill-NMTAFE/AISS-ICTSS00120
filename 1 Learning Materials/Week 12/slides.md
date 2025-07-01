@@ -2,7 +2,8 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# title: Session 12: Introduction to Transformers and Hugging Face
+title: Transformer Models and Hugging Face Platform
+
 ---
 
 <!-- _class: lead -->

@@ -2,6 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
+title: Course Conclusion and Future Directions
 ---
 
 <!-- _class: lead -->

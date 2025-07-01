@@ -2,9 +2,9 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# math: mathjax
 math: mathjax
-# Session 10: Fundamentals in Deep Learning & Introduction to Machine Vision
+title: Deep Learning Fundamentals and Machine Vision Applications
+
 ---
 
 <!-- _class: lead -->

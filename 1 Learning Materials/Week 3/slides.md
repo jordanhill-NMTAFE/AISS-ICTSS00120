@@ -2,7 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 3: Essentials of ML and DL Technologies
+title: Essentials of ML and DL Technologies
 ---
 
 <!-- _class: lead -->

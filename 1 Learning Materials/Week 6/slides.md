@@ -2,7 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 6: Evaluating Machine Learning Opportunities
+title: Evaluating Machine Learning Opportunities
 ---
 
 <!-- _class: lead -->

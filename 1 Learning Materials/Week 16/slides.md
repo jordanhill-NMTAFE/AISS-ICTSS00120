@@ -2,6 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
+title: Multi-modal Transformers
 ---
 
 <!-- TODO: add images -->

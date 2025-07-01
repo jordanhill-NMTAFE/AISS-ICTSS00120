@@ -2,7 +2,7 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# Session 5: Identify an Opportunity for Task Automation
+title: Identify an Opportunity for Task Automation
 ---
 
 <!-- _class: lead -->

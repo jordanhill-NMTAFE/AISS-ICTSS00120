@@ -2,7 +2,8 @@
 footer: "![height:50px](footer.png)"
 marp: true
 theme: nmt-theme
-# title: Session 13: Introduction to Language Models
+title: Language Models and Attention Mechanisms
+
 ---
 
 <!-- _class: lead -->
