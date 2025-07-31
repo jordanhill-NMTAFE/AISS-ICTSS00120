@@ -28,10 +28,10 @@ Welcome to our AI Skillset!
 
 
 - **Course Code**: ICTSS00120
-- **Delivery Period**: 2024, S2
+- **Delivery Period**: 2026, S1
 - **Lecturer**: Jordan Hill
-- **Contact**: [jordan.hill@nmtafe.edu.au](mailto:jordan.hill@nmtafe.edu.au)
-- **Room**: Perth 306 (30 Aberdeen st)
+- **Contact**: [jordan.hill@nmtafe.wa.edu.au](mailto:jordan.hill@nmtafe.wa.edu.au)
+- **Room**: Perth 303 (30 Aberdeen st)
 
 ---
 
@@ -488,9 +488,9 @@ Does ChatGPT pass the turing test for you?
 
 **Activity**:
 - **Explore Industry Technologies in AI, ML, and DL**:
-  - Divide into groups and research industry-specific applications of AI.
-  - Find examples of supervised and unsupervised learning in action.
-  - Each group presents their findings.
+  - Divide into groups and research some concrete examples of AI applications: What industries use AI? Is it Narrow or Broad AI?
+  - What is supervised and unsupervised learning? What does it mean?
+  - Each group presents their findings. Choose one group member to present!
   
 ---
 
@@ -501,6 +501,8 @@ This course has a companion reading list!
 
 **"The Moon is a Harsh Mistress" by Robert A. Heinlein** (1966)
 A lunar colony's AI, named Mike, gains self-awareness and aids in a revolution against Earth's government, highlighting themes of AI autonomy and human-machine relationships.
+
+There is an example of supervised learning in action here! *(at least fictionally)* Can you find it?
 
 ![bg right:40% 70%](images/moon.jpg)
 
